@@ -17,6 +17,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://lalagidimsum.com"),
   title: "LalaGi Dimsum | Dimsum untuk Setiap Momen",
   description:
     "Dimsum full ayam berkualitas dari Jagakarsa, Jakarta Selatan. Dari ngemil sehari-hari, Dimsum Cake ulang tahun, Dimsum Tampah acara, hingga hampers spesial. Halal Certified ID31110016921890424.",
