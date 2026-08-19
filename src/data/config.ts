@@ -1,0 +1,22 @@
+export const BRAND_CONFIG = {
+  name: "LalaGi Dimsum",
+  tagline: "Dimsum untuk Setiap Momen.",
+  subtagline: "Dari ngemil sampai hari spesial.",
+  description:
+    "Dimsum full ayam untuk dinikmati sendiri, dikirim sebagai hadiah, sampai menemani birthday, anniversary, gathering dan acara spesialmu dari Jagakarsa, Jakarta Selatan.",
+  location: "Jagakarsa, Jakarta Selatan",
+  deliveryArea: "Melayani Pengiriman Cepat Se-Jabodetabek (Instant / Sameday / Nextday)",
+  phoneDisplay: "0878-8255-0494",
+  whatsappNumber: "6287882550494",
+  instagramHandle: "@lalagi.dimsum",
+  instagramUrl: "https://instagram.com/lalagi.dimsum",
+  googleRating: "5.0",
+  googleReviewCount: "166",
+  halalCertNumber: "ID31110016921890424",
+  halalText: "Halal Certified ID31110016921890424",
+  experienceYears: "5+ Tahun Perjalanan",
+  networkStats: "3 Retail & 8 Reseller Aktif",
+  teamHighlights: "Diberdayakan oleh 3 ibu di dapur & 2 armada delivery",
+  googleMapsUrl: "https://maps.google.com/?q=LalaGi+Dimsum+Jagakarsa",
+  operatingHours: "Setiap hari, 09.00 – 17.00 WIB",
+};
