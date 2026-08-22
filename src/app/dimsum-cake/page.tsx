@@ -108,6 +108,7 @@ export default function DimsumCakePage() {
                   src="/images/lalagi-dimsum-cake.jpg"
                   alt="Dimsum Cake LalaGi"
                   fill
+                  sizes="(max-width: 1023px) 100vw, 42vw"
                   priority
                   className="object-cover"
                 />
@@ -141,7 +142,13 @@ export default function DimsumCakePage() {
             >
               <div>
                 <div className="relative w-full h-64 bg-[#FFF9F2] overflow-hidden">
-                  <Image src={cake.image} alt={cake.title} fill className="object-cover hover:scale-105 transition-transform duration-500" />
+                  <Image
+                    src={cake.image}
+                    alt={cake.title}
+                    fill
+                    sizes="(max-width: 767px) 100vw, 33vw"
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                  />
                   <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-bold text-[#ED7772] shadow-sm">
                     {cake.badge}
                   </div>

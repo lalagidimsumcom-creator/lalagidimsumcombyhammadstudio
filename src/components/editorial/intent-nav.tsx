@@ -1,113 +1,166 @@
-"use client";
-
-import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { BowlFood, Cake, UsersThree, ArrowRight, Sparkle } from "@phosphor-icons/react";
+
+type MenuFeatureProps = {
+  title: string;
+  description: string;
+  href: string;
+  cta: string;
+  image: string;
+  alt: string;
+  imageClassName: string;
+  sizes: string;
+};
+
+function MenuCopy({
+  title,
+  description,
+  href,
+  cta,
+}: Pick<MenuFeatureProps, "title" | "description" | "href" | "cta">) {
+  return (
+    <div className="flex flex-col items-start">
+      <h3 className="font-serif-display text-[1.45rem] font-medium uppercase leading-[1.25] tracking-[0.06em] text-[#17343D] sm:text-[1.7rem]">
+        {title}
+      </h3>
+      <span className="mt-4 block h-px w-8 bg-[#B69A63]" aria-hidden="true" />
+      <p className="mt-4 max-w-[28rem] text-sm leading-7 text-[#526167]">
+        {description}
+      </p>
+      <Link
+        href={href}
+        className="mt-6 border-b border-[#B69A63] pb-1 font-serif-display text-xs font-medium uppercase tracking-[0.12em] text-[#17343D] hover:text-[#8E713A] focus-visible:rounded-sm"
+      >
+        {cta}
+      </Link>
+    </div>
+  );
+}
+
+function MenuFeature({
+  title,
+  description,
+  href,
+  cta,
+  image,
+  alt,
+  imageClassName,
+  sizes,
+}: MenuFeatureProps) {
+  return (
+    <article className="grid items-center gap-7 sm:grid-cols-[minmax(0,1.2fr)_minmax(11rem,0.8fr)] sm:gap-8">
+      <div className={`relative overflow-hidden bg-[#E9E1D5] ${imageClassName}`}>
+        <Image src={image} alt={alt} fill sizes={sizes} className="object-cover" />
+      </div>
+      <MenuCopy title={title} description={description} href={href} cta={cta} />
+    </article>
+  );
+}
+
+const features: MenuFeatureProps[] = [
+  {
+    title: "Dimsum Mentai",
+    description:
+      "Lembut dan gurih dengan saus mentai premium—pilihan hangat untuk teman makan sehari-hari.",
+    href: "/menu#dimsum-mentai",
+    cta: "Lihat Menu",
+    image: "/images/lalagi-dimsum-mentai.jpg",
+    alt: "Dimsum mentai khas LalaGi dengan saus creamy",
+    imageClassName: "aspect-[4/5]",
+    sizes: "(max-width: 639px) 100vw, (max-width: 1023px) 58vw, 25vw",
+  },
+  {
+    title: "Dimsum Cake",
+    description:
+      "Kreasi gurih untuk ulang tahun dan perayaan, disusun istimewa agar momen terasa lebih personal.",
+    href: "/dimsum-cake",
+    cta: "Pesan Cake",
+    image: "/images/lalagi-dimsum-cake.jpg",
+    alt: "Dimsum cake LalaGi untuk perayaan spesial",
+    imageClassName: "aspect-[1/1]",
+    sizes: "(max-width: 639px) 100vw, (max-width: 1023px) 58vw, 27vw",
+  },
+  {
+    title: "Dimsum Tampah",
+    description:
+      "Sajian melimpah untuk arisan, keluarga, hingga acara kantor—rapi, praktis, dan siap dibagikan.",
+    href: "/pesanan-acara#dimsum-tampah",
+    cta: "Konsultasi Acara",
+    image: "/images/lalagi-hero-tampah.jpg",
+    alt: "Dimsum tampah LalaGi untuk acara dan kebersamaan",
+    imageClassName: "aspect-[5/3]",
+    sizes: "(max-width: 639px) 100vw, (max-width: 1023px) 58vw, 30vw",
+  },
+];
 
 export default function EditorialIntentNav() {
-  const occasions = [
-    {
-      id: "everyday",
-      title: "Everyday Dimsum",
-      subtitle: "Buat ngemil & stok praktis di rumah",
-      tag: "🥟 Fresh & Frozen",
-      href: "/menu",
-      buttonText: "Pesan Sekarang",
-      image: "/images/lalagi-dimsum-original.jpg",
-      icon: BowlFood,
-    },
-    {
-      id: "special",
-      title: "Special Moments",
-      subtitle: "Birthday, anniversary & surprise",
-      tag: "🎂 Free Topper & Lilin",
-      href: "/dimsum-cake",
-      buttonText: "Pesan Sekarang",
-      image: "/images/lalagi-dimsum-cake.jpg",
-      icon: Cake,
-    },
-    {
-      id: "big",
-      title: "Big Moments",
-      subtitle: "Gathering, wedding & acara kantor",
-      tag: "🥢 Porsi Tampah Jumbo",
-      href: "/pesanan-acara",
-      buttonText: "Pesan Sekarang",
-      image: "/images/lalagi-dimsum-tampah.jpg",
-      icon: UsersThree,
-    },
-  ];
-
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#FFFDF9]">
-      <div className="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8">
-        
-        {/* Section Heading with Sparkle Decor */}
-        <div className="text-center mb-10 sm:mb-14 space-y-2">
-          <div className="inline-flex items-center space-x-1.5 px-3.5 py-1 rounded-full bg-[#FBE9E5] text-[#ED7772] text-xs font-bold uppercase tracking-wider">
-            <Sparkle weight="fill" className="w-3.5 h-3.5 text-[#E4A53A]" />
-            <span>PILIHAN MOMEN SPESIAL</span>
-          </div>
-          <h2 className="font-serif-display text-3xl sm:text-5xl lg:text-6xl font-normal text-[#ED7772]">
-            Mau Dimsum Buat Apa? <span className="inline-block font-light text-2xl sm:text-4xl align-middle">♡</span>
+    <section
+      aria-labelledby="signature-menu-title"
+      className="bg-[#F7F3EC] py-28 lg:py-36"
+    >
+      <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-12 xl:px-16">
+        <header className="mb-16 max-w-2xl lg:mb-0">
+          <p className="font-serif-display text-xs font-medium uppercase tracking-[0.28em] text-[#9A7A3D] sm:text-sm">
+            Signature Menu
+          </p>
+          <span className="mt-5 block h-px w-10 bg-[#B69A63]" aria-hidden="true" />
+          <h2
+            id="signature-menu-title"
+            className="mt-5 font-serif-display text-[2.25rem] font-normal uppercase leading-[1.18] tracking-[0.055em] text-[#17343D] sm:text-5xl lg:text-[3.4rem]"
+          >
+            Pilihan untuk
+            <br />
+            setiap momen
           </h2>
+        </header>
+
+        <div className="space-y-20 lg:hidden">
+          {features.map((feature) => (
+            <MenuFeature key={feature.title} {...feature} />
+          ))}
         </div>
 
-        {/* 3 Intent Navigation Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
-          {occasions.map((item) => {
-            const IconComponent = item.icon;
-            return (
-              <div
-                key={item.id}
-                className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-[#321D16] text-white shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
-              >
-                {/* Photo Top Container */}
-                <div className="relative h-52 sm:h-64 lg:h-76 w-full overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#321D16] via-transparent to-black/20" />
-                  
-                  {/* Floating White Icon Pill */}
-                  <div className="absolute top-4 left-4 sm:top-5 sm:left-5 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-white text-[#ED7772] shadow-md flex items-center justify-center">
-                    <IconComponent weight="bold" className="w-6 h-6 sm:w-7 sm:h-7" />
-                  </div>
+        <div className="hidden lg:mt-16 lg:grid lg:grid-cols-12 lg:grid-rows-[auto_auto] lg:gap-x-10 lg:gap-y-20 xl:gap-x-14">
+          <article className="col-span-6 row-start-1 grid grid-cols-[minmax(0,1.25fr)_minmax(10.5rem,0.75fr)] items-center gap-8 xl:gap-10">
+            <div className="relative aspect-[4/5] overflow-hidden bg-[#E9E1D5]">
+              <Image
+                src={features[0].image}
+                alt={features[0].alt}
+                fill
+                sizes="(max-width: 1279px) 27vw, 25vw"
+                className="object-cover"
+              />
+            </div>
+            <MenuCopy {...features[0]} />
+          </article>
 
-                  {/* Floating Tag Top Right */}
-                  <div className="absolute top-4 right-4 sm:top-5 sm:right-5 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-[11px] sm:text-xs font-bold border border-white/20">
-                    {item.tag}
-                  </div>
-                </div>
+          <article className="col-span-6 col-start-7 row-start-1 grid grid-cols-[minmax(0,1.35fr)_minmax(10.5rem,0.65fr)] items-center gap-8 xl:gap-10">
+            <div className="relative aspect-square overflow-hidden bg-[#E9E1D5]">
+              <Image
+                src={features[1].image}
+                alt={features[1].alt}
+                fill
+                sizes="(max-width: 1279px) 29vw, 27vw"
+                className="object-cover"
+              />
+            </div>
+            <MenuCopy {...features[1]} />
+          </article>
 
-                {/* Content Details */}
-                <div className="p-5 sm:p-7 sm:pt-4 flex flex-col justify-between flex-grow">
-                  <div className="space-y-1.5 sm:space-y-2 mb-5 sm:mb-6">
-                    <h3 className="font-serif-display text-xl sm:text-2xl lg:text-3xl font-normal text-white">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-200 leading-relaxed font-normal">
-                      {item.subtitle}
-                    </p>
-                  </div>
-
-                  {/* Action Link Button */}
-                  <Link
-                    href={item.href}
-                    className="w-full inline-flex items-center justify-center space-x-2 py-3.5 sm:py-4 px-5 rounded-full bg-[#ED7772] hover:bg-[#D9615C] text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-xs hover:scale-[1.02] active:scale-95"
-                  >
-                    <span>{item.buttonText}</span>
-                    <ArrowRight weight="bold" className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </div>
-            );
-          })}
+          <article className="col-span-7 col-start-4 row-start-2 grid grid-cols-[minmax(0,1.55fr)_minmax(11rem,0.7fr)] items-center gap-8 xl:gap-10">
+            <div className="relative aspect-[5/3] overflow-hidden bg-[#E9E1D5]">
+              <Image
+                src={features[2].image}
+                alt={features[2].alt}
+                fill
+                sizes="36vw"
+                className="object-cover"
+              />
+            </div>
+            <MenuCopy {...features[2]} />
+          </article>
         </div>
-
       </div>
     </section>
   );

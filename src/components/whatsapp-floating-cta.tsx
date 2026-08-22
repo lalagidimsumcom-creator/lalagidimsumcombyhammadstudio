@@ -8,27 +8,21 @@ export default function WhatsAppFloatingCta() {
   return (
     <aside
       aria-label="Floating WhatsApp CTA"
-      className="fixed bottom-6 right-6 z-40 flex items-center group"
+      className="group fixed bottom-5 right-5 z-40 flex items-center"
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
     >
-      {/* Desktop Tooltip Label */}
-      <span className="mr-3 px-4 py-2 rounded-full bg-white text-[#302321] text-xs font-bold shadow-xl border border-[#F7E3E1] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hidden sm:inline-block">
-        Chat LalaGi Dimsum 🥟
+      <span className="pointer-events-none mr-3 hidden border border-[#B69A63]/45 bg-[#FFFCF7] px-4 py-2 font-serif text-[11px] font-semibold uppercase tracking-[0.16em] text-[#17343D] opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 sm:inline-block">
+        Chat LalaGi
       </span>
 
-      {/* Button */}
       <a
         href={getWhatsAppUrl()}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Pesan via WhatsApp"
-        className="relative flex items-center space-x-2 px-5 py-3.5 sm:px-4 sm:py-4 rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300"
+        className="flex size-14 items-center justify-center rounded-full border border-[#B69A63] bg-[#17343D] text-[#F7F3EC] shadow-xl transition-[background-color,color,transform] duration-200 hover:-translate-y-1 hover:bg-[#B69A63] hover:text-[#0E2831] active:translate-y-0"
       >
-        {/* Soft pulse glow */}
-        <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-60 animate-ping -z-10" />
-
-        <WhatsappLogo weight="fill" className="w-7 h-7 text-white" />
-        <span className="text-sm font-bold sm:hidden">Pesan via WhatsApp</span>
+        <WhatsappLogo weight="fill" className="size-6" aria-hidden="true" />
       </a>
     </aside>
   );

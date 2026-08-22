@@ -117,6 +117,7 @@ export default function PesananAcaraPage() {
                   src="/images/lalagi-dimsum-event.jpg"
                   alt="Sajian Acara LalaGi Dimsum"
                   fill
+                  sizes="(max-width: 1023px) 100vw, 50vw"
                   priority
                   className="object-cover"
                 />
@@ -195,9 +196,19 @@ export default function PesananAcaraPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {eventUseCases.map((useCase, idx) => (
-              <div key={idx} className="bg-white rounded-[32px] overflow-hidden border border-[#FBE9E5] shadow-xs">
+              <div
+                key={idx}
+                id={idx === 0 ? "dimsum-tampah" : undefined}
+                className="scroll-mt-24 bg-white rounded-[32px] overflow-hidden border border-[#FBE9E5] shadow-xs"
+              >
                 <div className="relative w-full h-56 bg-[#FFF9F2]">
-                  <Image src={useCase.image} alt={useCase.title} fill className="object-cover" />
+                  <Image
+                    src={useCase.image}
+                    alt={useCase.title}
+                    fill
+                    sizes="(max-width: 767px) 100vw, 33vw"
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-7 space-y-2 text-left">
                   <h4 className="font-serif-display text-2xl font-bold text-[#321D16]">{useCase.title}</h4>

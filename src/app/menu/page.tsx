@@ -93,7 +93,8 @@ export default function MenuPage() {
           {filteredProducts.map((product) => (
             <div
               key={product.id}
-              className="group bg-white rounded-[32px] overflow-hidden border border-[#FBE9E5] shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              id={product.id}
+              className="group scroll-mt-24 bg-white rounded-[32px] overflow-hidden border border-[#FBE9E5] shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Product Image */}
@@ -102,6 +103,7 @@ export default function MenuPage() {
                     src={product.image}
                     alt={product.name}
                     fill
+                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   {product.badge && (

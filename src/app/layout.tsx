@@ -1,19 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Mochiy_Pop_One, Plus_Jakarta_Sans } from "next/font/google";
+import { Cinzel } from "next/font/google";
 import "./globals.css";
 
-const mochiyPop = Mochiy_Pop_One({
-  variable: "--font-mochiy",
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400"],
-});
-
-const plusJakarta = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -41,10 +34,10 @@ export const metadata: Metadata = {
     siteName: "LalaGi Dimsum",
     images: [
       {
-        url: "/images/lalagi-dimsum-cake.jpg",
+        url: "/images/lalagi-hero-tampah.jpg",
         width: 1200,
         height: 1200,
-        alt: "LalaGi Dimsum Cake"
+        alt: "Tampah aneka dimsum LalaGi"
       }
     ],
     locale: "id_ID",
@@ -57,7 +50,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#ED7772",
+  themeColor: "#17343D",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -71,9 +64,9 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${mochiyPop.variable} ${plusJakarta.variable} scroll-smooth antialiased`}
+      className={`${cinzel.variable} scroll-smooth antialiased`}
     >
-      <body className="font-sans min-h-screen bg-[#FFFDF9] text-[#321D16] selection:bg-[#ED7772] selection:text-white overflow-x-hidden">
+      <body className="font-sans min-h-screen bg-[#F7F3EC] text-[#17343D] selection:bg-[#B69A63] selection:text-[#0E2831] overflow-x-hidden">
         {children}
       </body>
     </html>

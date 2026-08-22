@@ -2,7 +2,6 @@ import React from "react";
 import EditorialNavbar from "@/components/editorial/navbar";
 import EditorialHero from "@/components/editorial/hero";
 import EditorialIntentNav from "@/components/editorial/intent-nav";
-import EditorialBestSellers from "@/components/editorial/best-sellers";
 import EditorialSignatureCake from "@/components/editorial/signature-cake";
 import EditorialTrustStrip from "@/components/editorial/trust-strip";
 import EditorialFinalCta from "@/components/editorial/final-cta";
@@ -11,33 +10,25 @@ import WhatsAppFloatingCta from "@/components/whatsapp-floating-cta";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#FFFDF9] text-[#321D16] flex flex-col font-sans selection:bg-[#ED7772] selection:text-white">
-      {/* 00. Sticky Editorial Header */}
+    <div className="min-h-screen bg-[#F7F3EC] text-[#17343D] font-sans">
+      <a
+        href="#main-content"
+        className="fixed left-4 top-4 z-[100] -translate-y-24 bg-[#B69A63] px-4 py-3 font-bold text-[#0E2831] transition-transform focus-visible:translate-y-0"
+      >
+        Lewati ke Konten
+      </a>
       <EditorialNavbar />
 
-      {/* 01. Brand Campaign Hero: "Dimsum untuk Setiap Momen. ♡" */}
-      <EditorialHero />
+      <main id="main-content">
+        <EditorialHero />
+        <EditorialIntentNav />
+        <EditorialTrustStrip />
+        <EditorialSignatureCake />
+        <EditorialFinalCta />
+      </main>
 
-      {/* 02. Intent Navigation: "Mau Dimsum Buat Apa? ♡" */}
-      <EditorialIntentNav />
-
-      {/* 03. 3 Best Sellers: "Kenalan Sama Favorit LalaGi ♡" */}
-      <EditorialBestSellers />
-
-      {/* 04. Signature Campaign: "Birthday Cake? Coba yang Lebih Gurih. ✨" */}
-      <EditorialSignatureCake />
-
-      {/* 05. Dark Cocoa Trust Strip & Prominent Testimonial */}
-      <EditorialTrustStrip />
-
-      {/* 06. Playful Full-Width Coral CTA: "Jadi, Hari Ini Mau Dimsum Apa?" */}
-      <EditorialFinalCta />
-
-      {/* 07. Refined Warm Footer */}
       <EditorialFooter />
-
-      {/* Sticky Floating WhatsApp */}
       <WhatsAppFloatingCta />
-    </main>
+    </div>
   );
 }

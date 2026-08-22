@@ -1,107 +1,92 @@
-# 🥟 LalaGi Dimsum — Website Brand & Landing Page
+# LalaGi Dimsum
 
-> **"Dimsum untuk Setiap Momen. Dari ngemil sampai hari spesial."**  
-> Website resmi brand F&B modern **LalaGi Dimsum** (Jagakarsa, Jakarta Selatan).
+Website resmi LalaGi Dimsum, brand dimsum full ayam dari Jagakarsa, Jakarta Selatan. Situs ini dirancang sebagai landing page yang sederhana, elegan, dan berorientasi konversi untuk pemesanan harian, hadiah, perayaan, serta kebutuhan acara.
 
----
+## Tentang proyek
 
-## 🌟 Tentang LalaGi Dimsum
+Tampilan menggunakan pendekatan editorial premium dengan palet navy, ivory, dan gold. Cinzel digunakan untuk judul dan elemen display, sementara Arial menjadi font utama sementara agar antarmuka tetap bersih dan mudah dibaca.
 
-**LalaGi Dimsum** adalah brand kuliner lokal spesialis olahan dimsum full ayam premium yang memadukan kelezatan autentik, higienitas tinggi, dan sertifikasi halal resmi untuk berbagai momen: mulai dari ngemil harian, hampers, perayaan ulang tahun (*Dimsum Cake & Tower*), hingga katering acara besar (*Dimsum Tampah*).
+Informasi brand utama:
 
-- 🏷️ **Sertifikasi Halal:** BPJPH / MUI No. `ID31110016921890424` (100% Full Ayam Segar)
-- 📍 **Lokasi Dapur:** Jagakarsa, Jakarta Selatan
-- ⭐ **Google Maps Rating:** 5.0 ★ (166+ ulasan pelanggan terverifikasi)
-- 📱 **WhatsApp:** [0878-8255-0494](https://wa.me/6287882550494)
-- 📸 **Instagram:** [@lalagi.dimsum](https://instagram.com/lalagi.dimsum)
-- 📻 **Liputan Media:** Radio Republik Indonesia (RRI) & UMKM Connect
+- Lokasi: Jagakarsa, Jakarta Selatan
+- WhatsApp: [0878-8255-0494](https://wa.me/6287882550494)
+- Instagram: [@lalagi.dimsum](https://instagram.com/lalagi.dimsum)
+- Sertifikasi halal: `ID31110016921890424`
+- Jam operasional: setiap hari, 09.00–17.00 WIB
 
----
+## Fitur
 
-## 🚀 Fitur & Halaman Utama
+- Homepage responsif dengan fotografi produk LalaGi
+- Navigasi mobile dan desktop
+- Katalog menu dengan filter kategori
+- Halaman khusus Dimsum Cake dan Dimsum Tower
+- Halaman pemesanan acara dan bulk order
+- Cerita brand, bukti kepercayaan, dan ulasan pelanggan
+- CTA WhatsApp kontekstual pada setiap alur pemesanan
+- Optimasi gambar dan font melalui Next.js
+- Metadata dasar untuk mesin pencari dan media sosial
 
-1. **Homepage (Modern Editorial Canvas):**
-   - **Hero Canvas:** Komposisi editorial menyatu (*continuous canvas*) dengan foto piringan dimsum jumbo dan *feathered gradient mask* mulus.
-   - **Intent Navigation ("Mau Dimsum Buat Apa?"):** Panduan 3 skenario kebutuhan pelanggan (*Everyday Dimsum*, *Special Moments*, *Big Moments*).
-   - **Best Sellers:** Preview ringkas menu andalan (*Dimsum Mentai*, *Dimsum Cake*, *Dimsum Tampah*) dengan tampilan baris horizontal hemat ruang di layar HP.
-   - **Signature Celebration:** Showcase *Dimsum Cake* 50% *full-bleed edge-to-edge* dengan checklist keunggulan berikon.
-   - **Trust & Testimonial Strip:** Dark cocoa strip yang memuat logo resmi Google Reviews, Halal Indonesia, RRI, dan ulasan pelanggan nyata.
-   - **Final CTA & Floating WhatsApp:** Artwork sumpit menjepit dimsum transparan dengan tombol pemesanan cepat.
+## Halaman
 
-2. **Subpages:**
-   - [`/menu`](/menu) — Katalog lengkap dimsum fresh & frozen dengan filter kategori interaktif dan panduan penyimpanan.
-   - [`/dimsum-cake`](/dimsum-cake) — Halaman spesialis kue ulang tahun gurih (*Dimsum Cake 30 pcs & Dimsum Tower 3 Tingkat*).
-   - [`/pesanan-acara`](/pesanan-acara) — Layanan bulk order untuk wedding stall, meeting kantor, dan gathering keluarga.
-   - [`/tentang`](/tentang) — Kisah dapur rumahan Jagakarsa, tim ibu berdaya, pencapaian, dan galeri Instagram.
+| Rute | Fungsi |
+| --- | --- |
+| `/` | Landing page utama |
+| `/menu` | Katalog produk dan kategori menu |
+| `/dimsum-cake` | Produk perayaan: cake dan tower |
+| `/pesanan-acara` | Informasi pesanan acara dan jumlah besar |
+| `/tentang` | Cerita, nilai, dan profil LalaGi |
 
----
+## Teknologi
 
-## 🛠️ Tech Stack
+- Next.js 16 dengan App Router
+- React 19
+- TypeScript strict mode
+- Tailwind CSS v4
+- Phosphor Icons
+- Next.js Image dan Font optimization
+- Vercel sebagai target deployment
 
-- **Framework:** [Next.js 16 (App Router, React 19, Turbopack)](https://nextjs.org/)
-- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) dengan skema warna OKLCH & custom tokens
-- **Typography:** 
-  - Display / Headlines: `Mochiy Pop One` (Google Fonts)
-  - Body & UI: `Plus Jakarta Sans` (Google Fonts)
-- **Icons:** [@phosphor-icons/react](https://phosphoricons.com/) & [@iconify/react](https://iconify.design/)
-- **TypeScript:** Strict Mode (0 `any`, type safe)
-- **Assets:** WebP / PNG / JPEG beresolusi tinggi dengan optimasi Next.js
+## Menjalankan secara lokal
 
----
+Persyaratan: Node.js 20 atau lebih baru dan npm.
 
-## 💻 Panduan Menjalankan Project
-
-### 1. Instalasi Dependensi
 ```bash
+git clone https://github.com/lalagidimsumcom-creator/lalagidimsumcombyhammadstudio.git
+cd lalagidimsumcombyhammadstudio
 npm install
-```
-
-### 2. Menjalankan Server Development
-```bash
 npm run dev
 ```
-Buka [http://localhost:3000](http://localhost:3000) pada browser Anda.
 
-### 3. Pemeriksaan Codebase & Build
-```bash
-npm run check      # Menjalankan lint + typecheck + build
-npm run build      # Production Next.js build
-npm run start      # Menjalankan production server
-```
+Buka [http://localhost:3000](http://localhost:3000).
 
----
+## Perintah
 
-## 📁 Struktur Direktori
+| Perintah | Keterangan |
+| --- | --- |
+| `npm run dev` | Menjalankan development server |
+| `npm run build` | Membuat production build |
+| `npm run start` | Menjalankan production server |
+| `npm run lint` | Menjalankan ESLint |
+| `npm run typecheck` | Memeriksa TypeScript tanpa menghasilkan file |
+| `npm run check` | Menjalankan lint, typecheck, dan build |
 
-```
+## Struktur proyek
+
+```text
 src/
-├── app/
-│   ├── layout.tsx         # Root layout (Mochiy Pop One + Plus Jakarta Sans)
-│   ├── globals.css        # Tailwind v4 tokens & color variables
-│   ├── page.tsx           # Homepage editorial
-│   ├── menu/              # Katalog menu & filter
-│   ├── dimsum-cake/       # Halaman Dimsum Cake & Tower
-│   ├── pesanan-acara/     # Halaman katering & bulk order
-│   └── tentang/           # Story dapur Jagakarsa & review
+├── app/                 # Route, layout, metadata, dan global styles
 ├── components/
-│   ├── editorial/         # Komponen homepage editorial LalaGi
-│   │   ├── navbar.tsx
-│   │   ├── hero.tsx
-│   │   ├── intent-nav.tsx
-│   │   ├── best-sellers.tsx
-│   │   ├── signature-cake.tsx
-│   │   ├── trust-strip.tsx
-│   │   ├── final-cta.tsx
-│   │   └── footer.tsx
-│   └── whatsapp-floating-cta.tsx
-├── data/                  # Konfigurasi brand, menu, FAQ, & review
-├── lib/                   # Utility helpers & generator URL WhatsApp
-└── types/                 # Interface TypeScript
+│   └── editorial/       # Komponen landing page dan navigasi
+├── data/                # Konfigurasi brand, produk, dan ulasan
+└── lib/                 # Helper tautan WhatsApp
 public/
-└── images/                # Asset foto produk, logo resmi, & artwork
+└── images/              # Logo dan fotografi produk LalaGi
 ```
 
----
+## Konfigurasi deployment
 
-## 📄 Lisensi
-© 2026 LalaGi Dimsum. Dibuat dengan dedikasi untuk menyajikan dimsum terbaik bagi setiap momen kebersamaan.
+Deploy langsung ke Vercel dengan root directory proyek ini. Variabel `NEXT_PUBLIC_SITE_URL` bersifat opsional; jika tidak diatur, metadata menggunakan `https://lalagidimsum.com`.
+
+## Lisensi
+
+Kode proyek tersedia di bawah [MIT License](LICENSE). Seluruh nama, logo, fotografi, dan aset merek LalaGi Dimsum tetap menjadi milik pemiliknya masing-masing.

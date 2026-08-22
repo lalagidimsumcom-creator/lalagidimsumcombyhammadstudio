@@ -73,6 +73,7 @@ export default function TentangPage() {
                   src="/images/lalagi-dimsum-kitchen.jpg"
                   alt="Dapur Pembuatan LalaGi Dimsum"
                   fill
+                  sizes="(max-width: 1023px) 100vw, 42vw"
                   priority
                   className="object-cover"
                 />
@@ -93,6 +94,7 @@ export default function TentangPage() {
                 src="/images/lalagi-dimsum-original.jpg"
                 alt="Dimsum Asli Full Daging Ayam"
                 fill
+                sizes="(max-width: 1023px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>

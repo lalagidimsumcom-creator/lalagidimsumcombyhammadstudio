@@ -1,102 +1,85 @@
-"use client";
+type ProofPointProps = {
+  value: string;
+  label: string;
+  icon: "star" | "halal" | "shield" | "location";
+};
 
-import React from "react";
-import { Star, Medal, Quotes, CheckCircle } from "@phosphor-icons/react";
+function ProofIcon({ icon }: Pick<ProofPointProps, "icon">) {
+  const iconClassName = "h-9 w-9 shrink-0 text-[#C39A4A] sm:h-10 sm:w-10";
+
+  if (icon === "star") {
+    return (
+      <svg className={iconClassName} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="m12 3 2.62 5.31 5.86.85-4.24 4.13 1 5.83L12 16.37l-5.24 2.75 1-5.83-4.24-4.13 5.86-.85L12 3Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  if (icon === "halal") {
+    return (
+      <svg className={iconClassName} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 2.75 18.5 6.5v7L12 21.25 5.5 13.5v-7L12 2.75Z" stroke="currentColor" strokeWidth="1.35" />
+        <path d="M9.2 15.3V8.7m5.6 6.6V8.7M9.2 12h5.6" stroke="currentColor" strokeWidth="1.35" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  if (icon === "shield") {
+    return (
+      <svg className={iconClassName} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 2.8c2.4 2 4.7 2.65 7.25 2.9v5.55c0 4.65-2.88 8.1-7.25 10-4.37-1.9-7.25-5.35-7.25-10V5.7C7.3 5.45 9.6 4.8 12 2.8Z" stroke="currentColor" strokeWidth="1.35" strokeLinejoin="round" />
+        <path d="m8.9 12.1 2 2 4.35-4.55" stroke="currentColor" strokeWidth="1.35" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg className={iconClassName} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M19 10c0 5.3-7 11-7 11S5 15.3 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" strokeWidth="1.35" />
+      <circle cx="12" cy="10" r="2.25" stroke="currentColor" strokeWidth="1.35" />
+    </svg>
+  );
+}
+
+function ProofPoint({ value, label, icon }: ProofPointProps) {
+  return (
+    <div className="flex min-h-24 items-center justify-center gap-4 px-3 py-5 sm:px-5">
+      <ProofIcon icon={icon} />
+      <p className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-left">
+        <strong className="font-serif-display text-xl font-medium uppercase tracking-[0.08em] text-[#C9A259] sm:text-2xl">
+          {value}
+        </strong>
+        <span className="font-serif-display text-[0.65rem] uppercase tracking-[0.15em] text-[#F7F3EC] sm:text-xs">
+          {label}
+        </span>
+      </p>
+    </div>
+  );
+}
+
+const proofPoints: ProofPointProps[] = [
+  { value: "5.0", label: "Google Rating", icon: "star" },
+  { value: "Halal", label: "Certified", icon: "halal" },
+  { value: "5+", label: "Tahun", icon: "shield" },
+  { value: "Jabodetabek", label: "Area Layanan", icon: "location" },
+];
 
 export default function EditorialTrustStrip() {
   return (
-    <section className="bg-[#321D16] text-[#FFF9F1] py-16 lg:py-20 border-b border-[#432719]">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          
-          {/* Left Column: 4 Prominent Real Logos & Badges */}
-          <div className="lg:col-span-6 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 text-center items-start">
-            
-            {/* Metric 1: Google Reviews Official Logo */}
-            <div className="space-y-3 flex flex-col items-center">
-              <div className="w-20 h-20 sm:w-22 sm:h-22 rounded-2xl bg-white p-3 flex items-center justify-center shadow-lg border-2 border-white/30 hover:scale-105 transition-transform">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/logo-google-reviews.png"
-                  alt="Google Reviews 5 Stars"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-xl sm:text-2xl font-black text-white leading-tight">5.0 ★</div>
-                <div className="text-xs sm:text-sm text-gray-200 font-semibold">Google Rating</div>
-              </div>
-            </div>
-
-            {/* Metric 2: Halal Indonesia Official Logo */}
-            <div className="space-y-3 flex flex-col items-center">
-              <div className="w-20 h-20 sm:w-22 sm:h-22 rounded-2xl bg-white p-2.5 flex items-center justify-center shadow-lg border-2 border-white/30 hover:scale-105 transition-transform">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/logo-halal-indonesia.jpg"
-                  alt="Halal Indonesia BPJPH MUI"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-xl sm:text-2xl font-black text-white leading-tight">Halal</div>
-                <div className="text-xs sm:text-sm text-gray-200 font-semibold">Certified Resmi</div>
-              </div>
-            </div>
-
-            {/* Metric 3: RRI Official Logo */}
-            <div className="space-y-3 flex flex-col items-center">
-              <div className="w-20 h-20 sm:w-22 sm:h-22 rounded-2xl bg-white p-3 flex items-center justify-center shadow-lg border-2 border-white/30 hover:scale-105 transition-transform">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/logo-rri.png"
-                  alt="Radio Republik Indonesia (RRI)"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-xl sm:text-2xl font-black text-white leading-tight">RRI</div>
-                <div className="text-xs sm:text-sm text-gray-200 font-semibold">Liputan Resmi</div>
-              </div>
-            </div>
-
-            {/* Metric 4: 5+ Tahun Pengalaman */}
-            <div className="space-y-3 flex flex-col items-center">
-              <div className="w-20 h-20 sm:w-22 sm:h-22 rounded-2xl bg-gradient-to-br from-[#432719] to-[#25140D] flex items-center justify-center shadow-lg border-2 border-[#E4A53A]/40 hover:scale-105 transition-transform">
-                <Medal weight="fill" className="w-10 h-10 text-[#E4A53A]" />
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-xl sm:text-2xl font-black text-white leading-tight">5+ Tahun</div>
-                <div className="text-xs sm:text-sm text-gray-200 font-semibold">Pengalaman</div>
-              </div>
-            </div>
-
+    <section aria-label="Kepercayaan pelanggan" className="w-full bg-[#092A35] text-[#F7F3EC]">
+      <div className="mx-auto grid max-w-[1400px] grid-cols-2 px-4 py-5 sm:px-8 lg:grid-cols-4 lg:px-12 lg:py-3 xl:px-16">
+        {proofPoints.map((proofPoint, index) => (
+          <div
+            key={proofPoint.label}
+            className={[
+              index % 2 === 1 ? "border-l border-[#B69A63]/55" : "",
+              index > 1 ? "border-t border-[#B69A63]/55 lg:border-t-0" : "",
+              index > 0 ? "lg:border-l lg:border-[#B69A63]/55" : "",
+            ].join(" ")}
+          >
+            <ProofPoint {...proofPoint} />
           </div>
-
-          {/* Right Column: Prominent Real Testimonial Quote with Large Readable Typography */}
-          <div className="lg:col-span-6 lg:border-l-2 lg:border-white/15 lg:pl-10 space-y-4 text-left">
-            <div className="flex items-start space-x-4">
-              <Quotes weight="fill" className="w-10 h-10 sm:w-12 sm:h-12 text-[#ED7772] shrink-0" />
-              <div className="space-y-3">
-                <p className="font-serif-display text-xl sm:text-2xl lg:text-[26px] text-white italic leading-relaxed">
-                  &ldquo;Rasanya enak, bahan berkualitas, dan selalu jadi andalan tiap ada acara di keluarga kami.&rdquo;
-                </p>
-                <div className="flex flex-wrap items-center gap-3 pt-2">
-                  <div className="flex items-center space-x-1.5 text-sm sm:text-base text-gray-200 font-bold">
-                    <span>— Rina, Pelanggan Setia LalaGi</span>
-                    <CheckCircle weight="fill" className="w-4.5 h-4.5 text-[#25D366]" />
-                  </div>
-                  <div className="flex items-center space-x-1 text-[#E4A53A]">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} weight="fill" className="w-5 h-5" />
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
+        ))}
       </div>
     </section>
   );

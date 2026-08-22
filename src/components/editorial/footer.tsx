@@ -1,142 +1,178 @@
-"use client";
-
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { WhatsappLogo, InstagramLogo, MapPin, EnvelopeSimple } from "@phosphor-icons/react";
+import {
+  EnvelopeSimple,
+  InstagramLogo,
+  MapPin,
+  WhatsappLogo,
+} from "@phosphor-icons/react/dist/ssr";
 import { BRAND_CONFIG } from "@/data/config";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
+const navigation = [
+  { label: "Home", href: "/" },
+  { label: "Menu", href: "/menu" },
+  { label: "Dimsum Cake", href: "/dimsum-cake" },
+  { label: "Pesanan Acara", href: "/pesanan-acara" },
+  { label: "Tentang", href: "/tentang" },
+];
+
+const offerings = [
+  { label: "Menu Dimsum", href: "/menu" },
+  { label: "Dimsum Cake", href: "/dimsum-cake" },
+  { label: "Pesanan Acara", href: "/pesanan-acara" },
+];
+
+const linkClass =
+  "transition-colors duration-200 hover:text-lalagi-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lalagi-gold";
+
 export default function EditorialFooter() {
   return (
-    <footer className="bg-[#FFFDF9] text-[#76645D] pt-16 sm:pt-20 pb-12 border-t border-[#FBE9E5]">
-      <div className="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-[#FBE9E5]/70">
-          
-          {/* Col 1: Brand Info */}
-          <div className="lg:col-span-5 space-y-4">
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="relative w-11 h-11 rounded-full overflow-hidden border border-[#FBE9E5] shadow-xs">
-                <Image
-                  src="/images/lalagi-logo.jpg"
-                  alt="LalaGi Dimsum"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <span className="font-serif-display text-2xl font-bold text-[#321D16]">
-                LalaGi <span className="text-[#ED7772]">Dimsum</span>
+    <footer className="bg-lalagi-darknavy px-5 pb-8 text-lalagi-white sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-[1360px] border-t border-lalagi-gold/60 pt-12 sm:pt-14">
+        <div className="grid gap-11 pb-12 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.75fr_0.8fr_1.1fr] lg:gap-12">
+          <div>
+            <Link
+              href="/"
+              className={`inline-flex items-center gap-4 ${linkClass}`}
+              aria-label="LalaGi Dimsum — Home"
+            >
+              <Image
+                src="/images/lalagi-logo.jpg"
+                alt=""
+                width={52}
+                height={52}
+                className="border border-lalagi-gold"
+              />
+              <span className="font-serif-display text-lg tracking-[0.16em] text-lalagi-gold">
+                LALAGI DIMSUM
               </span>
             </Link>
-
-            <p className="text-sm sm:text-base text-[#665750] leading-relaxed max-w-sm font-normal">
-              LalaGi Dimsum – Dimsum full ayam berkualitas dibuat dengan bahan terbaik untuk setiap momen spesial dalam hidupmu.
+            <p className="mt-5 max-w-sm text-sm leading-6 text-white/65">
+              Dimsum homemade halal dari Jagakarsa, dibuat hangat untuk setiap
+              momen.
             </p>
-
-            <div className="pt-2">
+            <p className="mt-3 text-xs leading-5 tracking-wide text-white/50">
+              Halal MUI No. {BRAND_CONFIG.halalCertNumber}
+            </p>
+            <div className="mt-6 flex gap-5 text-lalagi-gold">
               <a
                 href={BRAND_CONFIG.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 text-sm sm:text-base font-bold text-[#ED7772] hover:underline"
+                className={linkClass}
+                aria-label={`Instagram ${BRAND_CONFIG.instagramHandle}`}
               >
-                <InstagramLogo weight="fill" className="w-5 h-5" />
-                <span>{BRAND_CONFIG.instagramHandle}</span>
+                <InstagramLogo size={22} weight="regular" aria-hidden="true" />
+              </a>
+              <a
+                href={getWhatsAppUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+                aria-label={`WhatsApp ${BRAND_CONFIG.phoneDisplay}`}
+              >
+                <WhatsappLogo size={22} weight="regular" aria-hidden="true" />
               </a>
             </div>
           </div>
 
-          {/* Col 2: Navigasi */}
-          <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-bold text-sm sm:text-base uppercase tracking-wider text-[#321D16]">
-              Navigasi
-            </h4>
-            <ul className="space-y-2.5 text-sm sm:text-base">
-              <li>
-                <Link href="/" className="hover:text-[#ED7772] transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/menu" className="hover:text-[#ED7772] transition-colors">
-                  Menu
-                </Link>
-              </li>
-              <li>
-                <Link href="/dimsum-cake" className="hover:text-[#ED7772] transition-colors">
-                  Dimsum Cake
-                </Link>
-              </li>
-              <li>
-                <Link href="/pesanan-acara" className="hover:text-[#ED7772] transition-colors">
-                  Pesanan Acara
-                </Link>
-              </li>
-              <li>
-                <Link href="/tentang" className="hover:text-[#ED7772] transition-colors">
-                  Tentang LalaGi
-                </Link>
-              </li>
+          <div>
+            <h3 className="font-serif-display text-xs font-semibold tracking-[0.18em] text-lalagi-gold">
+              NAVIGASI
+            </h3>
+            <ul className="mt-5 space-y-3 text-sm text-white/65">
+              {navigation.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className={linkClass}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Col 3: Bantuan */}
-          <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-bold text-sm sm:text-base uppercase tracking-wider text-[#321D16]">
-              Bantuan
-            </h4>
-            <ul className="space-y-2.5 text-sm sm:text-base">
-              <li>
-                <Link href="/tentang#pemesanan" className="hover:text-[#ED7772] transition-colors">
-                  Cara Pemesanan
-                </Link>
-              </li>
-              <li>
-                <Link href="/tentang#pengiriman" className="hover:text-[#ED7772] transition-colors">
-                  Pengiriman
-                </Link>
-              </li>
-              <li>
-                <Link href="/tentang#faq" className="hover:text-[#ED7772] transition-colors">
-                  FAQ
-                </Link>
-              </li>
+          <div>
+            <h3 className="font-serif-display text-xs font-semibold tracking-[0.18em] text-lalagi-gold">
+              LAYANAN
+            </h3>
+            <ul className="mt-5 space-y-3 text-sm text-white/65">
+              {offerings.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className={linkClass}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Col 4: Hubungi Kami */}
-          <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-bold text-sm sm:text-base uppercase tracking-wider text-[#321D16]">
-              Hubungi Kami
-            </h4>
-            <ul className="space-y-3 text-sm sm:text-base">
+          <div>
+            <h3 className="font-serif-display text-xs font-semibold tracking-[0.18em] text-lalagi-gold">
+              KONTAK
+            </h3>
+            <ul className="mt-5 space-y-4 text-sm text-white/65">
               <li>
                 <a
                   href={getWhatsAppUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-[#665750] hover:text-[#25D366] transition-colors font-medium"
+                  className={`flex items-start gap-3 ${linkClass}`}
                 >
-                  <WhatsappLogo weight="fill" className="w-5 h-5 text-[#25D366] shrink-0" />
+                  <WhatsappLogo
+                    size={18}
+                    weight="regular"
+                    className="mt-0.5 shrink-0 text-lalagi-gold"
+                    aria-hidden="true"
+                  />
                   <span>{BRAND_CONFIG.phoneDisplay}</span>
                 </a>
               </li>
-              <li className="flex items-center space-x-2 font-medium text-[#665750]">
-                <MapPin weight="bold" className="w-5 h-5 text-[#ED7772] shrink-0" />
+              <li>
+                <a
+                  href={BRAND_CONFIG.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-start gap-3 ${linkClass}`}
+                >
+                  <InstagramLogo
+                    size={18}
+                    weight="regular"
+                    className="mt-0.5 shrink-0 text-lalagi-gold"
+                    aria-hidden="true"
+                  />
+                  <span>{BRAND_CONFIG.instagramHandle}</span>
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin
+                  size={18}
+                  weight="regular"
+                  className="mt-0.5 shrink-0 text-lalagi-gold"
+                  aria-hidden="true"
+                />
                 <span>{BRAND_CONFIG.location}</span>
               </li>
-              <li className="flex items-center space-x-2 font-medium text-[#665750]">
-                <EnvelopeSimple weight="bold" className="w-5 h-5 text-[#ED7772] shrink-0" />
-                <span>hello@lalagidimsum.com</span>
+              <li>
+                <a
+                  href="mailto:hello@lalagidimsum.com"
+                  className={`flex items-start gap-3 ${linkClass}`}
+                >
+                  <EnvelopeSimple
+                    size={18}
+                    weight="regular"
+                    className="mt-0.5 shrink-0 text-lalagi-gold"
+                    aria-hidden="true"
+                  />
+                  <span>hello@lalagidimsum.com</span>
+                </a>
               </li>
             </ul>
           </div>
-
         </div>
 
-        {/* Bottom Copyright */}
-        <div className="pt-8 text-center text-xs sm:text-sm text-[#76645D]">
-          <p>© {new Date().getFullYear()} LalaGi Dimsum. All rights reserved.</p>
+        <div className="border-t border-lalagi-gold/60 pt-7 text-center text-[0.68rem] tracking-[0.08em] text-white/45 sm:text-left">
+          © {new Date().getFullYear()} LalaGi Dimsum. All rights reserved.
         </div>
       </div>
     </footer>
