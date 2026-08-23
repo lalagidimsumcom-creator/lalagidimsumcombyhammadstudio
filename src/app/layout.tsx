@@ -1,12 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Cinzel } from "next/font/google";
+import { DM_Serif_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const cinzel = Cinzel({
-  variable: "--font-cinzel",
+const dmSerifDisplay = DM_Serif_Display({
+  variable: "--font-dm-serif-display",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600"],
+  weight: "400",
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta-sans",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -34,9 +41,9 @@ export const metadata: Metadata = {
     siteName: "LalaGi Dimsum",
     images: [
       {
-        url: "/images/lalagi-hero-tampah.jpg",
-        width: 1200,
-        height: 1200,
+        url: "/images/lalagi-dimsum-tampah.png",
+        width: 941,
+        height: 1672,
         alt: "Tampah aneka dimsum LalaGi"
       }
     ],
@@ -64,9 +71,9 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${cinzel.variable} scroll-smooth antialiased`}
+      className={`${dmSerifDisplay.variable} ${plusJakartaSans.variable} scroll-smooth antialiased`}
     >
-      <body className="font-sans min-h-screen bg-[#FFF9F2] text-[#321D16] selection:bg-[#ED7772] selection:text-[#FFFDF9] overflow-x-hidden">
+      <body className="font-sans min-h-screen bg-[#F7F3EF] text-[#432719] selection:bg-[#ED7772] selection:text-[#FFFDF9] overflow-x-hidden">
         {children}
       </body>
     </html>

@@ -10,7 +10,7 @@ import WhatsAppFloatingCta from "@/components/whatsapp-floating-cta";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#FFF9F2] text-[#321D16] font-sans">
+    <div className="min-h-screen bg-[#F7F3EF] text-[#432719] font-sans">
       <a
         href="#main-content"
         className="fixed left-4 top-4 z-[100] -translate-y-24 bg-[#ED7772] px-4 py-3 font-bold text-[#FFFDF9] transition-transform focus-visible:translate-y-0"

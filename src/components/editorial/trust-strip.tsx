@@ -5,6 +5,9 @@ import {
   Quotes,
   Star,
 } from "@phosphor-icons/react/dist/ssr";
+import { REVIEWS_DATA } from "@/data/reviews";
+
+const featuredReview = REVIEWS_DATA.reviews[1];
 
 const trustMarks = [
   {
@@ -23,7 +26,7 @@ const trustMarks = [
     image: "/images/logo-rri.png",
     alt: "Radio Republik Indonesia",
     value: "RRI",
-    label: "Liputan Resmi",
+    label: "Liputan",
   },
 ];
 
@@ -31,7 +34,7 @@ export default function EditorialTrustStrip() {
   return (
     <section
       aria-labelledby="trust-title"
-      className="border-b border-[#432719] bg-[#321D16] px-5 py-16 text-[#FFF9F2] sm:px-8 lg:px-12 lg:py-20"
+      className="border-b border-[#432719] bg-[#321D16] px-5 py-16 text-[#FFFDF9] sm:px-8 lg:px-12 lg:py-20"
     >
       <div className="mx-auto max-w-[1360px]">
         <div className="mb-10 max-w-xl lg:mb-12">
@@ -40,7 +43,7 @@ export default function EditorialTrustStrip() {
           </p>
           <h2
             id="trust-title"
-            className="mt-4 font-serif-display text-2xl font-medium uppercase leading-tight tracking-[0.05em] text-white sm:text-3xl"
+            className="mt-4 font-serif-display text-3xl font-normal leading-tight tracking-[-0.01em] text-white sm:text-4xl"
           >
             Rasa yang dipercaya, kualitas yang terjaga.
           </h2>
@@ -76,7 +79,7 @@ export default function EditorialTrustStrip() {
                 5+ Tahun
               </strong>
               <span className="mt-1 text-xs font-medium text-white/65 sm:text-sm">
-                Pengalaman
+                Perjalanan
               </span>
             </article>
           </div>
@@ -84,11 +87,11 @@ export default function EditorialTrustStrip() {
           <figure className="border-t border-white/15 pt-9 lg:col-span-5 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
             <Quotes weight="fill" className="size-10 text-[#ED7772] sm:size-12" aria-hidden="true" />
             <blockquote className="mt-5 font-serif-display text-xl italic leading-relaxed text-white sm:text-2xl">
-              “Rasanya enak, bahan berkualitas, dan selalu jadi andalan tiap ada acara di keluarga kami.”
+              “{featuredReview.content}”
             </blockquote>
             <figcaption className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-semibold text-white/75">
               <span className="inline-flex items-center gap-2">
-                — Rina, Pelanggan Setia LalaGi
+                — {featuredReview.author}, {featuredReview.role}
                 <CheckCircle weight="fill" className="size-4 text-[#ED7772]" aria-hidden="true" />
               </span>
               <span className="inline-flex gap-0.5 text-[#ED7772]" aria-label="5 dari 5 bintang">

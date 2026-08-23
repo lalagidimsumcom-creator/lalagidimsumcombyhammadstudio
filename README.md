@@ -4,7 +4,7 @@ Website resmi LalaGi Dimsum, brand dimsum full ayam dari Jagakarsa, Jakarta Sela
 
 ## Tentang proyek
 
-Tampilan menggunakan pendekatan editorial premium dengan palet khas LalaGi: coral, cream, dan deep cocoa. Cinzel digunakan untuk judul dan elemen display, sementara Arial menjadi font utama sementara agar antarmuka tetap bersih dan mudah dibaca.
+Tampilan menggunakan pendekatan editorial premium dengan palet khas LalaGi: coral, ivory cream, dan deep cocoa. DM Serif Display digunakan untuk judul editorial, sementara Plus Jakarta Sans menjaga body dan antarmuka tetap bersih serta mudah dibaca.
 
 Informasi brand utama:
 

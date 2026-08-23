@@ -20,7 +20,7 @@ function MenuCopy({
 }: Pick<MenuFeatureProps, "title" | "description" | "href" | "cta">) {
   return (
     <div className="flex flex-col items-start">
-      <h3 className="font-serif-display text-[1.45rem] font-medium uppercase leading-[1.25] tracking-[0.06em] text-[#321D16] sm:text-[1.7rem]">
+      <h3 className="font-serif-display text-[1.65rem] font-normal leading-[1.15] tracking-[-0.01em] text-[#432719] sm:text-[1.95rem]">
         {title}
       </h3>
       <span className="mt-4 block h-px w-8 bg-[#ED7772]" aria-hidden="true" />
@@ -29,7 +29,7 @@ function MenuCopy({
       </p>
       <Link
         href={href}
-        className="mt-6 border-b border-[#ED7772] pb-1 font-serif-display text-xs font-medium uppercase tracking-[0.12em] text-[#321D16] hover:text-[#D9615C] focus-visible:rounded-sm"
+        className="mt-6 border-b border-[#ED7772] pb-1 text-xs font-semibold uppercase tracking-[0.1em] text-[#432719] hover:text-[#D9615C] focus-visible:rounded-sm"
       >
         {cta}
       </Link>
@@ -50,7 +50,14 @@ function MenuFeature({
   return (
     <article className="grid items-center gap-7 sm:grid-cols-[minmax(0,1.2fr)_minmax(11rem,0.8fr)] sm:gap-8">
       <div className={`relative overflow-hidden bg-[#FBE9E5] ${imageClassName}`}>
-        <Image src={image} alt={alt} fill sizes={sizes} className="object-cover" />
+        <Image
+          src={image}
+          alt={alt}
+          fill
+          sizes={sizes}
+          loading={image === "/images/lalagi-dimsum-tampah.png" ? "eager" : "lazy"}
+          className="object-cover"
+        />
       </div>
       <MenuCopy title={title} description={description} href={href} cta={cta} />
     </article>
@@ -67,7 +74,7 @@ const features: MenuFeatureProps[] = [
     image: "/images/lalagi-dimsum-mentai.jpg",
     alt: "Dimsum mentai khas LalaGi dengan saus creamy",
     imageClassName: "aspect-[4/5]",
-    sizes: "(max-width: 639px) 100vw, (max-width: 1023px) 58vw, 25vw",
+    sizes: "(max-width: 639px) calc(100vw - 3rem), (max-width: 1023px) 58vw, 25vw",
   },
   {
     title: "Dimsum Cake",
@@ -78,7 +85,7 @@ const features: MenuFeatureProps[] = [
     image: "/images/lalagi-dimsum-cake.jpg",
     alt: "Dimsum cake LalaGi untuk perayaan spesial",
     imageClassName: "aspect-[1/1]",
-    sizes: "(max-width: 639px) 100vw, (max-width: 1023px) 58vw, 27vw",
+    sizes: "(max-width: 639px) calc(100vw - 3rem), (max-width: 1023px) 58vw, 27vw",
   },
   {
     title: "Dimsum Tampah",
@@ -86,10 +93,10 @@ const features: MenuFeatureProps[] = [
       "Sajian melimpah untuk arisan, keluarga, hingga acara kantor—rapi, praktis, dan siap dibagikan.",
     href: "/pesanan-acara#dimsum-tampah",
     cta: "Konsultasi Acara",
-    image: "/images/lalagi-hero-tampah.jpg",
+    image: "/images/lalagi-dimsum-tampah.png",
     alt: "Dimsum tampah LalaGi untuk acara dan kebersamaan",
     imageClassName: "aspect-[5/3]",
-    sizes: "(max-width: 639px) 100vw, (max-width: 1023px) 58vw, 30vw",
+    sizes: "(max-width: 639px) calc(100vw - 3rem), (max-width: 1023px) 58vw, 30vw",
   },
 ];
 
@@ -97,17 +104,17 @@ export default function EditorialIntentNav() {
   return (
     <section
       aria-labelledby="signature-menu-title"
-      className="bg-[#FFF9F2] py-28 lg:py-36"
+      className="bg-[#F7F3EF] py-28 lg:py-36"
     >
       <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-12 xl:px-16">
         <header className="mb-16 max-w-2xl lg:mb-0">
-          <p className="font-serif-display text-xs font-medium uppercase tracking-[0.28em] text-[#D9615C] sm:text-sm">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#D9615C] sm:text-sm">
             Signature Menu
           </p>
           <span className="mt-5 block h-px w-10 bg-[#ED7772]" aria-hidden="true" />
           <h2
             id="signature-menu-title"
-            className="mt-5 font-serif-display text-[2.25rem] font-normal uppercase leading-[1.18] tracking-[0.055em] text-[#321D16] sm:text-5xl lg:text-[3.4rem]"
+            className="mt-5 font-serif-display text-[2.75rem] font-normal leading-[1.02] tracking-[-0.02em] text-[#432719] sm:text-5xl lg:text-[3.7rem]"
           >
             Pilihan untuk
             <br />

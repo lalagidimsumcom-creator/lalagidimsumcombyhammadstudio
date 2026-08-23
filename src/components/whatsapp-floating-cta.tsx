@@ -11,7 +11,7 @@ export default function WhatsAppFloatingCta() {
       className="group fixed bottom-5 right-5 z-40 flex items-center"
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
     >
-      <span className="pointer-events-none mr-3 hidden border border-[#ED7772]/45 bg-[#FFFDF9] px-4 py-2 font-serif text-[11px] font-semibold uppercase tracking-[0.16em] text-[#321D16] opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 sm:inline-block">
+      <span className="pointer-events-none mr-3 hidden border border-[#ED7772]/45 bg-[#FFFDF9] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#432719] opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 sm:inline-block">
         Chat LalaGi
       </span>
 

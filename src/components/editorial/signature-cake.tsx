@@ -19,29 +19,29 @@ export default function EditorialSignatureCake() {
         </div>
 
         <div>
-          <p className="mb-5 text-[0.7rem] font-semibold tracking-[0.3em] text-lalagi-coral sm:text-xs">
+          <p className="mb-5 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-lalagi-coral sm:text-xs">
             DARI DAPUR JAGAKARSA
           </p>
           <span className="mb-6 block h-px w-10 bg-lalagi-coral" aria-hidden="true" />
 
           <h2
             id="brand-story-title"
-            className="font-serif-display max-w-2xl text-3xl leading-[1.24] font-medium tracking-[0.035em] sm:text-4xl lg:text-[2.75rem] xl:text-5xl"
+            className="font-serif-display max-w-2xl text-4xl font-normal leading-[1.08] tracking-[-0.015em] sm:text-5xl lg:text-[3.25rem]"
           >
-            DIBUAT HANGAT,
+            Dibuat Hangat,
             <br />
-            UNTUK MOMEN YANG DEKAT.
+            Untuk Momen yang Dekat.
           </h2>
 
           <p className="mt-7 max-w-xl text-sm leading-7 text-lalagi-muted sm:text-base sm:leading-8">
-            LalaGi lahir dari dapur rumahan di Jagakarsa. Dimsum full daging
-            ayam kami dibuat satu per satu oleh tim ibu-ibu lokal, dengan bahan
-            pilihan dan perhatian yang terasa di setiap gigitan.
+            LalaGi lahir dari dapur rumahan di Jagakarsa. Dimsum dibuat setiap
+            hari dengan bahan pilihan dan perhatian pada rasa, tekstur, serta
+            pengalaman berbagi.
           </p>
 
           <Link
             href="/tentang"
-            className="mt-7 inline-block border-b border-lalagi-coral pb-1 font-serif-display text-xs font-semibold tracking-[0.15em] text-lalagi-cocoa transition-colors duration-200 hover:text-lalagi-coral focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lalagi-coral"
+            className="mt-7 inline-block border-b border-lalagi-coral pb-1 text-xs font-semibold uppercase tracking-[0.1em] text-lalagi-cocoa transition-colors duration-200 hover:text-lalagi-coral focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lalagi-coral"
           >
             KENAL LEBIH DEKAT
           </Link>
@@ -54,11 +54,11 @@ export default function EditorialSignatureCake() {
               >
                 “
               </span>
-              Dimsumnya padat daging, rasanya enak, dan tampilannya cantik.
+              Dimsumnya beneran enak, padat dagingnya!
             </blockquote>
             <figcaption className="mt-4 text-sm text-lalagi-muted">
-              <span className="font-semibold text-lalagi-cocoa">— Rifdah</span>,
-              Google Review
+              <span className="font-semibold text-lalagi-cocoa">— Wellysa Amanda</span>,
+              Local Guide Google
             </figcaption>
             <div
               className="mt-3 flex gap-1 text-lg tracking-wider text-lalagi-coral"

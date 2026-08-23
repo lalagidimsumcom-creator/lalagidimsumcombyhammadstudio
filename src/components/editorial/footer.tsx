@@ -42,10 +42,10 @@ export default function EditorialFooter() {
                 alt=""
                 width={52}
                 height={52}
-                className="border border-lalagi-coral"
+                className="aspect-square rounded-full border border-white/25 object-cover"
               />
-              <span className="font-serif-display text-lg tracking-[0.16em] text-lalagi-coral">
-                LALAGI DIMSUM
+              <span className="text-lg font-semibold tracking-normal text-white">
+                LalaGi Dimsum
               </span>
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-6 text-white/65">
@@ -78,7 +78,7 @@ export default function EditorialFooter() {
           </div>
 
           <div>
-            <h3 className="font-serif-display text-xs font-semibold tracking-[0.18em] text-lalagi-coral">
+            <h3 className="text-xs font-semibold tracking-[0.14em] text-lalagi-coral">
               NAVIGASI
             </h3>
             <ul className="mt-5 space-y-3 text-sm text-white/65">
@@ -93,7 +93,7 @@ export default function EditorialFooter() {
           </div>
 
           <div>
-            <h3 className="font-serif-display text-xs font-semibold tracking-[0.18em] text-lalagi-coral">
+            <h3 className="text-xs font-semibold tracking-[0.14em] text-lalagi-coral">
               LAYANAN
             </h3>
             <ul className="mt-5 space-y-3 text-sm text-white/65">
@@ -108,7 +108,7 @@ export default function EditorialFooter() {
           </div>
 
           <div>
-            <h3 className="font-serif-display text-xs font-semibold tracking-[0.18em] text-lalagi-coral">
+            <h3 className="text-xs font-semibold tracking-[0.14em] text-lalagi-coral">
               KONTAK
             </h3>
             <ul className="mt-5 space-y-4 text-sm text-white/65">
