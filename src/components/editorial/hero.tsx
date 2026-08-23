@@ -22,14 +22,14 @@ export default function EditorialHero() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1360px] px-6 pb-10 pt-16 sm:px-8 sm:pb-12 sm:pt-20 md:py-24 lg:px-12 lg:py-28 xl:px-16">
         <div className="max-w-[36rem] md:w-[46%]">
-          <p className="text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-[#3A3A3A] sm:text-xs">
+          <p className="text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-[#E75480] sm:text-xs">
             Homemade <span aria-hidden="true">•</span> Halal <span aria-hidden="true">•</span> 90% Daging Ayam
           </p>
-          <span aria-hidden="true" className="mt-6 block h-px w-10 bg-[#3A3A3A]" />
+          <span aria-hidden="true" className="mt-6 block h-px w-10 bg-[#E75480]" />
 
           <h1 className="mt-7 font-serif-display text-[2.45rem] font-normal leading-[1.06] tracking-[-0.025em] text-[#432719] sm:text-[3.15rem] md:text-[3.3rem] lg:text-[3.55rem] xl:text-[3.7rem]">
             <span className="block sm:whitespace-nowrap">Dimsum Premium</span>
-            <span className="block sm:whitespace-nowrap text-[#3A3A3A]">untuk Setiap Momen</span>
+            <span className="block sm:whitespace-nowrap text-[#E75480]">untuk Setiap Momen</span>
           </h1>
 
           <div className="mt-7 max-w-[32rem] space-y-3 text-[0.93rem] leading-7 text-[#76645D] sm:text-base sm:leading-7">
@@ -46,14 +46,14 @@ export default function EditorialHero() {
               href={getWhatsAppUrl("Halo LalaGi Dimsum, saya mau pesan dimsum")}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-13 w-full items-center justify-center gap-2.5 rounded-full bg-[#3A3A3A] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_28px_rgba(58,58,58,0.18)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-[#242424] hover:shadow-[0_14px_34px_rgba(58,58,58,0.26)] active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#3A3A3A] sm:w-auto"
+              className="inline-flex min-h-13 w-full items-center justify-center gap-2.5 rounded-full bg-[#E75480] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_28px_rgba(231,84,128,0.18)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-[#C7436D] hover:shadow-[0_14px_34px_rgba(231,84,128,0.26)] active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E75480] sm:w-auto"
             >
               <WhatsappLogo weight="fill" className="size-5" aria-hidden="true" />
               Pesan via WhatsApp
             </a>
             <Link
               href="/menu"
-              className="group inline-flex min-h-11 items-center gap-2 border-b border-[#432719]/35 text-sm font-semibold text-[#432719] transition-colors duration-200 hover:border-[#3A3A3A] hover:text-[#3A3A3A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#3A3A3A]"
+              className="group inline-flex min-h-11 items-center gap-2 border-b border-[#432719]/35 text-sm font-semibold text-[#432719] transition-colors duration-200 hover:border-[#E75480] hover:text-[#E75480] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E75480]"
             >
               Lihat Menu
               <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />

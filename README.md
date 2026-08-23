@@ -1,10 +1,10 @@
 # LalaGi Dimsum
 
-Website resmi LalaGi Dimsum, brand dimsum full ayam dari Jagakarsa, Jakarta Selatan. Situs ini dirancang sebagai landing page yang sederhana, elegan, dan berorientasi konversi untuk pemesanan harian, hadiah, perayaan, serta kebutuhan acara.
+Website resmi LalaGi Dimsum, brand dimsum homemade dengan 90% daging ayam dari Jagakarsa, Jakarta Selatan. Situs ini dirancang sebagai landing page yang sederhana, elegan, dan berorientasi konversi untuk pemesanan harian, hadiah, perayaan, serta kebutuhan acara.
 
 ## Tentang proyek
 
-Tampilan menggunakan pendekatan editorial premium dengan ivory cream `#F7F3EF`, aksen charcoal rose `#3A3A3A`, dan permukaan dark cocoa. Cinzel digunakan sebagai font utama untuk judul editorial, sementara Plus Jakarta Sans menjaga body dan antarmuka tetap bersih serta mudah dibaca.
+Tampilan menggunakan pendekatan editorial premium dengan ivory cream `#F7F3EF`, aksen pink rose `#E75480`, dan permukaan dark cocoa. Cinzel digunakan sebagai font utama untuk judul editorial, sementara Plus Jakarta Sans menjaga body dan antarmuka tetap bersih serta mudah dibaca.
 
 Informasi brand utama:
 
@@ -19,9 +19,8 @@ Informasi brand utama:
 - Homepage responsif dengan fotografi produk LalaGi
 - Navigasi mobile dan desktop
 - Katalog menu dengan filter kategori
-- Halaman khusus Dimsum Cake dan Dimsum Tower
-- Halaman pemesanan acara dan bulk order
-- Cerita brand, bukti kepercayaan, dan ulasan pelanggan
+- Satu halaman menu untuk dimsum reguler, Dimsum Cake, tampah, dan hampers
+- Cerita brand, bukti kepercayaan, dan carousel screenshot ulasan Google
 - CTA WhatsApp kontekstual pada setiap alur pemesanan
 - Optimasi gambar dan font melalui Next.js
 - Metadata dasar untuk mesin pencari dan media sosial
@@ -32,9 +31,6 @@ Informasi brand utama:
 | --- | --- |
 | `/` | Landing page utama |
 | `/menu` | Katalog produk dan kategori menu |
-| `/dimsum-cake` | Produk perayaan: cake dan tower |
-| `/pesanan-acara` | Informasi pesanan acara dan jumlah besar |
-| `/tentang` | Cerita, nilai, dan profil LalaGi |
 
 ## Teknologi
 

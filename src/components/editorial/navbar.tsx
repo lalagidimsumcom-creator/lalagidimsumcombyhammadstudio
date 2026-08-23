@@ -10,9 +10,6 @@ import { getWhatsAppUrl } from "@/lib/whatsapp";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Menu", href: "/menu" },
-  { label: "Dimsum Cake", href: "/dimsum-cake" },
-  { label: "Pesanan Acara", href: "/pesanan-acara" },
-  { label: "Tentang", href: "/tentang" },
 ];
 
 export default function EditorialNavbar() {
@@ -50,7 +47,7 @@ export default function EditorialNavbar() {
           })}
         </nav>
 
-        <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="hidden items-center gap-2 rounded-full border border-white/20 bg-[#3A3A3A] px-5 py-2.5 text-xs font-semibold text-white transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-[#505050] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-reduce:transition-none xl:inline-flex">
+        <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="hidden items-center gap-2 rounded-full border border-white/20 bg-[#E75480] px-5 py-2.5 text-xs font-semibold text-white transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-[#C7436D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-reduce:transition-none xl:inline-flex">
           <WhatsappLogo aria-hidden="true" weight="regular" className="size-4" />
           Pesan
         </a>
@@ -72,7 +69,7 @@ export default function EditorialNavbar() {
               );
             })}
           </div>
-          <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-[#3A3A3A] px-5 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#505050] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-reduce:transition-none">
+          <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-[#E75480] px-5 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#C7436D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-reduce:transition-none">
             <WhatsappLogo aria-hidden="true" weight="regular" className="size-4" />
             Pesan via WhatsApp
           </a>

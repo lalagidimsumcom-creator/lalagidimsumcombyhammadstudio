@@ -12,15 +12,12 @@ import { getWhatsAppUrl } from "@/lib/whatsapp";
 const navigation = [
   { label: "Home", href: "/" },
   { label: "Menu", href: "/menu" },
-  { label: "Dimsum Cake", href: "/dimsum-cake" },
-  { label: "Pesanan Acara", href: "/pesanan-acara" },
-  { label: "Tentang", href: "/tentang" },
 ];
 
 const offerings = [
   { label: "Menu Dimsum", href: "/menu" },
-  { label: "Dimsum Cake", href: "/dimsum-cake" },
-  { label: "Pesanan Acara", href: "/pesanan-acara" },
+  { label: "Dimsum Cake", href: "/menu#dimsum-cake" },
+  { label: "Pesanan Acara", href: "/menu#dimsum-tampah" },
 ];
 
 const linkClass =

@@ -2,15 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import {
-  ArrowLeft,
-  ArrowRight,
-  CheckCircle,
-  Medal,
-  Quotes,
-  Star,
-} from "@phosphor-icons/react";
-import { REVIEWS_DATA } from "@/data/reviews";
+import { ArrowLeft, ArrowRight, Medal } from "@phosphor-icons/react";
 
 const trustMarks = [
   {
@@ -33,16 +25,38 @@ const trustMarks = [
   },
 ];
 
+const reviewImages = [
+  {
+    src: "/images/google-review-ribka.jpeg",
+    alt: "Ulasan Google dari Ribka Anflora untuk LalaGi Dimsum",
+  },
+  {
+    src: "/images/google-review-rifdah.jpeg",
+    alt: "Ulasan Google dari Rifdah Safitri untuk LalaGi Dimsum",
+  },
+  {
+    src: "/images/google-review-fransisca.jpeg",
+    alt: "Ulasan Google dari Fransisca Marseilla untuk LalaGi Dimsum",
+  },
+  {
+    src: "/images/google-review-liza.jpeg",
+    alt: "Ulasan Google dari Liza Noah untuk LalaGi Dimsum",
+  },
+  {
+    src: "/images/google-review-elsa.jpeg",
+    alt: "Ulasan Google dari Elsa Meilinda Putri untuk LalaGi Dimsum",
+  },
+];
+
 export default function EditorialTrustStrip() {
-  const reviews = REVIEWS_DATA.reviews.filter((review) => review.verified);
   const [activeReview, setActiveReview] = useState(0);
 
   const showPreviousReview = () => {
-    setActiveReview((current) => (current - 1 + reviews.length) % reviews.length);
+    setActiveReview((current) => (current - 1 + reviewImages.length) % reviewImages.length);
   };
 
   const showNextReview = () => {
-    setActiveReview((current) => (current + 1) % reviews.length);
+    setActiveReview((current) => (current + 1) % reviewImages.length);
   };
 
   return (
@@ -52,7 +66,7 @@ export default function EditorialTrustStrip() {
     >
       <div className="mx-auto max-w-[1360px]">
         <div className="mb-12 max-w-2xl lg:mb-16">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#76645D]">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#E75480]">
             Kepercayaan pelanggan
           </p>
           <h2
@@ -91,7 +105,7 @@ export default function EditorialTrustStrip() {
             ))}
 
             <article className="flex min-h-52 flex-col justify-between border-b border-r border-[#321D16]/15 p-5 sm:min-h-60 sm:p-7">
-              <div className="flex size-16 items-center justify-center rounded-full border border-[#321D16]/15 bg-[#3A3A3A] sm:size-20">
+              <div className="flex size-16 items-center justify-center rounded-full border border-[#E75480] bg-[#E75480] sm:size-20">
                 <Medal weight="fill" className="size-8 text-white sm:size-10" aria-hidden="true" />
               </div>
               <div>
@@ -111,39 +125,32 @@ export default function EditorialTrustStrip() {
                 className="flex transition-transform duration-500 ease-out"
                 style={{ transform: `translateX(-${activeReview * 100}%)` }}
               >
-                {reviews.map((review) => (
-                  <figure key={review.id} className="w-full shrink-0 pr-1">
-                    <Quotes weight="fill" className="size-10 text-[#3A3A3A] sm:size-12" aria-hidden="true" />
-                    <blockquote className="mt-6 max-w-[38rem] text-pretty font-serif-display text-xl leading-relaxed sm:text-2xl lg:text-[1.75rem]">
-                      “{review.content}”
-                    </blockquote>
-                    <figcaption className="mt-8">
-                      <div className="flex gap-0.5 text-[#3A3A3A]" aria-label={`${review.rating} dari 5 bintang`}>
-                        {Array.from({ length: review.rating }, (_, index) => (
-                          <Star key={index} weight="fill" className="size-4" aria-hidden="true" />
-                        ))}
-                      </div>
-                      <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
-                        <strong className="font-semibold">{review.author}</strong>
-                        <CheckCircle weight="fill" className="size-4 text-[#3A3A3A]" aria-label="Ulasan terverifikasi" />
-                        <span className="text-[#76645D]">{review.role}</span>
-                      </div>
-                    </figcaption>
+                {reviewImages.map((review) => (
+                  <figure key={review.src} className="w-full shrink-0">
+                    <div className="relative h-[30rem] w-full overflow-hidden border border-[#321D16]/15 bg-white sm:h-[34rem]">
+                      <Image
+                        src={review.src}
+                        alt={review.alt}
+                        fill
+                        sizes="(max-width: 1023px) calc(100vw - 2.5rem), 54vw"
+                        className="object-contain"
+                      />
+                    </div>
                   </figure>
                 ))}
               </div>
             </div>
 
-            <div className="mt-10 flex items-center justify-between border-t border-[#321D16]/15 pt-6">
+            <div className="mt-7 flex items-center justify-between border-t border-[#321D16]/15 pt-6">
               <span className="text-xs font-semibold tabular-nums text-[#76645D]">
-                {String(activeReview + 1).padStart(2, "0")} / {String(reviews.length).padStart(2, "0")}
+                {String(activeReview + 1).padStart(2, "0")} / {String(reviewImages.length).padStart(2, "0")}
               </span>
               <div className="flex items-center gap-2">
                 <button
                   type="button"
                   onClick={showPreviousReview}
                   aria-label="Lihat ulasan sebelumnya"
-                  className="flex size-11 items-center justify-center rounded-full border border-[#321D16]/25 text-[#321D16] transition-colors duration-200 hover:bg-[#3A3A3A] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#321D16] active:scale-95"
+                  className="flex size-11 items-center justify-center rounded-full border border-[#E75480] text-[#E75480] transition-colors duration-200 hover:bg-[#E75480] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E75480] active:scale-95"
                 >
                   <ArrowLeft weight="bold" className="size-4" aria-hidden="true" />
                 </button>
@@ -151,7 +158,7 @@ export default function EditorialTrustStrip() {
                   type="button"
                   onClick={showNextReview}
                   aria-label="Lihat ulasan berikutnya"
-                  className="flex size-11 items-center justify-center rounded-full bg-[#3A3A3A] text-white transition-colors duration-200 hover:bg-[#242424] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#321D16] active:scale-95"
+                  className="flex size-11 items-center justify-center rounded-full bg-[#E75480] text-white transition-colors duration-200 hover:bg-[#C7436D] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E75480] active:scale-95"
                 >
                   <ArrowRight weight="bold" className="size-4" aria-hidden="true" />
                 </button>
