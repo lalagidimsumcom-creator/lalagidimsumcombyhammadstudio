@@ -113,7 +113,7 @@ export default function MenuPage() {
                     </span>
                   )}
                   {deliveryLabel[product.deliveryType] && (
-                    <span className="rounded-full bg-[#6A1E55]/95 px-3 py-1 text-[0.68rem] font-bold text-white shadow-sm">
+                    <span className="rounded-full bg-[#321D16]/95 px-3 py-1 text-[0.68rem] font-bold text-white shadow-sm">
                       {deliveryLabel[product.deliveryType]}
                     </span>
                   )}

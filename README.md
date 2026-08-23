@@ -4,7 +4,7 @@ Website resmi LalaGi Dimsum, brand dimsum homemade dengan 90% daging ayam dari J
 
 ## Tentang proyek
 
-Tampilan menggunakan pendekatan editorial premium dengan background `#FAF7F8`, navbar dan footer plum `#6A1E55`, tombol utama `#E94E87`, hover `#D63D76`, serta judul `#3A2232`. Cinzel digunakan sebagai font utama untuk judul editorial, sementara Plus Jakarta Sans menjaga body dan antarmuka tetap bersih serta mudah dibaca.
+Tampilan menggunakan pendekatan editorial premium dengan background `#FAF7F8`, navbar dan footer dark cocoa `#321D16`, tombol utama `#E94E87`, hover `#D63D76`, serta judul `#3A2232`. Cinzel digunakan sebagai font utama untuk judul editorial, sementara Plus Jakarta Sans menjaga body dan antarmuka tetap bersih serta mudah dibaca.
 
 Informasi brand utama:
 
