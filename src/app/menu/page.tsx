@@ -231,7 +231,7 @@ export default function MenuPage() {
               <li>Jam pengiriman pukul 08.00–18.00.</li>
               <li>Harga belum termasuk biaya pengiriman.</li>
               <li>
-                Ongkir mengikuti aplikasi GoSend/Lalamove dan dapat berubah
+                Biaya pengiriman mengikuti aplikasi GoSend/Lalamove dan dapat berubah
                 mengikuti kondisi perjalanan.
               </li>
             </ul>

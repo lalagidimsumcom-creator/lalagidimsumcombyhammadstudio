@@ -65,16 +65,6 @@
   animation-play-state: paused;
 }
 
-.client-marquee-rail {
-  -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
-  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
-}
-
-.client-marquee-track {
-  animation: lalagi-marquee 52s linear infinite;
-  will-change: transform;
-}
-
 body {
   font-family: var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
   background-color: var(--background);
@@ -106,8 +96,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .menu-marquee-track,
-  .menu-marquee-track-reverse,
-  .client-marquee-track {
+  .menu-marquee-track-reverse {
     animation: none !important;
     transform: translate3d(0, 0, 0) !important;
   }

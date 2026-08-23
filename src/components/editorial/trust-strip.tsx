@@ -1,13 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import {
   ArrowLeft,
   ArrowRight,
   Medal,
-  Pause,
-  Play,
 } from "@phosphor-icons/react";
 
 const trustMarks = [
@@ -56,24 +54,6 @@ const reviewImages = [
 
 export default function EditorialTrustStrip() {
   const [activeReview, setActiveReview] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isInteracting, setIsInteracting] = useState(false);
-
-  useEffect(() => {
-    if (
-      isPaused ||
-      isInteracting ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ) {
-      return;
-    }
-
-    const intervalId = window.setInterval(() => {
-      setActiveReview((current) => (current + 1) % reviewImages.length);
-    }, 5_000);
-
-    return () => window.clearInterval(intervalId);
-  }, [isInteracting, isPaused]);
 
   const showPreviousReview = () => {
     setActiveReview(
@@ -151,14 +131,6 @@ export default function EditorialTrustStrip() {
 
           <div
             className="flex min-w-0 flex-col justify-between border-t border-[#3A2232]/15 pt-9 lg:col-span-7 lg:border-l lg:border-t-0 lg:pl-16 lg:pt-0"
-            onMouseEnter={() => setIsInteracting(true)}
-            onMouseLeave={() => setIsInteracting(false)}
-            onFocusCapture={() => setIsInteracting(true)}
-            onBlurCapture={(event) => {
-              if (!event.currentTarget.contains(event.relatedTarget)) {
-                setIsInteracting(false);
-              }
-            }}
           >
             <div
               className="overflow-hidden"
@@ -196,27 +168,6 @@ export default function EditorialTrustStrip() {
                 {String(reviewImages.length).padStart(2, "0")}
               </span>
               <div className="flex items-center gap-2">
-                <button
-                  type="button"
-                  onClick={() => setIsPaused((paused) => !paused)}
-                  aria-label={
-                    isPaused
-                      ? "Putar otomatis ulasan"
-                      : "Jeda putar otomatis ulasan"
-                  }
-                  aria-pressed={isPaused}
-                  className="flex size-11 items-center justify-center rounded-full border border-[#3A2232]/20 text-[#735E6C] transition-colors duration-200 hover:border-[#722F37] hover:text-[#722F37] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#722F37] active:scale-95"
-                >
-                  {isPaused ? (
-                    <Play weight="fill" className="size-4" aria-hidden="true" />
-                  ) : (
-                    <Pause
-                      weight="fill"
-                      className="size-4"
-                      aria-hidden="true"
-                    />
-                  )}
-                </button>
                 <button
                   type="button"
                   onClick={showPreviousReview}
