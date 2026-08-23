@@ -140,14 +140,22 @@ export default function EditorialFooter() {
                   <span>{BRAND_CONFIG.instagramHandle}</span>
                 </a>
               </li>
-              <li className="flex items-start gap-3">
-                <MapPin
-                  size={18}
-                  weight="regular"
-                  className="mt-0.5 shrink-0 text-white/70"
-                  aria-hidden="true"
-                />
-                <span>{BRAND_CONFIG.location}</span>
+              <li>
+                <a
+                  href="https://maps.app.goo.gl/SKEzF9ccMyTjyMcF8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-start gap-3 ${linkClass}`}
+                  aria-label={`Buka lokasi LalaGi Dimsum di Google Maps: ${BRAND_CONFIG.location}`}
+                >
+                  <MapPin
+                    size={18}
+                    weight="regular"
+                    className="mt-0.5 shrink-0 text-white/70"
+                    aria-hidden="true"
+                  />
+                  <span>{BRAND_CONFIG.location}</span>
+                </a>
               </li>
             </ul>
           </div>
