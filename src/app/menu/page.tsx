@@ -46,14 +46,14 @@ export default function MenuPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#FFFDF9] text-[#321D16] flex flex-col font-sans selection:bg-[#ED7772] selection:text-white">
+    <main className="min-h-screen bg-[#FFFDF9] text-[#321D16] flex flex-col font-sans selection:bg-[#3A3A3A] selection:text-white">
       <Navbar />
 
       {/* Hero Banner */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-20 bg-[#FFF9F2] border-b border-[#FBE9E5] relative overflow-hidden">
+      <section className="pt-24 pb-16 md:pt-32 md:pb-20 bg-[#F7F3EF] border-b border-[#FBE9E5] relative overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8 text-center space-y-4">
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#FBE9E5] text-[#ED7772] text-xs sm:text-sm font-bold uppercase tracking-wider">
-            <Sparkle weight="fill" className="w-4 h-4 text-[#E4A53A]" />
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#FBE9E5] text-[#3A3A3A] text-xs sm:text-sm font-bold uppercase tracking-wider">
+            <Sparkle weight="fill" className="w-4 h-4 text-[#3A3A3A]" />
             <span>KATALOG LENGKAP LALAGI</span>
           </div>
 
@@ -62,7 +62,7 @@ export default function MenuPage() {
           </h1>
 
           <p className="text-base sm:text-lg lg:text-xl text-[#665750] max-w-2xl mx-auto">
-            Semua dimsum dibuat dari 100% daging ayam segar pilihan, bersertifikat halal resmi, dan disiapkan fresh dari dapur Jagakarsa.
+            Semua dimsum dibuat dari 90% daging ayam pilihan, bersertifikat halal resmi dan disiapkan fresh setiap hari.
           </p>
 
           {/* Category Filter Pills */}
@@ -75,7 +75,7 @@ export default function MenuPage() {
                   onClick={() => setActiveCategory(cat.id)}
                   className={`px-6 py-2.5 rounded-full text-sm sm:text-base font-bold transition-all duration-300 ${
                     isActive
-                      ? "bg-[#ED7772] text-white shadow-md transform scale-105"
+                      ? "bg-[#3A3A3A] text-white shadow-md transform scale-105"
                       : "bg-white text-[#665750] hover:text-[#321D16] hover:bg-[#FBE9E5] border border-[#FBE9E5]"
                   }`}
                 >
@@ -98,7 +98,7 @@ export default function MenuPage() {
             >
               <div>
                 {/* Product Image */}
-                <div className="relative w-full h-72 bg-[#FFF9F2] overflow-hidden">
+                <div className="relative w-full h-72 bg-[#F7F3EF] overflow-hidden">
                   <Image
                     src={product.image}
                     alt={product.name}
@@ -107,7 +107,7 @@ export default function MenuPage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   {product.badge && (
-                    <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-bold text-[#ED7772] shadow-sm border border-[#FBE9E5]">
+                    <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-bold text-[#3A3A3A] shadow-sm border border-[#FBE9E5]">
                       {product.badge}
                     </div>
                   )}
@@ -116,7 +116,7 @@ export default function MenuPage() {
                 {/* Info */}
                 <div className="p-7 space-y-4">
                   <div>
-                    <h3 className="font-serif-display text-2xl font-bold text-[#321D16] group-hover:text-[#ED7772] transition-colors">
+                    <h3 className="font-serif-display text-2xl font-bold text-[#321D16] group-hover:text-[#3A3A3A] transition-colors">
                       {product.name}
                     </h3>
                     <p className="text-sm sm:text-base text-[#665750] mt-2 leading-relaxed">
@@ -127,7 +127,7 @@ export default function MenuPage() {
                   <div className="space-y-1.5 pt-2 border-t border-[#FBE9E5]">
                     {product.highlights.map((h, idx) => (
                       <div key={idx} className="flex items-center text-xs sm:text-sm text-[#665750]">
-                        <Check weight="bold" className="w-3.5 h-3.5 text-[#ED7772] mr-2 shrink-0" />
+                        <Check weight="bold" className="w-3.5 h-3.5 text-[#3A3A3A] mr-2 shrink-0" />
                         <span>{h}</span>
                       </div>
                     ))}
@@ -150,7 +150,7 @@ export default function MenuPage() {
                   href={getProductWhatsAppUrl(product.name)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-bold bg-[#ED7772] hover:bg-[#D9615C] text-white shadow-xs hover:shadow-md transition-all group-hover:scale-105"
+                  className="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-bold bg-[#3A3A3A] hover:bg-[#242424] text-white shadow-xs hover:shadow-md transition-all group-hover:scale-105"
                 >
                   <WhatsappLogo weight="fill" className="w-4 h-4 mr-1.5" />
                   <span>Pesan</span>
@@ -163,12 +163,12 @@ export default function MenuPage() {
       </section>
 
       {/* Delivery & Quality Strip */}
-      <section className="py-12 bg-[#FFF9F2] border-y border-[#FBE9E5]">
+      <section className="py-12 bg-[#F7F3EF] border-y border-[#FBE9E5]">
         <div className="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             <div className="flex items-start space-x-4 p-5 rounded-2xl bg-white border border-[#FBE9E5] shadow-2xs">
               <div className="w-11 h-11 rounded-xl bg-[#FBE9E5] flex items-center justify-center shrink-0">
-                <Truck weight="duotone" className="w-6 h-6 text-[#ED7772]" />
+                <Truck weight="duotone" className="w-6 h-6 text-[#3A3A3A]" />
               </div>
               <div>
                 <h4 className="font-bold text-base sm:text-lg text-[#321D16]">Kirim Cepat Se-Jabodetabek</h4>
@@ -178,7 +178,7 @@ export default function MenuPage() {
 
             <div className="flex items-start space-x-4 p-5 rounded-2xl bg-white border border-[#FBE9E5] shadow-2xs">
               <div className="w-11 h-11 rounded-xl bg-[#FBE9E5] flex items-center justify-center shrink-0">
-                <Snowflake weight="duotone" className="w-6 h-6 text-[#ED7772]" />
+                <Snowflake weight="duotone" className="w-6 h-6 text-[#3A3A3A]" />
               </div>
               <div>
                 <h4 className="font-bold text-base sm:text-lg text-[#321D16]">Fresh &amp; Frozen Berkualitas</h4>
@@ -188,7 +188,7 @@ export default function MenuPage() {
 
             <div className="flex items-start space-x-4 p-5 rounded-2xl bg-white border border-[#FBE9E5] shadow-2xs">
               <div className="w-11 h-11 rounded-xl bg-[#FBE9E5] flex items-center justify-center shrink-0">
-                <ShieldCheck weight="duotone" className="w-6 h-6 text-[#ED7772]" />
+                <ShieldCheck weight="duotone" className="w-6 h-6 text-[#3A3A3A]" />
               </div>
               <div>
                 <h4 className="font-bold text-base sm:text-lg text-[#321D16]">100% Halal Certified</h4>
@@ -202,8 +202,8 @@ export default function MenuPage() {
       {/* Menu & Storage FAQ */}
       <section className="py-20 lg:py-28 max-w-4xl mx-auto px-5 sm:px-6 lg:px-8 w-full">
         <div className="text-center mb-12 space-y-3">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#FBE9E5] text-[#ED7772] text-xs font-bold uppercase tracking-wider">
-            <Question weight="duotone" className="w-4 h-4 text-[#ED7772]" />
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#FBE9E5] text-[#3A3A3A] text-xs font-bold uppercase tracking-wider">
+            <Question weight="duotone" className="w-4 h-4 text-[#3A3A3A]" />
             <span>PANDUAN PEMESANAN</span>
           </div>
           <h2 className="font-serif-display text-3xl sm:text-4xl font-normal text-[#321D16]">
@@ -218,7 +218,7 @@ export default function MenuPage() {
               <div
                 key={idx}
                 className={`rounded-[24px] border transition-all ${
-                  isOpen ? "bg-white border-[#ED7772] shadow-md" : "bg-white/80 border-[#FBE9E5]"
+                  isOpen ? "bg-white border-[#3A3A3A] shadow-md" : "bg-white/80 border-[#FBE9E5]"
                 }`}
               >
                 <button
@@ -231,7 +231,7 @@ export default function MenuPage() {
                   </span>
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
-                      isOpen ? "bg-[#ED7772] text-white" : "bg-[#FBE9E5] text-[#ED7772]"
+                      isOpen ? "bg-[#3A3A3A] text-white" : "bg-[#FBE9E5] text-[#3A3A3A]"
                     }`}
                   >
                     {isOpen ? <Minus weight="bold" className="w-4 h-4" /> : <Plus weight="bold" className="w-4 h-4" />}
@@ -252,7 +252,7 @@ export default function MenuPage() {
             href={getWhatsAppUrl("Halo LalaGi, saya mau tanya menu dan rekomendasi pemesanan 😊")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 px-9 py-4 rounded-full text-base font-bold bg-[#321D16] hover:bg-[#ED7772] text-white transition-colors shadow-md"
+            className="inline-flex items-center space-x-2 px-9 py-4 rounded-full text-base font-bold bg-[#3A3A3A] hover:bg-[#242424] text-white transition-colors shadow-md"
           >
             <WhatsappLogo weight="fill" className="w-5 h-5 text-[#25D366]" />
             <span>Tanya Menu Langsung via WhatsApp</span>

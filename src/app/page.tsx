@@ -13,7 +13,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-[#F7F3EF] text-[#432719] font-sans">
       <a
         href="#main-content"
-        className="fixed left-4 top-4 z-[100] -translate-y-24 bg-[#ED7772] px-4 py-3 font-bold text-[#FFFDF9] transition-transform focus-visible:translate-y-0"
+        className="fixed left-4 top-4 z-[100] -translate-y-24 bg-[#3A3A3A] px-4 py-3 font-bold text-white transition-transform focus-visible:translate-y-0"
       >
         Lewati ke Konten
       </a>

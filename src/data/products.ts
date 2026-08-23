@@ -16,11 +16,11 @@ export const PRODUCTS: Product[] = [
     name: "Dimsum Cake",
     category: "signature",
     badge: "Birthday & Celebration Favorite 🎂",
-    description: "Kue ulang tahun gurih terbuat dari susunan dimsum full ayam lezat dengan baluran saus mentai bakar, hiasan cabai segar, dan cake topper spesial.",
-    price: "Rp 168.000 (30 pcs)",
-    priceNote: "Tersedia variasi porsi custom",
+    description: "Kue ulang tahun gurih yang disusun dari beberapa dimsum dengan baluran saus mentai bakar.",
+    price: "Mulai Rp 165.000 (25 pcs)",
+    priceNote: "Tersedia tulisan custom",
     image: "/images/lalagi-dimsum-cake.jpg",
-    highlights: ["Dimsum 100% Full Ayam", "Free Cake Topper & Lilin Pesta", "Bisa Custom Tulisan & Desain", "Pengiriman Aman Se-Jabodetabek"]
+    highlights: ["Dimsum Ayam", "Free Cake Topper dan Lilin", "Bisa Custom Tulisan", "Pengiriman Aman dengan Driver LalaGi Dimsum"]
   },
   {
     id: "dimsum-tower",
@@ -64,7 +64,7 @@ export const PRODUCTS: Product[] = [
     price: "Rp 33.000",
     priceNote: "Snapshot harga marketplace",
     image: "/images/lalagi-dimsum-original.jpg",
-    highlights: ["100% Full Ayam Bersertifikat Halal", "Tersedia Fresh & Frozen Siap Kukus", "Stok Praktis Cemilan Rumah", "Termasuk Saus & Chili Oil"]
+    highlights: ["90% Daging Ayam Bersertifikat Halal", "Tersedia Fresh & Frozen Siap Kukus", "Stok Praktis Cemilan Rumah", "Termasuk Saus & Chili Oil"]
   },
   {
     id: "dimsum-hampers",

@@ -5,7 +5,7 @@ import { getWhatsAppUrl } from "@/lib/whatsapp";
 export default function EditorialFinalCta() {
   return (
     <section
-      className="relative isolate overflow-hidden bg-[#ED7772] px-5 py-20 text-center text-white sm:px-8 sm:py-24 lg:px-12 lg:py-28"
+      className="relative isolate overflow-hidden bg-[#3A3A3A] px-5 py-20 text-center text-white sm:px-8 sm:py-24 lg:px-12 lg:py-28"
       aria-labelledby="final-cta-title"
     >
       <div className="pointer-events-none absolute -left-20 top-1/2 hidden size-72 -translate-y-1/2 overflow-hidden rounded-full border-4 border-white/25 opacity-85 shadow-[0_24px_60px_rgba(90,33,29,0.3)] lg:block xl:-left-14 xl:size-80">
@@ -49,7 +49,7 @@ export default function EditorialFinalCta() {
           href={getWhatsAppUrl("Halo LalaGi Dimsum, saya mau pesan dimsum")}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-9 inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-white px-8 py-4 font-semibold text-[#D9615C] shadow-[0_14px_35px_rgba(90,33,29,0.24)] transition-[transform,box-shadow,background-color] duration-200 hover:-translate-y-1 hover:bg-[#F7F3EF] hover:shadow-[0_18px_45px_rgba(90,33,29,0.3)] active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:px-11 sm:text-lg"
+          className="mt-9 inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-white px-8 py-4 font-semibold text-[#3A3A3A] shadow-[0_14px_35px_rgba(0,0,0,0.18)] transition-[transform,box-shadow,background-color] duration-200 hover:-translate-y-1 hover:bg-[#F7F3EF] hover:shadow-[0_18px_45px_rgba(0,0,0,0.24)] active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:px-11 sm:text-lg"
         >
           <WhatsappLogo weight="fill" className="size-5 text-[#25D366] sm:size-6" aria-hidden="true" />
           Pesan via WhatsApp

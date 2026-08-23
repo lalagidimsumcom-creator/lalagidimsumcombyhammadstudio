@@ -23,13 +23,13 @@ function MenuCopy({
       <h3 className="font-serif-display text-[1.65rem] font-normal leading-[1.15] tracking-[-0.01em] text-[#432719] sm:text-[1.95rem]">
         {title}
       </h3>
-      <span className="mt-4 block h-px w-8 bg-[#ED7772]" aria-hidden="true" />
+      <span className="mt-4 block h-px w-8 bg-[#3A3A3A]" aria-hidden="true" />
       <p className="mt-4 max-w-[28rem] text-sm leading-7 text-[#665750]">
         {description}
       </p>
       <Link
         href={href}
-        className="mt-6 border-b border-[#ED7772] pb-1 text-xs font-semibold uppercase tracking-[0.1em] text-[#432719] hover:text-[#D9615C] focus-visible:rounded-sm"
+        className="mt-6 border-b border-[#3A3A3A] pb-1 text-xs font-semibold uppercase tracking-[0.1em] text-[#432719] hover:text-[#3A3A3A] focus-visible:rounded-sm"
       >
         {cta}
       </Link>
@@ -108,10 +108,10 @@ export default function EditorialIntentNav() {
     >
       <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-12 xl:px-16">
         <header className="mb-16 max-w-2xl lg:mb-0">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#D9615C] sm:text-sm">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#3A3A3A] sm:text-sm">
             Signature Menu
           </p>
-          <span className="mt-5 block h-px w-10 bg-[#ED7772]" aria-hidden="true" />
+          <span className="mt-5 block h-px w-10 bg-[#3A3A3A]" aria-hidden="true" />
           <h2
             id="signature-menu-title"
             className="mt-5 font-serif-display text-[2.75rem] font-normal leading-[1.02] tracking-[-0.02em] text-[#432719] sm:text-5xl lg:text-[3.7rem]"

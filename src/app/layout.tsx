@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Serif_Display, Plus_Jakarta_Sans } from "next/font/google";
+import { Cinzel, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const dmSerifDisplay = DM_Serif_Display({
-  variable: "--font-dm-serif-display",
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
   subsets: ["latin"],
   display: "swap",
-  weight: "400",
+  weight: ["400", "500", "600", "700"],
 });
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://lalagidimsum.com"),
   title: "LalaGi Dimsum | Dimsum untuk Setiap Momen",
   description:
-    "Dimsum full ayam berkualitas dari Jagakarsa, Jakarta Selatan. Dari ngemil sehari-hari, Dimsum Cake ulang tahun, Dimsum Tampah acara, hingga hampers spesial. Halal Certified ID31110016921890424.",
+    "Dimsum homemade dengan 90% daging ayam pilihan dari Jagakarsa, Jakarta Selatan. Dari ngemil sehari-hari, Dimsum Cake ulang tahun, Dimsum Tampah acara, hingga hampers spesial. Halal Certified ID31110016921890424.",
   keywords: [
     "LalaGi Dimsum",
     "Dimsum Cake Jakarta",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "LalaGi Dimsum | Dimsum untuk Setiap Momen",
     description:
-      "Dimsum full ayam berkualitas, dibuat dengan bahan terbaik untuk menemani momen sehari-hari hingga perayaan istimewa bersama orang tersayang.",
+      "Dimsum homemade dengan 90% daging ayam pilihan untuk menemani momen sehari-hari hingga perayaan istimewa bersama orang tersayang.",
     url: "https://lalagidimsum.com/",
     siteName: "LalaGi Dimsum",
     images: [
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#ED7772",
+  themeColor: "#3A3A3A",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -71,9 +71,9 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${dmSerifDisplay.variable} ${plusJakartaSans.variable} scroll-smooth antialiased`}
+      className={`${cinzel.variable} ${plusJakartaSans.variable} scroll-smooth antialiased`}
     >
-      <body className="font-sans min-h-screen bg-[#F7F3EF] text-[#432719] selection:bg-[#ED7772] selection:text-[#FFFDF9] overflow-x-hidden">
+      <body className="font-sans min-h-screen bg-[#F7F3EF] text-[#432719] selection:bg-[#3A3A3A] selection:text-white overflow-x-hidden">
         {children}
       </body>
     </html>
