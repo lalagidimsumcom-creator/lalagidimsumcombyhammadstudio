@@ -10,10 +10,10 @@ import WhatsAppFloatingCta from "@/components/whatsapp-floating-cta";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#F7F3EC] text-[#17343D] font-sans">
+    <div className="min-h-screen bg-[#FFF9F2] text-[#321D16] font-sans">
       <a
         href="#main-content"
-        className="fixed left-4 top-4 z-[100] -translate-y-24 bg-[#B69A63] px-4 py-3 font-bold text-[#0E2831] transition-transform focus-visible:translate-y-0"
+        className="fixed left-4 top-4 z-[100] -translate-y-24 bg-[#ED7772] px-4 py-3 font-bold text-[#FFFDF9] transition-transform focus-visible:translate-y-0"
       >
         Lewati ke Konten
       </a>

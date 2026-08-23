@@ -4,32 +4,32 @@ import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export default function EditorialHero() {
   return (
-    <section className="overflow-hidden border-b border-[#D8CDBB] bg-[#F7F3EC]">
+    <section className="overflow-hidden border-b border-[#E9D9D1] bg-[#FFF9F2]">
       <div className="mx-auto grid min-h-[calc(100svh-68px)] max-w-[1280px] grid-cols-1 lg:min-h-[720px] lg:grid-cols-12">
         <div className="flex items-center px-6 py-14 sm:px-8 sm:py-16 lg:col-span-5 lg:px-10 lg:py-20 xl:px-12">
           <div className="w-full">
-            <p className="font-serif-display text-[11px] font-medium uppercase tracking-[0.3em] text-[#9A7534] sm:text-xs lg:whitespace-nowrap">
+            <p className="font-serif-display text-[11px] font-medium uppercase tracking-[0.3em] text-[#D9615C] sm:text-xs lg:whitespace-nowrap">
               Homemade <span aria-hidden="true" className="px-1.5">•</span> Halal <span aria-hidden="true" className="px-1.5">•</span> Jagakarsa
             </p>
-            <span aria-hidden="true" className="mt-6 block h-px w-12 bg-[#B69A63] sm:mt-7" />
-            <h1 className="mt-9 font-serif-display text-[38px] font-normal uppercase leading-[1.08] tracking-[-0.04em] text-[#17343D] min-[390px]:text-[40px] sm:text-[54px] lg:mt-10 lg:text-[56px] xl:text-[58px]">
+            <span aria-hidden="true" className="mt-6 block h-px w-12 bg-[#ED7772] sm:mt-7" />
+            <h1 className="mt-9 font-serif-display text-[38px] font-normal uppercase leading-[1.08] tracking-[-0.04em] text-[#321D16] min-[390px]:text-[40px] sm:text-[54px] lg:mt-10 lg:text-[56px] xl:text-[58px]">
               <span className="block lg:whitespace-nowrap">Dimsum untuk</span>
               <span className="block lg:whitespace-nowrap">setiap momen.</span>
             </h1>
-            <p className="mt-6 max-w-[440px] text-[15px] leading-7 text-[#465A60] sm:text-base sm:leading-8 md:mt-7">
+            <p className="mt-6 max-w-[440px] text-[15px] leading-7 text-[#665750] sm:text-base sm:leading-8 md:mt-7">
               Dibuat segar setiap hari dengan bahan pilihan dan resep khas rumahan untuk rasa yang selalu berkesan.
             </p>
             <div className="mt-8 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-8 md:mt-10">
-              <a href={getWhatsAppUrl("Halo LalaGi Dimsum, saya mau pesan dimsum")} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 w-full items-center justify-center bg-[#17343D] px-7 py-4 font-serif-display text-xs font-semibold uppercase tracking-[0.13em] text-[#FFFCF7] transition-colors duration-200 hover:bg-[#244954] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B69A63] motion-reduce:transition-none sm:w-auto">
+              <a href={getWhatsAppUrl("Halo LalaGi Dimsum, saya mau pesan dimsum")} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 w-full items-center justify-center bg-[#ED7772] px-7 py-4 font-serif-display text-xs font-semibold uppercase tracking-[0.13em] text-[#FFFDF9] transition-colors duration-200 hover:bg-[#D9615C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ED7772] motion-reduce:transition-none sm:w-auto">
                 Pesan via WhatsApp
               </a>
-              <Link href="/menu" className="inline-flex min-h-11 items-center border-b border-[#B69A63] font-serif-display text-xs font-semibold uppercase tracking-[0.14em] text-[#17343D] transition-colors duration-200 hover:text-[#9A7534] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B69A63] motion-reduce:transition-none">
+              <Link href="/menu" className="inline-flex min-h-11 items-center border-b border-[#ED7772] font-serif-display text-xs font-semibold uppercase tracking-[0.14em] text-[#321D16] transition-colors duration-200 hover:text-[#D9615C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ED7772] motion-reduce:transition-none">
                 Lihat Menu
               </Link>
             </div>
-            <div className="mt-10 flex items-center gap-4 border-t border-[#D8CDBB] pt-5 md:mt-14">
-              <span aria-hidden="true" className="font-serif-display text-xl text-[#B69A63]">H</span>
-              <p className="text-[10px] font-medium uppercase leading-5 tracking-[0.13em] text-[#465A60] sm:text-[11px]">
+            <div className="mt-10 flex items-center gap-4 border-t border-[#E9D9D1] pt-5 md:mt-14">
+              <span aria-hidden="true" className="font-serif-display text-xl text-[#ED7772]">H</span>
+              <p className="text-[10px] font-medium uppercase leading-5 tracking-[0.13em] text-[#665750] sm:text-[11px]">
                 Halal MUI <span className="whitespace-nowrap">ID31110016921890424</span>
               </p>
             </div>

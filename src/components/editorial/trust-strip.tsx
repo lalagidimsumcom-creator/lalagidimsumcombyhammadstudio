@@ -1,85 +1,104 @@
-type ProofPointProps = {
-  value: string;
-  label: string;
-  icon: "star" | "halal" | "shield" | "location";
-};
+import Image from "next/image";
+import {
+  CheckCircle,
+  Medal,
+  Quotes,
+  Star,
+} from "@phosphor-icons/react/dist/ssr";
 
-function ProofIcon({ icon }: Pick<ProofPointProps, "icon">) {
-  const iconClassName = "h-9 w-9 shrink-0 text-[#C39A4A] sm:h-10 sm:w-10";
-
-  if (icon === "star") {
-    return (
-      <svg className={iconClassName} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="m12 3 2.62 5.31 5.86.85-4.24 4.13 1 5.83L12 16.37l-5.24 2.75 1-5.83-4.24-4.13 5.86-.85L12 3Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
-      </svg>
-    );
-  }
-
-  if (icon === "halal") {
-    return (
-      <svg className={iconClassName} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M12 2.75 18.5 6.5v7L12 21.25 5.5 13.5v-7L12 2.75Z" stroke="currentColor" strokeWidth="1.35" />
-        <path d="M9.2 15.3V8.7m5.6 6.6V8.7M9.2 12h5.6" stroke="currentColor" strokeWidth="1.35" strokeLinecap="round" />
-      </svg>
-    );
-  }
-
-  if (icon === "shield") {
-    return (
-      <svg className={iconClassName} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M12 2.8c2.4 2 4.7 2.65 7.25 2.9v5.55c0 4.65-2.88 8.1-7.25 10-4.37-1.9-7.25-5.35-7.25-10V5.7C7.3 5.45 9.6 4.8 12 2.8Z" stroke="currentColor" strokeWidth="1.35" strokeLinejoin="round" />
-        <path d="m8.9 12.1 2 2 4.35-4.55" stroke="currentColor" strokeWidth="1.35" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    );
-  }
-
-  return (
-    <svg className={iconClassName} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M19 10c0 5.3-7 11-7 11S5 15.3 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" strokeWidth="1.35" />
-      <circle cx="12" cy="10" r="2.25" stroke="currentColor" strokeWidth="1.35" />
-    </svg>
-  );
-}
-
-function ProofPoint({ value, label, icon }: ProofPointProps) {
-  return (
-    <div className="flex min-h-24 items-center justify-center gap-4 px-3 py-5 sm:px-5">
-      <ProofIcon icon={icon} />
-      <p className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-left">
-        <strong className="font-serif-display text-xl font-medium uppercase tracking-[0.08em] text-[#C9A259] sm:text-2xl">
-          {value}
-        </strong>
-        <span className="font-serif-display text-[0.65rem] uppercase tracking-[0.15em] text-[#F7F3EC] sm:text-xs">
-          {label}
-        </span>
-      </p>
-    </div>
-  );
-}
-
-const proofPoints: ProofPointProps[] = [
-  { value: "5.0", label: "Google Rating", icon: "star" },
-  { value: "Halal", label: "Certified", icon: "halal" },
-  { value: "5+", label: "Tahun", icon: "shield" },
-  { value: "Jabodetabek", label: "Area Layanan", icon: "location" },
+const trustMarks = [
+  {
+    image: "/images/logo-google-reviews.png",
+    alt: "Google Reviews",
+    value: "5.0 ★",
+    label: "Google Rating",
+  },
+  {
+    image: "/images/logo-halal-indonesia.jpg",
+    alt: "Logo Halal Indonesia",
+    value: "Halal",
+    label: "Certified Resmi",
+  },
+  {
+    image: "/images/logo-rri.png",
+    alt: "Radio Republik Indonesia",
+    value: "RRI",
+    label: "Liputan Resmi",
+  },
 ];
 
 export default function EditorialTrustStrip() {
   return (
-    <section aria-label="Kepercayaan pelanggan" className="w-full bg-[#092A35] text-[#F7F3EC]">
-      <div className="mx-auto grid max-w-[1400px] grid-cols-2 px-4 py-5 sm:px-8 lg:grid-cols-4 lg:px-12 lg:py-3 xl:px-16">
-        {proofPoints.map((proofPoint, index) => (
-          <div
-            key={proofPoint.label}
-            className={[
-              index % 2 === 1 ? "border-l border-[#B69A63]/55" : "",
-              index > 1 ? "border-t border-[#B69A63]/55 lg:border-t-0" : "",
-              index > 0 ? "lg:border-l lg:border-[#B69A63]/55" : "",
-            ].join(" ")}
+    <section
+      aria-labelledby="trust-title"
+      className="border-b border-[#432719] bg-[#321D16] px-5 py-16 text-[#FFF9F2] sm:px-8 lg:px-12 lg:py-20"
+    >
+      <div className="mx-auto max-w-[1360px]">
+        <div className="mb-10 max-w-xl lg:mb-12">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#ED7772]">
+            Kepercayaan pelanggan
+          </p>
+          <h2
+            id="trust-title"
+            className="mt-4 font-serif-display text-2xl font-medium uppercase leading-tight tracking-[0.05em] text-white sm:text-3xl"
           >
-            <ProofPoint {...proofPoint} />
+            Rasa yang dipercaya, kualitas yang terjaga.
+          </h2>
+        </div>
+
+        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
+          <div className="grid grid-cols-2 gap-7 sm:grid-cols-4 lg:col-span-7 lg:gap-6">
+            {trustMarks.map((mark) => (
+              <article key={mark.label} className="flex flex-col items-center text-center">
+                <div className="relative flex size-20 items-center justify-center overflow-hidden rounded-2xl border border-white/25 bg-white p-2.5 shadow-[0_14px_35px_rgba(22,10,7,0.28)] transition-transform duration-200 hover:-translate-y-1 sm:size-24">
+                  <Image
+                    src={mark.image}
+                    alt={mark.alt}
+                    fill
+                    sizes="96px"
+                    className="object-contain p-2.5"
+                  />
+                </div>
+                <strong className="mt-4 text-lg font-bold leading-tight text-white sm:text-xl">
+                  {mark.value}
+                </strong>
+                <span className="mt-1 text-xs font-medium text-white/65 sm:text-sm">
+                  {mark.label}
+                </span>
+              </article>
+            ))}
+
+            <article className="flex flex-col items-center text-center">
+              <div className="flex size-20 items-center justify-center rounded-2xl border border-[#ED7772]/45 bg-[#432719] shadow-[0_14px_35px_rgba(22,10,7,0.28)] transition-transform duration-200 hover:-translate-y-1 sm:size-24">
+                <Medal weight="fill" className="size-10 text-[#ED7772] sm:size-12" aria-hidden="true" />
+              </div>
+              <strong className="mt-4 text-lg font-bold leading-tight text-white sm:text-xl">
+                5+ Tahun
+              </strong>
+              <span className="mt-1 text-xs font-medium text-white/65 sm:text-sm">
+                Pengalaman
+              </span>
+            </article>
           </div>
-        ))}
+
+          <figure className="border-t border-white/15 pt-9 lg:col-span-5 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
+            <Quotes weight="fill" className="size-10 text-[#ED7772] sm:size-12" aria-hidden="true" />
+            <blockquote className="mt-5 font-serif-display text-xl italic leading-relaxed text-white sm:text-2xl">
+              “Rasanya enak, bahan berkualitas, dan selalu jadi andalan tiap ada acara di keluarga kami.”
+            </blockquote>
+            <figcaption className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-semibold text-white/75">
+              <span className="inline-flex items-center gap-2">
+                — Rina, Pelanggan Setia LalaGi
+                <CheckCircle weight="fill" className="size-4 text-[#ED7772]" aria-hidden="true" />
+              </span>
+              <span className="inline-flex gap-0.5 text-[#ED7772]" aria-label="5 dari 5 bintang">
+                {Array.from({ length: 5 }, (_, index) => (
+                  <Star key={index} weight="fill" className="size-4" aria-hidden="true" />
+                ))}
+              </span>
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </section>
   );

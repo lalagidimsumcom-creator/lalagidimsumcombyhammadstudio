@@ -6,26 +6,26 @@
   --font-sans: Arial, Helvetica, ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-cinzel), Georgia, serif;
   
-  /* LalaGi Quiet Premium Palette */
+  /* LalaGi Warm Brand Palette */
   --color-lalagi-coral: #ED7772;
-  --color-lalagi-navy: #17343D;
-  --color-lalagi-darknavy: #0E2831;
-  --color-lalagi-cream: #F7F3EC;
-  --color-lalagi-white: #FFFCF7;
-  --color-lalagi-muted: #667176;
-  --color-lalagi-gold: #B69A63;
+  --color-lalagi-cocoa: #321D16;
+  --color-lalagi-darkcocoa: #24130F;
+  --color-lalagi-cream: #FFF9F2;
+  --color-lalagi-white: #FFFDF9;
+  --color-lalagi-muted: #665750;
+  --color-lalagi-blush: #FBE9E5;
 }
 
 :root {
-  --background: #F7F3EC;
-  --foreground: #17343D;
-  --primary: #17343D;
-  --primary-foreground: #FFFCF7;
-  --card: #FFFCF7;
-  --card-foreground: #17343D;
-  --muted: #EEE8DE;
-  --muted-foreground: #667176;
-  --border: #D8CDBB;
+  --background: #FFF9F2;
+  --foreground: #321D16;
+  --primary: #ED7772;
+  --primary-foreground: #FFFDF9;
+  --card: #FFFDF9;
+  --card-foreground: #321D16;
+  --muted: #FBE9E5;
+  --muted-foreground: #665750;
+  --border: #E9D9D1;
   --radius: 0.25rem;
 }
 
@@ -49,7 +49,7 @@ body {
   }
 
   :focus-visible {
-    outline: 2px solid #B69A63;
+    outline: 2px solid #ED7772;
     outline-offset: 4px;
   }
 

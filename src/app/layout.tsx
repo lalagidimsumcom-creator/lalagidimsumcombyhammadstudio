@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#17343D",
+  themeColor: "#ED7772",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -66,7 +66,7 @@ export default function RootLayout({
       lang="id"
       className={`${cinzel.variable} scroll-smooth antialiased`}
     >
-      <body className="font-sans min-h-screen bg-[#F7F3EC] text-[#17343D] selection:bg-[#B69A63] selection:text-[#0E2831] overflow-x-hidden">
+      <body className="font-sans min-h-screen bg-[#FFF9F2] text-[#321D16] selection:bg-[#ED7772] selection:text-[#FFFDF9] overflow-x-hidden">
         {children}
       </body>
     </html>

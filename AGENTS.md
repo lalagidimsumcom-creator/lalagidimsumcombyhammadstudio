@@ -25,6 +25,6 @@ Official brand website and high-converting landing page for **LalaGi Dimsum** in
 - Keep TypeScript strict and avoid `any`.
 - Build mobile-first, accessible interfaces with an editorial food aesthetic.
 - Use real LalaGi brand photography and accurate business information.
-- Preserve the quiet-premium palette: navy `#17343D`, dark navy `#0E2831`, ivory `#F7F3EC`, white `#FFFCF7`, and gold `#B69A63`.
+- Preserve the warm brand palette: coral `#ED7772`, cream `#FFF9F2`, deep cocoa `#321D16`, white `#FFFDF9`, and blush `#FBE9E5`.
 - Keep ordering flows clear and route calls to action through the shared WhatsApp helper.
 - Display halal certification number `ID31110016921890424` accurately.

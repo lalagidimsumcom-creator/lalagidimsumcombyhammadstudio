@@ -24,12 +24,12 @@ const offerings = [
 ];
 
 const linkClass =
-  "transition-colors duration-200 hover:text-lalagi-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lalagi-gold";
+  "transition-colors duration-200 hover:text-lalagi-coral focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lalagi-coral";
 
 export default function EditorialFooter() {
   return (
-    <footer className="bg-lalagi-darknavy px-5 pb-8 text-lalagi-white sm:px-8 lg:px-12">
-      <div className="mx-auto max-w-[1360px] border-t border-lalagi-gold/60 pt-12 sm:pt-14">
+    <footer className="bg-lalagi-darkcocoa px-5 pb-8 text-lalagi-white sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-[1360px] border-t border-lalagi-coral/60 pt-12 sm:pt-14">
         <div className="grid gap-11 pb-12 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.75fr_0.8fr_1.1fr] lg:gap-12">
           <div>
             <Link
@@ -42,9 +42,9 @@ export default function EditorialFooter() {
                 alt=""
                 width={52}
                 height={52}
-                className="border border-lalagi-gold"
+                className="border border-lalagi-coral"
               />
-              <span className="font-serif-display text-lg tracking-[0.16em] text-lalagi-gold">
+              <span className="font-serif-display text-lg tracking-[0.16em] text-lalagi-coral">
                 LALAGI DIMSUM
               </span>
             </Link>
@@ -55,7 +55,7 @@ export default function EditorialFooter() {
             <p className="mt-3 text-xs leading-5 tracking-wide text-white/50">
               Halal MUI No. {BRAND_CONFIG.halalCertNumber}
             </p>
-            <div className="mt-6 flex gap-5 text-lalagi-gold">
+            <div className="mt-6 flex gap-5 text-lalagi-coral">
               <a
                 href={BRAND_CONFIG.instagramUrl}
                 target="_blank"
@@ -78,7 +78,7 @@ export default function EditorialFooter() {
           </div>
 
           <div>
-            <h3 className="font-serif-display text-xs font-semibold tracking-[0.18em] text-lalagi-gold">
+            <h3 className="font-serif-display text-xs font-semibold tracking-[0.18em] text-lalagi-coral">
               NAVIGASI
             </h3>
             <ul className="mt-5 space-y-3 text-sm text-white/65">
@@ -93,7 +93,7 @@ export default function EditorialFooter() {
           </div>
 
           <div>
-            <h3 className="font-serif-display text-xs font-semibold tracking-[0.18em] text-lalagi-gold">
+            <h3 className="font-serif-display text-xs font-semibold tracking-[0.18em] text-lalagi-coral">
               LAYANAN
             </h3>
             <ul className="mt-5 space-y-3 text-sm text-white/65">
@@ -108,7 +108,7 @@ export default function EditorialFooter() {
           </div>
 
           <div>
-            <h3 className="font-serif-display text-xs font-semibold tracking-[0.18em] text-lalagi-gold">
+            <h3 className="font-serif-display text-xs font-semibold tracking-[0.18em] text-lalagi-coral">
               KONTAK
             </h3>
             <ul className="mt-5 space-y-4 text-sm text-white/65">
@@ -122,7 +122,7 @@ export default function EditorialFooter() {
                   <WhatsappLogo
                     size={18}
                     weight="regular"
-                    className="mt-0.5 shrink-0 text-lalagi-gold"
+                    className="mt-0.5 shrink-0 text-lalagi-coral"
                     aria-hidden="true"
                   />
                   <span>{BRAND_CONFIG.phoneDisplay}</span>
@@ -138,7 +138,7 @@ export default function EditorialFooter() {
                   <InstagramLogo
                     size={18}
                     weight="regular"
-                    className="mt-0.5 shrink-0 text-lalagi-gold"
+                    className="mt-0.5 shrink-0 text-lalagi-coral"
                     aria-hidden="true"
                   />
                   <span>{BRAND_CONFIG.instagramHandle}</span>
@@ -148,7 +148,7 @@ export default function EditorialFooter() {
                 <MapPin
                   size={18}
                   weight="regular"
-                  className="mt-0.5 shrink-0 text-lalagi-gold"
+                  className="mt-0.5 shrink-0 text-lalagi-coral"
                   aria-hidden="true"
                 />
                 <span>{BRAND_CONFIG.location}</span>
@@ -161,7 +161,7 @@ export default function EditorialFooter() {
                   <EnvelopeSimple
                     size={18}
                     weight="regular"
-                    className="mt-0.5 shrink-0 text-lalagi-gold"
+                    className="mt-0.5 shrink-0 text-lalagi-coral"
                     aria-hidden="true"
                   />
                   <span>hello@lalagidimsum.com</span>
@@ -171,7 +171,7 @@ export default function EditorialFooter() {
           </div>
         </div>
 
-        <div className="border-t border-lalagi-gold/60 pt-7 text-center text-[0.68rem] tracking-[0.08em] text-white/45 sm:text-left">
+        <div className="border-t border-lalagi-coral/60 pt-7 text-center text-[0.68rem] tracking-[0.08em] text-white/45 sm:text-left">
           © {new Date().getFullYear()} LalaGi Dimsum. All rights reserved.
         </div>
       </div>
