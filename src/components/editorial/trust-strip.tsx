@@ -1,8 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, Medal } from "@phosphor-icons/react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Medal,
+  Pause,
+  Play,
+} from "@phosphor-icons/react";
 
 const trustMarks = [
   {
@@ -26,7 +32,6 @@ const trustMarks = [
 ];
 
 const reviewImages = [
-
   {
     src: "/images/google-review-new-1.webp",
     alt: "Ulasan Google tambahan dari Fransisca Marseilla untuk LalaGi Dimsum",
@@ -51,9 +56,29 @@ const reviewImages = [
 
 export default function EditorialTrustStrip() {
   const [activeReview, setActiveReview] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [isInteracting, setIsInteracting] = useState(false);
+
+  useEffect(() => {
+    if (
+      isPaused ||
+      isInteracting ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
+
+    const intervalId = window.setInterval(() => {
+      setActiveReview((current) => (current + 1) % reviewImages.length);
+    }, 5_000);
+
+    return () => window.clearInterval(intervalId);
+  }, [isInteracting, isPaused]);
 
   const showPreviousReview = () => {
-    setActiveReview((current) => (current - 1 + reviewImages.length) % reviewImages.length);
+    setActiveReview(
+      (current) => (current - 1 + reviewImages.length) % reviewImages.length,
+    );
   };
 
   const showNextReview = () => {
@@ -107,7 +132,11 @@ export default function EditorialTrustStrip() {
 
             <article className="flex min-h-52 flex-col justify-between border-b border-r border-[#3A2232]/15 p-5 sm:min-h-60 sm:p-7">
               <div className="flex size-16 items-center justify-center rounded-full border border-[#722F37] bg-[#722F37] sm:size-20">
-                <Medal weight="fill" className="size-8 text-white sm:size-10" aria-hidden="true" />
+                <Medal
+                  weight="fill"
+                  className="size-8 text-white sm:size-10"
+                  aria-hidden="true"
+                />
               </div>
               <div>
                 <strong className="block text-xl font-bold leading-tight sm:text-2xl">
@@ -120,14 +149,33 @@ export default function EditorialTrustStrip() {
             </article>
           </div>
 
-          <div className="flex min-w-0 flex-col justify-between border-t border-[#3A2232]/15 pt-9 lg:col-span-7 lg:border-l lg:border-t-0 lg:pl-16 lg:pt-0">
-            <div className="overflow-hidden" aria-live="polite">
+          <div
+            className="flex min-w-0 flex-col justify-between border-t border-[#3A2232]/15 pt-9 lg:col-span-7 lg:border-l lg:border-t-0 lg:pl-16 lg:pt-0"
+            onMouseEnter={() => setIsInteracting(true)}
+            onMouseLeave={() => setIsInteracting(false)}
+            onFocusCapture={() => setIsInteracting(true)}
+            onBlurCapture={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) {
+                setIsInteracting(false);
+              }
+            }}
+          >
+            <div
+              className="overflow-hidden"
+              aria-label="Carousel ulasan Google pelanggan"
+              aria-roledescription="carousel"
+            >
               <div
                 className="flex transition-transform duration-500 ease-out"
                 style={{ transform: `translateX(-${activeReview * 100}%)` }}
               >
-                {reviewImages.map((review) => (
-                  <figure key={review.src} className="w-full shrink-0">
+                {reviewImages.map((review, index) => (
+                  <figure
+                    key={review.src}
+                    className="w-full shrink-0"
+                    aria-label={`Ulasan ${index + 1} dari ${reviewImages.length}`}
+                    aria-hidden={index !== activeReview}
+                  >
                     <div className="relative h-[30rem] w-full overflow-hidden border border-[#3A2232]/15 bg-white sm:h-[34rem]">
                       <Image
                         src={review.src}
@@ -144,16 +192,42 @@ export default function EditorialTrustStrip() {
 
             <div className="mt-7 flex items-center justify-between border-t border-[#3A2232]/15 pt-6">
               <span className="text-xs font-semibold tabular-nums text-[#735E6C]">
-                {String(activeReview + 1).padStart(2, "0")} / {String(reviewImages.length).padStart(2, "0")}
+                {String(activeReview + 1).padStart(2, "0")} /{" "}
+                {String(reviewImages.length).padStart(2, "0")}
               </span>
               <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setIsPaused((paused) => !paused)}
+                  aria-label={
+                    isPaused
+                      ? "Putar otomatis ulasan"
+                      : "Jeda putar otomatis ulasan"
+                  }
+                  aria-pressed={isPaused}
+                  className="flex size-11 items-center justify-center rounded-full border border-[#3A2232]/20 text-[#735E6C] transition-colors duration-200 hover:border-[#722F37] hover:text-[#722F37] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#722F37] active:scale-95"
+                >
+                  {isPaused ? (
+                    <Play weight="fill" className="size-4" aria-hidden="true" />
+                  ) : (
+                    <Pause
+                      weight="fill"
+                      className="size-4"
+                      aria-hidden="true"
+                    />
+                  )}
+                </button>
                 <button
                   type="button"
                   onClick={showPreviousReview}
                   aria-label="Lihat ulasan sebelumnya"
                   className="flex size-11 items-center justify-center rounded-full border border-[#722F37] text-[#722F37] transition-colors duration-200 hover:bg-[#722F37] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#722F37] active:scale-95"
                 >
-                  <ArrowLeft weight="bold" className="size-4" aria-hidden="true" />
+                  <ArrowLeft
+                    weight="bold"
+                    className="size-4"
+                    aria-hidden="true"
+                  />
                 </button>
                 <button
                   type="button"
@@ -161,7 +235,11 @@ export default function EditorialTrustStrip() {
                   aria-label="Lihat ulasan berikutnya"
                   className="flex size-11 items-center justify-center rounded-full bg-[#722F37] text-white transition-colors duration-200 hover:bg-[#5F252D] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#722F37] active:scale-95"
                 >
-                  <ArrowRight weight="bold" className="size-4" aria-hidden="true" />
+                  <ArrowRight
+                    weight="bold"
+                    className="size-4"
+                    aria-hidden="true"
+                  />
                 </button>
               </div>
             </div>
