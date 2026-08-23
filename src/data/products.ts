@@ -30,23 +30,25 @@ const CELEBRATION_OCCASIONS = [
 
 export const MENU_GROUPS: readonly MenuGroup[] = [
   {
-    id: "dimsum-tampah",
+    id: "dimsum-party-size",
     menuNumber: "01",
-    name: "Dimsum Tampah",
-    meta: "Untuk kantor & keluarga",
+    name: "Dimsum Party Size",
+    meta: "Untuk dinikmati dan dibagikan",
     description:
-      "Dimsum Tampah dikemas secara rapi dan eksklusif, cocok untuk menemani momen spesial di kantor ataupun bersama keluarga.",
-    occasions: CELEBRATION_OCCASIONS,
+      "Pilihan Party Size full mentai atau mix untuk menemani kumpul kecil, hadiah, dan momen berbagi.",
     variants: [
-      { name: "Dimsum Tampah 50 pcs", price: 390_000 },
-      { name: "Dimsum Tampah 100 pcs", price: 580_000 },
+      { name: "Party Size Full Mentai 20 pcs", price: 90_000 },
+      { name: "Party Size Mix 20 pcs", price: 100_000 },
+      { name: "Party Size Full Mentai 25 pcs", price: 115_000 },
+      { name: "Party Size Mix 25 pcs", price: 125_000 },
     ],
-    deliveryType: "car",
-    deliveryLabel: "Pengantaran wajib dengan mobil",
-    images: [
-      "/images/menu-groups/dimsum-tampah-01.webp",
-      "/images/menu-groups/dimsum-tampah-02.webp",
+    notes: [
+      "Bisa request tambahan add-on keju huruf",
+      "Bisa request untuk gift",
     ],
+    deliveryType: "motor",
+    deliveryLabel: "Pengantaran bisa dengan motor",
+    images: ["/images/menu-groups/dimsum-party-size.webp"],
   },
   {
     id: "dimsum-cake",
@@ -87,8 +89,27 @@ export const MENU_GROUPS: readonly MenuGroup[] = [
     images: ["/images/menu-groups/dimsum-bucket.webp"],
   },
   {
-    id: "dimsum-tower",
+    id: "dimsum-tampah",
     menuNumber: "04",
+    name: "Dimsum Tampah",
+    meta: "Untuk kantor & keluarga",
+    description:
+      "Dimsum Tampah dikemas secara rapi dan eksklusif, cocok untuk menemani momen spesial di kantor ataupun bersama keluarga.",
+    occasions: CELEBRATION_OCCASIONS,
+    variants: [
+      { name: "Dimsum Tampah 50 pcs", price: 390_000 },
+      { name: "Dimsum Tampah 100 pcs", price: 580_000 },
+    ],
+    deliveryType: "car",
+    deliveryLabel: "Pengantaran wajib dengan mobil",
+    images: [
+      "/images/menu-groups/dimsum-tampah-01.webp",
+      "/images/menu-groups/dimsum-tampah-02.webp",
+    ],
+  },
+  {
+    id: "dimsum-tower",
+    menuNumber: "05",
     name: "Dimsum Tower",
     meta: "Tampilan mewah untuk acara besar",
     description:
@@ -104,26 +125,5 @@ export const MENU_GROUPS: readonly MenuGroup[] = [
       "/images/menu-groups/dimsum-tower-01.webp",
       "/images/menu-groups/dimsum-tower-02.webp",
     ],
-  },
-  {
-    id: "dimsum-party-size",
-    menuNumber: "05",
-    name: "Dimsum Party Size",
-    meta: "Untuk dinikmati dan dibagikan",
-    description:
-      "Pilihan Party Size full mentai atau mix untuk menemani kumpul kecil, hadiah, dan momen berbagi.",
-    variants: [
-      { name: "Party Size Full Mentai 20 pcs", price: 90_000 },
-      { name: "Party Size Mix 20 pcs", price: 100_000 },
-      { name: "Party Size Full Mentai 25 pcs", price: 115_000 },
-      { name: "Party Size Mix 25 pcs", price: 125_000 },
-    ],
-    notes: [
-      "Bisa request tambahan add-on keju huruf",
-      "Bisa request untuk gift",
-    ],
-    deliveryType: "motor",
-    deliveryLabel: "Pengantaran bisa dengan motor",
-    images: ["/images/menu-groups/dimsum-party-size.webp"],
   },
 ];
