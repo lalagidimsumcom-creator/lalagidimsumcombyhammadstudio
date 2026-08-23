@@ -36,7 +36,7 @@ export default function WhatsAppFloatingCta() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Pesan via WhatsApp"
-        className="flex size-13 shrink-0 items-center justify-center rounded-full border border-[#E75480] bg-[#E75480] text-white shadow-xl transition-[background-color,color,transform] duration-200 hover:-translate-y-1 hover:bg-[#D63D76] active:translate-y-0 sm:size-14"
+        className="flex size-13 shrink-0 items-center justify-center rounded-full border border-[#722F37] bg-[#722F37] text-white shadow-xl transition-[background-color,color,transform] duration-200 hover:-translate-y-1 hover:bg-[#5F252D] active:translate-y-0 sm:size-14"
       >
         <WhatsappLogo weight="fill" className="size-6" aria-hidden="true" />
       </a>

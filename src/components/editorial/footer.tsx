@@ -24,7 +24,7 @@ const linkClass =
 
 export default function EditorialFooter() {
   return (
-    <footer className="bg-lalagi-darkcocoa px-5 pb-8 text-lalagi-white sm:px-8 lg:px-12">
+    <footer className="bg-[#722F37] px-5 pb-8 text-white sm:px-8 lg:px-12">
       <div className="mx-auto max-w-[1360px] border-t border-white/20 pt-12 sm:pt-14">
         <div className="grid gap-11 pb-12 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.75fr_0.8fr_1.1fr] lg:gap-12">
           <div>

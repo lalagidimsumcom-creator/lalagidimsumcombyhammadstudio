@@ -26,26 +26,7 @@ const trustMarks = [
 ];
 
 const reviewImages = [
-  {
-    src: "/images/google-review-ribka.jpeg",
-    alt: "Ulasan Google dari Ribka Anflora untuk LalaGi Dimsum",
-  },
-  {
-    src: "/images/google-review-rifdah.jpeg",
-    alt: "Ulasan Google dari Rifdah Safitri untuk LalaGi Dimsum",
-  },
-  {
-    src: "/images/google-review-fransisca.jpeg",
-    alt: "Ulasan Google dari Fransisca Marseilla untuk LalaGi Dimsum",
-  },
-  {
-    src: "/images/google-review-liza.jpeg",
-    alt: "Ulasan Google dari Liza Noah untuk LalaGi Dimsum",
-  },
-  {
-    src: "/images/google-review-elsa.jpeg",
-    alt: "Ulasan Google dari Elsa Meilinda Putri untuk LalaGi Dimsum",
-  },
+
   {
     src: "/images/google-review-new-1.webp",
     alt: "Ulasan Google tambahan dari Fransisca Marseilla untuk LalaGi Dimsum",

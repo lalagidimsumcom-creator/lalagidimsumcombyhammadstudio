@@ -4,6 +4,7 @@ import EditorialHero from "@/components/editorial/hero";
 import EditorialSignatureCake from "@/components/editorial/signature-cake";
 import EditorialProductGallery from "@/components/editorial/product-gallery";
 import EditorialTrustStrip from "@/components/editorial/trust-strip";
+import EditorialClientWall from "@/components/editorial/client-wall";
 import EditorialFinalCta from "@/components/editorial/final-cta";
 import EditorialFooter from "@/components/editorial/footer";
 import WhatsAppFloatingCta from "@/components/whatsapp-floating-cta";
@@ -22,6 +23,7 @@ export default function HomePage() {
       <main id="main-content">
         <EditorialHero />
         <EditorialTrustStrip />
+        <EditorialClientWall />
         <EditorialSignatureCake />
         <EditorialProductGallery />
         <EditorialFinalCta />
