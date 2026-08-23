@@ -13,6 +13,8 @@ export interface MenuGroup {
   description: string;
   occasions?: readonly string[];
   variants: readonly MenuVariant[];
+  priceNote?: string;
+  notesTitle?: string;
   notes?: readonly string[];
   deliveryType: DeliveryType;
   deliveryLabel: string;
@@ -53,17 +55,17 @@ export const MENU_GROUPS: readonly MenuGroup[] = [
   {
     id: "dimsum-cake",
     menuNumber: "02",
-    name: "Dimsum Cake Reguler",
+    name: "Dimsum Reguler",
     meta: "Perayaan yang lebih personal",
     description:
       "Dimsum Cake untuk perayaan momen spesial kamu dengan perpaduan dimsum bersaus mentai creamy dan dimsum original.",
     occasions: CELEBRATION_OCCASIONS,
     variants: [
-      { name: "Dimsum Cake Reguler 25 pcs", price: 165_000 },
-      { name: "Dimsum Cake Reguler 30 pcs", price: 185_000 },
-      { name: "Dimsum Cake Reguler 35 pcs", price: 200_000 },
-      { name: "Dimsum Cake Reguler 40 pcs", price: 225_000 },
-      { name: "Dimsum Cake Reguler 45 pcs", price: 260_000 },
+      { name: "Dimsum Reguler 25 pcs", price: 165_000 },
+      { name: "Dimsum Reguler 30 pcs", price: 185_000 },
+      { name: "Dimsum Reguler 35 pcs", price: 200_000 },
+      { name: "Dimsum Reguler 40 pcs", price: 225_000 },
+      { name: "Dimsum Reguler 45 pcs", price: 260_000 },
     ],
     deliveryType: "motor",
     deliveryLabel: "Pengantaran bisa dengan motor",
@@ -125,5 +127,27 @@ export const MENU_GROUPS: readonly MenuGroup[] = [
       "/images/menu-groups/dimsum-tower-01.webp",
       "/images/menu-groups/dimsum-tower-02.webp",
     ],
+  },
+  {
+    id: "dimsum-money-roll",
+    menuNumber: "06",
+    name: "Dimsum Money Roll",
+    meta: "Surprise untuk orang tersayang",
+    description:
+      "Surprise dengan Dimsum Money Roll akan terasa sangat berkesan untuk orang tersayang, baik di kantor maupun bersama keluarga.",
+    occasions: CELEBRATION_OCCASIONS,
+    variants: [
+      { name: "Dimsum Money Roll 40 pcs", price: 315_000 },
+    ],
+    priceNote:
+      "Harga Dimsum Money Roll belum termasuk isi uang di dalamnya.",
+    notesTitle: "Syarat & ketentuan",
+    notes: [
+      "Uang menggunakan pecahan Rp50.000 atau Rp100.000.",
+      "Isi uang maksimal Rp1.000.000 untuk pecahan Rp50.000 atau Rp2.000.000 untuk pecahan Rp100.000.",
+    ],
+    deliveryType: "car",
+    deliveryLabel: "Pengantaran dengan mobil",
+    images: ["/images/menu-groups/dimsum-money-roll.webp"],
   },
 ];

@@ -75,7 +75,7 @@ export default function MenuPage() {
               halal resmi, dan disiapkan fresh setiap hari.
             </p>
             <p className="mt-5 border-t border-[#3A2232]/15 pt-5 text-xs font-semibold uppercase tracking-[0.18em] text-[#722F37]">
-              5 pilihan menu saat ini
+              6 pilihan menu saat ini
             </p>
           </div>
         </div>
@@ -143,22 +143,35 @@ export default function MenuPage() {
                   ))}
                 </div>
 
+                {menu.priceNote && (
+                  <p className="mt-4 text-sm font-medium leading-6 text-[#735E6C]">
+                    {menu.priceNote}
+                  </p>
+                )}
+
                 {menu.notes && (
-                  <ul className="mt-6 space-y-2.5">
-                    {menu.notes.map((note) => (
-                      <li
-                        key={note}
-                        className="flex items-start gap-2.5 text-sm leading-6 text-[#735E6C]"
-                      >
-                        <CheckCircle
-                          weight="fill"
-                          className="mt-1 size-4 shrink-0 text-[#722F37]"
-                          aria-hidden="true"
-                        />
-                        <span>{note}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="mt-6">
+                    {menu.notesTitle && (
+                      <h3 className="mb-3 text-sm font-bold text-[#3A2232]">
+                        {menu.notesTitle}
+                      </h3>
+                    )}
+                    <ul className="space-y-2.5">
+                      {menu.notes.map((note) => (
+                        <li
+                          key={note}
+                          className="flex items-start gap-2.5 text-sm leading-6 text-[#735E6C]"
+                        >
+                          <CheckCircle
+                            weight="fill"
+                            className="mt-1 size-4 shrink-0 text-[#722F37]"
+                            aria-hidden="true"
+                          />
+                          <span>{note}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 )}
 
                 <div className="mt-7 flex items-start gap-3 bg-[#FFFDF9] px-4 py-4 text-sm font-semibold leading-6 text-[#3A2232]">
