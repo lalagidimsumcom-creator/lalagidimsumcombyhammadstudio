@@ -5,6 +5,7 @@ import Image from "next/image";
 import {
   ArrowUpRight,
   Car,
+  CaretDown,
   Check,
   Clock,
   Motorcycle,
@@ -28,15 +29,13 @@ const categories: Array<{ id: CategoryFilter; label: string }> = [
   { id: "party", label: "Party Size" },
   { id: "single", label: "Dimsum Satuan" },
   { id: "hampers", label: "Hampers" },
-  { id: "collaboration", label: "Kimako & Sanka" },
-  { id: "bundle", label: "Paket Bundling" },
 ];
 
 const formatRupiah = (price: number) => `Rp${new Intl.NumberFormat("id-ID").format(price)}`;
 
-const deliveryLabel = {
-  "motor-ok": "Bisa dikirim motor dengan bag",
-  "car-required": "Pengiriman wajib mobil",
+const deliveryNote = {
+  "motor-ok": "Dikirim dengan motor + tas bersama driver LalaGi Dimsum",
+  "car-required": "Dikirim dengan mobil bersama driver LalaGi Dimsum",
   standard: null,
 } as const;
 
@@ -63,25 +62,23 @@ export default function MenuPage() {
             Semua dimsum dibuat dari 90% daging ayam pilihan, bersertifikat halal resmi dan disiapkan fresh setiap hari.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-2.5 pt-7" aria-label="Filter kategori menu">
-            {categories.map((category) => {
-              const isActive = activeCategory === category.id;
-              return (
-                <button
-                  key={category.id}
-                  type="button"
-                  onClick={() => setActiveCategory(category.id)}
-                  aria-pressed={isActive}
-                  className={`rounded-full border px-5 py-2.5 text-sm font-bold transition-all duration-200 sm:text-base ${
-                    isActive
-                      ? "border-[#E75480] bg-[#E75480] text-white shadow-md"
-                      : "border-[#EADDE5] bg-white text-[#735E6C] hover:border-[#E75480] hover:text-[#3A2232]"
-                  }`}
-                >
-                  {category.label}
-                </button>
-              );
-            })}
+          <div className="mx-auto max-w-sm pt-7 text-left">
+            <label htmlFor="menu-category" className="mb-2 block text-xs font-bold uppercase tracking-[0.14em] text-[#735E6C]">
+              Submenu kategori
+            </label>
+            <div className="relative">
+              <select
+                id="menu-category"
+                value={activeCategory}
+                onChange={(event) => setActiveCategory(event.target.value as CategoryFilter)}
+                className="min-h-13 w-full appearance-none rounded-full border border-[#EADDE5] bg-white py-3 pl-5 pr-12 text-sm font-bold text-[#3A2232] shadow-sm outline-none transition-colors hover:border-[#E75480] focus:border-[#E75480] focus:ring-2 focus:ring-[#E75480]/20 sm:text-base"
+              >
+                {categories.map((category) => (
+                  <option key={category.id} value={category.id}>{category.label}</option>
+                ))}
+              </select>
+              <CaretDown weight="bold" className="pointer-events-none absolute right-5 top-1/2 size-4 -translate-y-1/2 text-[#E75480]" aria-hidden="true" />
+            </div>
           </div>
         </div>
       </section>
@@ -135,11 +132,6 @@ export default function MenuPage() {
                       Tanyakan ketersediaan
                     </span>
                   )}
-                  {deliveryLabel[product.deliveryType] && (
-                    <span className="rounded-full bg-[#321D16]/95 px-3 py-1 text-[0.68rem] font-bold text-white shadow-sm">
-                      {deliveryLabel[product.deliveryType]}
-                    </span>
-                  )}
                 </div>
               </div>
 
@@ -163,6 +155,16 @@ export default function MenuPage() {
                     <p className="mt-3 border-l-2 border-[#E75480] pl-3 text-xs leading-5 text-[#735E6C]">
                       {product.availabilityNote}
                     </p>
+                  )}
+                  {deliveryNote[product.deliveryType] && (
+                    <div className="mt-4 flex items-start gap-2.5 border-t border-[#EADDE5] pt-4 text-xs font-semibold leading-5 text-[#735E6C]">
+                      {product.deliveryType === "motor-ok" ? (
+                        <Motorcycle weight="duotone" className="mt-0.5 size-5 shrink-0 text-[#E75480]" aria-hidden="true" />
+                      ) : (
+                        <Car weight="duotone" className="mt-0.5 size-5 shrink-0 text-[#E75480]" aria-hidden="true" />
+                      )}
+                      <span>{deliveryNote[product.deliveryType]}</span>
+                    </div>
                   )}
                 </div>
 
@@ -231,8 +233,8 @@ export default function MenuPage() {
           </h2>
           <div className="mt-9 grid gap-5 md:grid-cols-3">
             {[
-              { icon: Motorcycle, title: "Cake & Bucket", text: "Bisa menggunakan motor dengan bag. Driver LalaGi Dimsum direkomendasikan agar paket lebih aman." },
-              { icon: Car, title: "Tower, Tampah & Money Roll", text: "Mini Tower, Tower, Money Roll, dan Tampah wajib dikirim menggunakan mobil." },
+              { icon: Motorcycle, title: "Cake & Bucket", text: "Dikirim dengan motor + tas bersama driver LalaGi Dimsum agar paket tetap aman." },
+              { icon: Car, title: "Tower, Tampah & Money Roll", text: "Dikirim dengan mobil bersama driver LalaGi Dimsum agar susunan tetap terjaga." },
               { icon: WarningCircle, title: "Tanyakan stok", text: "Party Size dan dimsum satuan dapat sewaktu-waktu sold out. Konfirmasi sebelum memesan." },
             ].map((item) => (
               <article key={item.title} className="border border-[#EADDE5] bg-white p-6">
@@ -258,10 +260,9 @@ export default function MenuPage() {
           <li>Jam pengiriman pukul 08.00–18.00.</li>
           <li>Semua harga belum termasuk biaya kirim.</li>
           <li>Ongkir mengikuti aplikasi GoSend/Lalamove dan dapat berubah karena cuaca atau banjir.</li>
-          <li>Cake dan Bucket dapat dikirim menggunakan motor dengan bag; driver LalaGi Dimsum direkomendasikan.</li>
-          <li>Mini Tower, Tower, Money Roll, dan Tampah wajib menggunakan mobil.</li>
+          <li>Cake dan Bucket dikirim dengan motor + tas bersama driver LalaGi Dimsum.</li>
+          <li>Mini Tower, Tower, Money Roll, dan Tampah dikirim dengan mobil bersama driver LalaGi Dimsum.</li>
           <li>Hampers Ramadan/Idul Fitri bersifat seasonal dan perlu dipesan saat periodenya aktif.</li>
-          <li>Kimako, Sanka, dan paket bundling merupakan menu kolaborasi opsional; ikuti waktu pre-order yang tercantum dan konfirmasi ketersediaan terlebih dahulu.</li>
         </ol>
         <a
           href={getWhatsAppUrl("Halo LalaGi Dimsum, saya lihat menu di website dan mau tanya/pesan dimsum 😊")}

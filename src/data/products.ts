@@ -4,9 +4,7 @@ export type ProductCategory =
   | "tower-tampah"
   | "party"
   | "single"
-  | "hampers"
-  | "collaboration"
-  | "bundle";
+  | "hampers";
 
 export type StockStatus = "available" | "ask" | "seasonal" | "optional";
 export type DeliveryType = "motor-ok" | "car-required" | "standard";
@@ -256,58 +254,6 @@ const hamperProducts: Product[] = [
   },
 ];
 
-const kimakoAddons: ProductAddon[] = [
-  { name: "Extra Shot ++", price: 4_000 },
-  { name: "Upgrade Oatside", price: 5_000 },
-];
-
-const kimakoProducts: Product[] = [
-  { id: "kimako-americano", name: "Kimako Americano", meta: "Kolaborasi · Cup / 200 ml", price: 18_000, includes: ["Espresso", "Water"] },
-  { id: "kimako-coffee-latte", name: "Kimako Coffee Latte", meta: "Kolaborasi · Cup & 1 L", price: 20_000, includes: ["Espresso", "Milk", "Cream", "Sugar"], priceOptions: [{ name: "Cup / 200 ml", price: 20_000 }, { name: "1 L", price: 75_000 }] },
-  ...["Butterscotch", "Caramel", "Aren", "Vanilla"].map((flavour) => ({ id: `kimako-coffee-${flavour.toLowerCase()}`, name: `Kimako Coffee ${flavour}`, meta: "Kolaborasi · Cup & 1 L", price: 20_000, includes: ["Espresso", "Milk", "Cream", "Syrup"], priceOptions: [{ name: "Cup / 200 ml", price: 20_000 }, { name: "1 L", price: 80_000 }] })),
-  { id: "kimako-matcha-latte", name: "Kimako Ceremonial Matcha Latte", meta: "Kolaborasi · Cup & 1 L", price: 25_000, includes: ["Ceremonial Matcha", "Pure Milk"], priceOptions: [{ name: "Cup / 200 ml", price: 25_000 }, { name: "1 L", price: 85_000 }] },
-  { id: "kimako-dark-chocolate", name: "Kimako Dark Chocolate Signature", meta: "Kolaborasi · Cup & 1 L", price: 20_000, includes: ["Dark Chocolate", "Milk", "Syrup"], priceOptions: [{ name: "Cup / 200 ml", price: 20_000 }, { name: "1 L", price: 75_000 }] },
-].map((product): Product => ({
-  category: "collaboration",
-  description: "Menu minuman kolaborasi Kimako yang tersedia melalui sistem pre-order.",
-  addons: kimakoAddons,
-  stockStatus: "optional",
-  availabilityNote: "Kimako pre-order H-1. Tanyakan ketersediaan sebelum memesan.",
-  deliveryType: "standard",
-  visualLabel: "Kimako · PO H-1",
-  ...product,
-}));
-
-const sankaDrinks = ["Kopsus Aren", "Latte", "Osmanthus Honey Latte", "Long Black", "Black Mango", "Black Honey Lemon", "Black Peach", "Signature Chocolate", "Earl Grey Milk Tea"];
-
-const sankaProducts: Product[] = [
-  { id: "sanka-standard", name: "Sanka Standard", meta: "Kolaborasi · Min. 10 kaleng", price: 28_000, priceSuffix: "/ kaleng", priceOptions: [10, 20, 30, 40, 50].map((quantity) => ({ name: `${quantity} kaleng`, price: quantity * 28_000 })), availabilityNote: "Pre-order H-3." },
-  { id: "sanka-custom-design", name: "Sanka Custom Design", meta: "Kolaborasi · Min. 10 kaleng", price: 32_000, priceSuffix: "/ kaleng", priceOptions: [10, 20, 30, 40, 50].map((quantity) => ({ name: `${quantity} kaleng`, price: quantity * 32_000 })), availabilityNote: "Pre-order H-7 untuk custom design." },
-].map((product): Product => ({
-  category: "collaboration",
-  description: "Minuman kaleng kolaborasi Sanka dengan pilihan coffee, black series, dan non-coffee.",
-  includes: sankaDrinks,
-  stockStatus: "optional",
-  deliveryType: "standard",
-  visualLabel: "Sanka · Canned Drinks",
-  ...product,
-}));
-
-const bundleProducts: Product[] = [
-  { id: "bundle-tampah-100-sanka-20", name: "Dimsum Tampah 100 pcs + Sanka 20 kaleng", meta: "Bundling · 120 item", price: 1_140_000, includes: ["Dimsum Tampah 100 pcs", "Sanka 20 kaleng"], stockStatus: "optional" },
-  { id: "bundle-tower-100-sanka-20", name: "Dimsum Tower 100 pcs + Sanka 20 kaleng", meta: "Bundling · 120 item", price: 1_195_000, includes: ["Dimsum Tower 100 pcs", "Sanka 20 kaleng"], stockStatus: "optional" },
-  { id: "bundle-tampah-50-sanka-10", name: "Dimsum Tampah 50 pcs + Sanka 10 kaleng", meta: "Bundling · 60 item", price: 570_000, includes: ["Dimsum Tampah 50 pcs", "Sanka 10 kaleng"], stockStatus: "optional" },
-  { id: "bundle-tower-sanka-10", name: "Dimsum Tower 50/55 pcs + Sanka 10 kaleng", meta: "Bundling · Perlu konfirmasi", price: 630_000, includes: ["Dimsum Tower — ukuran 50/55 pcs perlu dikonfirmasi", "Sanka 10 kaleng"], stockStatus: "ask", availabilityNote: "Materi sumber berbeda antara ukuran Tower 50 pcs dan pricelist utama 55 pcs. Konfirmasi ukuran sebelum memesan." },
-].map((product): Product => ({
-  category: "bundle",
-  description: "Paket dimsum untuk acara yang dipadukan dengan minuman kaleng Sanka.",
-  availabilityNote: "Menu kolaborasi bersifat opsional. Tanyakan ketersediaan.",
-  deliveryType: "car-required",
-  image: "/images/lalagi-dimsum-event.jpg",
-  ...product,
-  stockStatus: product.stockStatus as StockStatus,
-}));
-
 export const PRODUCTS: Product[] = [
   ...cakeProducts,
   ...bucketProducts,
@@ -315,7 +261,4 @@ export const PRODUCTS: Product[] = [
   ...partyProducts,
   ...singleProducts,
   ...hamperProducts,
-  ...kimakoProducts,
-  ...sankaProducts,
-  ...bundleProducts,
 ];

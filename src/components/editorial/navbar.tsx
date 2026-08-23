@@ -26,7 +26,7 @@ export default function EditorialNavbar() {
   }, [mobileOpen]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#321D16] text-white">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#722F37] text-white">
       <div className="mx-auto flex h-[68px] max-w-[1280px] items-center justify-between px-5 sm:px-7 md:h-20 lg:px-8">
         <Link href="/" aria-label="LalaGi Dimsum — halaman utama" onClick={() => setMobileOpen(false)} className="group inline-flex items-center gap-3 rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
           <span className="relative size-9 shrink-0 overflow-hidden rounded-full border border-white/25 md:size-11">
@@ -57,7 +57,7 @@ export default function EditorialNavbar() {
         </button>
       </div>
 
-      <div id="mobile-navigation" className={`${mobileOpen ? "block" : "hidden"} border-t border-white/10 bg-[#321D16] lg:hidden`}>
+      <div id="mobile-navigation" className={`${mobileOpen ? "block" : "hidden"} border-t border-white/10 bg-[#722F37] lg:hidden`}>
         <nav aria-label="Navigasi seluler" className="mx-auto max-w-[1280px] px-5 py-5 sm:px-7">
           <div className="flex flex-col">
             {navLinks.map((link) => {

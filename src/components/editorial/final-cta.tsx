@@ -43,7 +43,7 @@ export default function EditorialFinalCta() {
           Jadi, hari ini mau dimsum apa?
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-sm font-medium leading-7 text-[#735E6C] sm:text-lg">
-          Mau untuk ngemil, surprise, atau acara besar? LalaGi Dimsum siap nemenin.
+          Mau untuk surprise atau acara besar? Kami siap menemani
         </p>
         <a
           href={getWhatsAppUrl("Halo LalaGi Dimsum, saya mau pesan dimsum")}
