@@ -8,7 +8,7 @@ export default function EditorialFinalCta() {
       className="relative isolate overflow-hidden border-t border-[#3A2232]/15 bg-[#F7F3EF] px-5 py-20 text-center text-[#3A2232] sm:px-8 sm:py-24 lg:px-12 lg:py-28"
       aria-labelledby="final-cta-title"
     >
-      <div className="pointer-events-none absolute -left-20 top-1/2 hidden size-72 -translate-y-1/2 overflow-hidden rounded-full border-4 border-[#E75480]/25 opacity-85 shadow-[0_24px_60px_rgba(106,30,85,0.18)] lg:block xl:-left-14 xl:size-80">
+      <div className="pointer-events-none absolute -left-20 top-1/2 hidden size-72 -translate-y-1/2 overflow-hidden rounded-full border-4 border-[#722F37]/25 opacity-85 shadow-[0_24px_60px_rgba(106,30,85,0.18)] lg:block xl:-left-14 xl:size-80">
         <Image
           src="/images/lalagi-dimsum-original.jpg"
           alt=""
@@ -29,11 +29,11 @@ export default function EditorialFinalCta() {
         />
       </div>
 
-      <span aria-hidden="true" className="absolute left-[8%] top-8 text-3xl text-[#E75480]/55">♡</span>
-      <span aria-hidden="true" className="absolute bottom-8 right-[24%] hidden text-2xl text-[#E75480]/55 sm:block">✦</span>
+      <span aria-hidden="true" className="absolute left-[8%] top-8 text-3xl text-[#722F37]/55">♡</span>
+      <span aria-hidden="true" className="absolute bottom-8 right-[24%] hidden text-2xl text-[#722F37]/55 sm:block">✦</span>
 
       <div className="relative z-10 mx-auto max-w-[820px]">
-        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#E75480] sm:text-xs">
+        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#722F37] sm:text-xs">
           Pesan langsung dari dapur kami
         </p>
         <h2
@@ -49,10 +49,10 @@ export default function EditorialFinalCta() {
           href={getWhatsAppUrl("Halo LalaGi Dimsum, saya mau pesan dimsum")}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-9 inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#E75480] px-8 py-4 font-semibold text-white shadow-[0_14px_35px_rgba(231,84,128,0.24)] transition-[transform,box-shadow,background-color] duration-200 hover:-translate-y-1 hover:bg-[#D63D76] hover:shadow-[0_18px_45px_rgba(231,84,128,0.3)] active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E75480] sm:px-11 sm:text-lg"
+          className="mt-9 inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#722F37] px-8 py-4 font-semibold text-white shadow-[0_14px_35px_rgba(114,47,55,0.24)] transition-[transform,box-shadow,background-color] duration-200 hover:-translate-y-1 hover:bg-[#5F252D] hover:shadow-[0_18px_45px_rgba(114,47,55,0.3)] active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#722F37] sm:px-11 sm:text-lg"
         >
           <WhatsappLogo weight="fill" className="size-5 text-white sm:size-6" aria-hidden="true" />
-          Pesan via WhatsApp
+          Pesan langsung dari dapur kami
         </a>
       </div>
     </section>

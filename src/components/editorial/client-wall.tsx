@@ -23,7 +23,7 @@ export default function EditorialClientWall() {
       <div className="mx-auto max-w-[1360px]">
         <div className="grid gap-8 border-b border-[#3A2232]/15 pb-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           <div>
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#E75480]">Clients LalaGi Dimsum</p>
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#722F37]">Clients LalaGi Dimsum</p>
             <h2 id="clients-title" className="mt-4 text-balance font-serif-display text-3xl font-medium leading-tight text-[#3A2232] sm:text-4xl lg:text-5xl">
               Dipercaya untuk berbagai momen.
             </h2>
@@ -38,7 +38,7 @@ export default function EditorialClientWall() {
             <li key={client.name} className="group flex min-h-32 flex-col items-center justify-center gap-3 border-b border-r border-[#3A2232]/12 bg-[#FFFDF9] px-4 py-5 text-center transition-colors duration-300 hover:bg-[#F7F3EF] sm:min-h-36">
               {"logo" in client ? (
                 <div className="relative h-14 w-full max-w-36 sm:h-16">
-                  <Image src={client.logo} alt={`Logo ${client.name}`} fill sizes="144px" className="object-contain mix-blend-multiply grayscale transition-[filter,transform] duration-300 group-hover:scale-[1.03] group-hover:grayscale-0" />
+                  <Image src={client.logo} alt={`Logo ${client.name}`} fill sizes="144px" className="object-contain mix-blend-multiply transition-transform duration-300 group-hover:scale-[1.03]" />
                 </div>
               ) : (
                 <span aria-hidden="true" className="flex size-14 items-center justify-center rounded-full border border-[#722F37]/20 font-serif-display text-xl font-semibold text-[#722F37]">K</span>

@@ -7,7 +7,7 @@
   --font-serif: var(--font-cinzel), Georgia, serif;
   
   /* LalaGi Dimsum Warm Brand Palette */
-  --color-lalagi-coral: #E75480;
+  --color-lalagi-coral: #722F37;
   --color-lalagi-cocoa: #3A2232;
   --color-lalagi-darkcocoa: #722F37;
   --color-lalagi-cream: #F7F3EF;
@@ -19,7 +19,7 @@
 :root {
   --background: #F7F3EF;
   --foreground: #3A2232;
-  --primary: #E75480;
+  --primary: #722F37;
   --primary-foreground: #FFFDF9;
   --card: #FFFDF9;
   --card-foreground: #3A2232;
@@ -84,7 +84,7 @@ body {
   }
 
   :focus-visible {
-    outline: 2px solid #E75480;
+    outline: 2px solid #722F37;
     outline-offset: 4px;
   }
 

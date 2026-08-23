@@ -48,7 +48,7 @@ export default function EditorialProductGallery() {
   return (
     <section className="menu-gallery overflow-hidden border-y border-[#3A2232]/10 bg-[#FFFDF9] py-20 sm:py-24 lg:py-28" aria-labelledby="gallery-title">
       <div className="mx-auto mb-12 max-w-[1280px] px-5 sm:px-8 lg:mb-16 lg:px-12">
-        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#E75480]">Momen bersama LalaGi Dimsum</p>
+        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#722F37]">Momen bersama LalaGi Dimsum</p>
         <div className="mt-4 grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(18rem,0.55fr)] lg:items-end">
           <h2 id="gallery-title" className="max-w-3xl text-balance font-serif-display text-4xl font-normal leading-[1.08] text-[#3A2232] sm:text-5xl lg:text-6xl">
             Dibuat untuk dirayakan.

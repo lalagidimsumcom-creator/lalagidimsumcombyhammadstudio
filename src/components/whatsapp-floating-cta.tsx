@@ -12,7 +12,7 @@ export default function WhatsAppFloatingCta() {
       className="fixed bottom-4 right-4 z-40 flex items-center gap-2.5 sm:bottom-5 sm:right-5"
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
     >
-      <div className="flex items-center gap-2.5 rounded-full border border-[#E75480]/25 bg-[#FFFDF9] p-1.5 pr-3.5 shadow-lg sm:gap-3 sm:pr-4">
+      <div className="flex items-center gap-2.5 rounded-full border border-[#722F37]/25 bg-[#FFFDF9] p-1.5 pr-3.5 shadow-lg sm:gap-3 sm:pr-4">
         <span className="relative size-9 shrink-0 overflow-hidden rounded-full border-2 border-white shadow-sm sm:size-10">
           <Image
             src="/images/lalagi-dimsum-kitchen.jpg"
@@ -25,7 +25,7 @@ export default function WhatsAppFloatingCta() {
         <span className="min-w-0 leading-none">
           <strong className="block text-xs font-bold text-[#3A2232] sm:text-sm">Admin</strong>
           <span className="mt-1 flex items-center gap-1.5 text-[10px] font-semibold text-[#735E6C] sm:text-[11px]">
-            <span className="size-1.5 shrink-0 rounded-full bg-[#E75480]" aria-hidden="true" />
+            <span className="size-1.5 shrink-0 rounded-full bg-[#722F37]" aria-hidden="true" />
             Fast Respon
           </span>
         </span>
