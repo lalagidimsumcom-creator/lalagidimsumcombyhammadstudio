@@ -6,6 +6,8 @@ Website resmi LalaGi Dimsum, brand dimsum homemade dengan 90% daging ayam dari J
 
 Tampilan menggunakan pendekatan editorial premium dengan background ivory cream `#F7F3EF`, navbar dan footer dark cocoa `#321D16`, tombol dan aksen pink rose `#E75480`, hover `#D63D76`, serta judul `#3A2232`. Cinzel digunakan sebagai font utama untuk judul editorial, sementara Plus Jakarta Sans menjaga body dan antarmuka tetap bersih serta mudah dibaca.
 
+Fotografi produk disimpan sebagai WebP teroptimasi dan ditampilkan pada katalog serta galeri marquee dua arah di homepage.
+
 Informasi brand utama:
 
 - Lokasi: Jagakarsa, Jakarta Selatan

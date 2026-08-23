@@ -37,6 +37,34 @@
   font-family: var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
 }
 
+@keyframes lalagi-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.menu-marquee-rail {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+
+.menu-marquee-track {
+  animation: lalagi-marquee 92s linear infinite;
+  will-change: transform;
+}
+
+.menu-marquee-track-reverse {
+  animation-direction: reverse;
+  animation-duration: 104s;
+}
+
+.menu-gallery:hover .menu-marquee-track {
+  animation-play-state: paused;
+}
+
 body {
   font-family: var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
   background-color: var(--background);
@@ -67,6 +95,12 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .menu-marquee-track,
+  .menu-marquee-track-reverse {
+    animation: none !important;
+    transform: translate3d(0, 0, 0) !important;
+  }
+
   *,
   *::before,
   *::after {

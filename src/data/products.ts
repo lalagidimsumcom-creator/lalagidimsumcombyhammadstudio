@@ -63,6 +63,10 @@ const bucketVariants = [
   { pieces: 45, price: 275_000, mentai: 25, original: 20 },
 ];
 
+const menuImage = (number: number) => `/images/menu/lalagi-menu-${String(number).padStart(2, "0")}.webp`;
+const cakeImages = [1, 4, 7, 17, 25];
+const bucketImages = [9, 11, 13, 15, 21];
+
 const cakeProducts: Product[] = cakeVariants.map((item, index) => ({
   id: index === 0 ? "dimsum-cake" : `dimsum-cake-${item.pieces}`,
   name: `Dimsum Cake ${item.pieces} pcs`,
@@ -74,10 +78,10 @@ const cakeProducts: Product[] = cakeVariants.map((item, index) => ({
   addons: cakeAddons,
   stockStatus: "available",
   deliveryType: "motor-ok",
-  image: "/images/lalagi-dimsum-cake.jpg",
+  image: menuImage(cakeImages[index]),
 }));
 
-const bucketProducts: Product[] = bucketVariants.map((item) => ({
+const bucketProducts: Product[] = bucketVariants.map((item, index) => ({
   id: `dimsum-bucket-${item.pieces}`,
   name: `Dimsum Bucket ${item.pieces} pcs`,
   category: "bucket",
@@ -88,7 +92,7 @@ const bucketProducts: Product[] = bucketVariants.map((item) => ({
   addons: [...cakeAddons, { name: "Bucket dua warna", price: 5_000 }],
   stockStatus: "available",
   deliveryType: "motor-ok",
-  image: "/images/lalagi-dimsum-hampers.jpg",
+  image: menuImage(bucketImages[index]),
 }));
 
 const celebrationExtras = ["Topper", "Candle", "Cutlery", "Greeting Card", "Saus Merah", "Chili Oil", "Tape", "Box Exclusive"];
@@ -104,9 +108,9 @@ const celebrationProducts: Product[] = [
     includes: ["Dimsum Mentai / Mix Mayo Katsuobushi", "Dimsum Original", ...celebrationExtras],
     stockStatus: "available",
     deliveryType: "car-required",
-    image: "/images/lalagi-dimsum-tower.jpg",
+    image: menuImage(2),
   },
-  ...[55, 100].map((pieces): Product => ({
+  ...[55, 100].map((pieces, index): Product => ({
     id: `dimsum-tower-${pieces}`,
     name: `Dimsum Tower ${pieces} pcs`,
     category: "tower-tampah",
@@ -116,7 +120,7 @@ const celebrationProducts: Product[] = [
     includes: ["Dimsum Mentai / all-in topping", "Dimsum Original", ...celebrationExtras, "Bucket"],
     stockStatus: "available",
     deliveryType: "car-required",
-    image: "/images/lalagi-dimsum-tower.jpg",
+    image: menuImage(index === 0 ? 8 : 36),
   })),
   {
     id: "dimsum-money-roll-40",
@@ -128,7 +132,7 @@ const celebrationProducts: Product[] = [
     includes: ["Dimsum Mentai & Mayo Katsuobushi", "Dimsum Original", ...celebrationExtras, "Bucket"],
     stockStatus: "available",
     deliveryType: "car-required",
-    image: "/images/lalagi-dimsum-event.jpg",
+    image: menuImage(3),
   },
   ...[50, 100].map((pieces): Product => ({
     id: pieces === 50 ? "dimsum-tampah" : "dimsum-tampah-100",
@@ -140,7 +144,7 @@ const celebrationProducts: Product[] = [
     includes: ["Dimsum Mentai / all-in topping", "Dimsum Original / Dimsum Panggang", "Bisa mix dengan Pempek Palembang", "Lumpia Dimsum", "Gyoza", "Topper", "Candle", "Cutlery", "Greeting Card", "Saus Merah", "Chili Oil"],
     stockStatus: "available",
     deliveryType: "car-required",
-    image: "/images/lalagi-dimsum-tampah.png",
+    image: menuImage(pieces === 50 ? 6 : 34),
   })),
 ];
 
@@ -150,7 +154,7 @@ const partyAddons: ProductAddon[] = [
 ];
 
 const partyProducts: Product[] = [
-  ...[20, 25].map((pieces): Product => ({
+  ...[20, 25].map((pieces, index): Product => ({
     id: `party-super-mixed-${pieces}`,
     name: `Party Size ${pieces} pcs — Super Mixed`,
     category: "party",
@@ -161,9 +165,9 @@ const partyProducts: Product[] = [
     addons: partyAddons,
     stockStatus: "ask",
     deliveryType: "standard",
-    image: "/images/lalagi-dimsum-event.jpg",
+    image: menuImage(index === 0 ? 5 : 10),
   })),
-  ...[20, 25].map((pieces): Product => ({
+  ...[20, 25].map((pieces, index): Product => ({
     id: `party-full-mentai-${pieces}`,
     name: `Party Size ${pieces} pcs — Full Mentai`,
     category: "party",
@@ -174,7 +178,7 @@ const partyProducts: Product[] = [
     addons: partyAddons,
     stockStatus: "ask",
     deliveryType: "standard",
-    image: "/images/lalagi-dimsum-mentai.jpg",
+    image: menuImage(index === 0 ? 12 : 18),
   })),
   {
     id: "dimsum-mix-platter-20",
@@ -187,7 +191,7 @@ const partyProducts: Product[] = [
     addons: partyAddons,
     stockStatus: "ask",
     deliveryType: "standard",
-    image: "/images/lalagi-dimsum-tampah.png",
+    image: menuImage(33),
   },
 ];
 

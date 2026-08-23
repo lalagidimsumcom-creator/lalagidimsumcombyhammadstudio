@@ -2,6 +2,7 @@ import React from "react";
 import EditorialNavbar from "@/components/editorial/navbar";
 import EditorialHero from "@/components/editorial/hero";
 import EditorialSignatureCake from "@/components/editorial/signature-cake";
+import EditorialProductGallery from "@/components/editorial/product-gallery";
 import EditorialTrustStrip from "@/components/editorial/trust-strip";
 import EditorialFinalCta from "@/components/editorial/final-cta";
 import EditorialFooter from "@/components/editorial/footer";
@@ -22,6 +23,7 @@ export default function HomePage() {
         <EditorialHero />
         <EditorialTrustStrip />
         <EditorialSignatureCake />
+        <EditorialProductGallery />
         <EditorialFinalCta />
       </main>
 
