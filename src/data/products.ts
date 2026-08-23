@@ -38,8 +38,8 @@ export const MENU_GROUPS: readonly MenuGroup[] = [
       "Dimsum Tampah dikemas secara rapi dan eksklusif, cocok untuk menemani momen spesial di kantor ataupun bersama keluarga.",
     occasions: CELEBRATION_OCCASIONS,
     variants: [
-      { name: "Dimsum Tampah 100 pcs", price: 580_000 },
       { name: "Dimsum Tampah 50 pcs", price: 390_000 },
+      { name: "Dimsum Tampah 100 pcs", price: 580_000 },
     ],
     deliveryType: "car",
     deliveryLabel: "Pengantaran wajib dengan mobil",
@@ -95,8 +95,8 @@ export const MENU_GROUPS: readonly MenuGroup[] = [
       "Dimsum Tower dikemas secara rapi dan mewah, cocok untuk perayaan momen spesial di kantor ataupun bersama keluarga.",
     occasions: CELEBRATION_OCCASIONS,
     variants: [
-      { name: "Dimsum Tower 100 pcs", price: 635_000 },
       { name: "Dimsum Tower 55 pcs", price: 350_000 },
+      { name: "Dimsum Tower 100 pcs", price: 635_000 },
     ],
     deliveryType: "car",
     deliveryLabel: "Pengantaran wajib dengan mobil",

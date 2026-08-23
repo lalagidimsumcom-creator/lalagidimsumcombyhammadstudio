@@ -15,11 +15,11 @@ export default function WhatsAppFloatingCta() {
       <div className="flex items-center gap-2.5 rounded-full border border-[#722F37]/25 bg-[#FFFDF9] p-1.5 pr-3.5 shadow-lg sm:gap-3 sm:pr-4">
         <span className="relative size-9 shrink-0 overflow-hidden rounded-full border-2 border-white shadow-sm sm:size-10">
           <Image
-            src="/images/lalagi-dimsum-kitchen.jpg"
+            src="/images/lalagi-whatsapp-admin.webp"
             alt="Admin LalaGi Dimsum"
             fill
             sizes="40px"
-            className="object-cover"
+            className="object-cover object-top"
           />
         </span>
         <span className="min-w-0 leading-none">
