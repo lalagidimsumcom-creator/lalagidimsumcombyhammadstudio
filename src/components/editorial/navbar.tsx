@@ -26,7 +26,7 @@ export default function EditorialNavbar() {
   }, [mobileOpen]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#321D16] text-white">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#6A1E55] text-white">
       <div className="mx-auto flex h-[68px] max-w-[1280px] items-center justify-between px-5 sm:px-7 md:h-20 lg:px-8">
         <Link href="/" aria-label="LalaGi Dimsum — halaman utama" onClick={() => setMobileOpen(false)} className="group inline-flex items-center gap-3 rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
           <span className="relative size-9 shrink-0 overflow-hidden rounded-full border border-white/25 md:size-11">
@@ -47,7 +47,7 @@ export default function EditorialNavbar() {
           })}
         </nav>
 
-        <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="hidden items-center gap-2 rounded-full border border-white/20 bg-[#E75480] px-5 py-2.5 text-xs font-semibold text-white transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-[#C7436D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-reduce:transition-none xl:inline-flex">
+        <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="hidden items-center gap-2 rounded-full border border-white/20 bg-[#E94E87] px-5 py-2.5 text-xs font-semibold text-white transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-[#D63D76] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-reduce:transition-none xl:inline-flex">
           <WhatsappLogo aria-hidden="true" weight="regular" className="size-4" />
           Pesan
         </a>
@@ -57,7 +57,7 @@ export default function EditorialNavbar() {
         </button>
       </div>
 
-      <div id="mobile-navigation" className={`${mobileOpen ? "block" : "hidden"} border-t border-white/10 bg-[#321D16] lg:hidden`}>
+      <div id="mobile-navigation" className={`${mobileOpen ? "block" : "hidden"} border-t border-white/10 bg-[#6A1E55] lg:hidden`}>
         <nav aria-label="Navigasi seluler" className="mx-auto max-w-[1280px] px-5 py-5 sm:px-7">
           <div className="flex flex-col">
             {navLinks.map((link) => {
@@ -69,7 +69,7 @@ export default function EditorialNavbar() {
               );
             })}
           </div>
-          <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-[#E75480] px-5 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#C7436D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-reduce:transition-none">
+          <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-[#E94E87] px-5 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#D63D76] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-reduce:transition-none">
             <WhatsappLogo aria-hidden="true" weight="regular" className="size-4" />
             Pesan via WhatsApp
           </a>

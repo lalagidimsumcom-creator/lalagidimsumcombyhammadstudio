@@ -62,11 +62,11 @@ export default function EditorialTrustStrip() {
   return (
     <section
       aria-labelledby="trust-title"
-      className="border-b border-[#321D16]/15 bg-[#F7F3EF] px-5 py-16 text-[#321D16] sm:px-8 lg:px-12 lg:py-24"
+      className="border-b border-[#3A2232]/15 bg-[#FAF7F8] px-5 py-16 text-[#3A2232] sm:px-8 lg:px-12 lg:py-24"
     >
       <div className="mx-auto max-w-[1360px]">
         <div className="mb-12 max-w-2xl lg:mb-16">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#E75480]">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#E94E87]">
             Kepercayaan pelanggan
           </p>
           <h2
@@ -78,13 +78,13 @@ export default function EditorialTrustStrip() {
         </div>
 
         <div className="grid items-stretch gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="grid grid-cols-2 border-l border-t border-[#321D16]/15 lg:col-span-5">
+          <div className="grid grid-cols-2 border-l border-t border-[#3A2232]/15 lg:col-span-5">
             {trustMarks.map((mark) => (
               <article
                 key={mark.label}
-                className="flex min-h-52 flex-col justify-between border-b border-r border-[#321D16]/15 p-5 sm:min-h-60 sm:p-7"
+                className="flex min-h-52 flex-col justify-between border-b border-r border-[#3A2232]/15 p-5 sm:min-h-60 sm:p-7"
               >
-                <div className="relative flex size-16 items-center justify-center overflow-hidden rounded-full border border-[#321D16]/15 bg-white p-2 sm:size-20">
+                <div className="relative flex size-16 items-center justify-center overflow-hidden rounded-full border border-[#3A2232]/15 bg-white p-2 sm:size-20">
                   <Image
                     src={mark.image}
                     alt={mark.alt}
@@ -97,29 +97,29 @@ export default function EditorialTrustStrip() {
                   <strong className="block text-xl font-bold leading-tight sm:text-2xl">
                     {mark.value}
                   </strong>
-                  <span className="mt-1 block text-xs font-medium text-[#76645D] sm:text-sm">
+                  <span className="mt-1 block text-xs font-medium text-[#735E6C] sm:text-sm">
                     {mark.label}
                   </span>
                 </div>
               </article>
             ))}
 
-            <article className="flex min-h-52 flex-col justify-between border-b border-r border-[#321D16]/15 p-5 sm:min-h-60 sm:p-7">
-              <div className="flex size-16 items-center justify-center rounded-full border border-[#E75480] bg-[#E75480] sm:size-20">
+            <article className="flex min-h-52 flex-col justify-between border-b border-r border-[#3A2232]/15 p-5 sm:min-h-60 sm:p-7">
+              <div className="flex size-16 items-center justify-center rounded-full border border-[#E94E87] bg-[#E94E87] sm:size-20">
                 <Medal weight="fill" className="size-8 text-white sm:size-10" aria-hidden="true" />
               </div>
               <div>
                 <strong className="block text-xl font-bold leading-tight sm:text-2xl">
                   5+ Tahun
                 </strong>
-                <span className="mt-1 block text-xs font-medium text-[#76645D] sm:text-sm">
+                <span className="mt-1 block text-xs font-medium text-[#735E6C] sm:text-sm">
                   Perjalanan
                 </span>
               </div>
             </article>
           </div>
 
-          <div className="flex min-w-0 flex-col justify-between border-t border-[#321D16]/15 pt-9 lg:col-span-7 lg:border-l lg:border-t-0 lg:pl-16 lg:pt-0">
+          <div className="flex min-w-0 flex-col justify-between border-t border-[#3A2232]/15 pt-9 lg:col-span-7 lg:border-l lg:border-t-0 lg:pl-16 lg:pt-0">
             <div className="overflow-hidden" aria-live="polite">
               <div
                 className="flex transition-transform duration-500 ease-out"
@@ -127,7 +127,7 @@ export default function EditorialTrustStrip() {
               >
                 {reviewImages.map((review) => (
                   <figure key={review.src} className="w-full shrink-0">
-                    <div className="relative h-[30rem] w-full overflow-hidden border border-[#321D16]/15 bg-white sm:h-[34rem]">
+                    <div className="relative h-[30rem] w-full overflow-hidden border border-[#3A2232]/15 bg-white sm:h-[34rem]">
                       <Image
                         src={review.src}
                         alt={review.alt}
@@ -141,8 +141,8 @@ export default function EditorialTrustStrip() {
               </div>
             </div>
 
-            <div className="mt-7 flex items-center justify-between border-t border-[#321D16]/15 pt-6">
-              <span className="text-xs font-semibold tabular-nums text-[#76645D]">
+            <div className="mt-7 flex items-center justify-between border-t border-[#3A2232]/15 pt-6">
+              <span className="text-xs font-semibold tabular-nums text-[#735E6C]">
                 {String(activeReview + 1).padStart(2, "0")} / {String(reviewImages.length).padStart(2, "0")}
               </span>
               <div className="flex items-center gap-2">
@@ -150,7 +150,7 @@ export default function EditorialTrustStrip() {
                   type="button"
                   onClick={showPreviousReview}
                   aria-label="Lihat ulasan sebelumnya"
-                  className="flex size-11 items-center justify-center rounded-full border border-[#E75480] text-[#E75480] transition-colors duration-200 hover:bg-[#E75480] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E75480] active:scale-95"
+                  className="flex size-11 items-center justify-center rounded-full border border-[#E94E87] text-[#E94E87] transition-colors duration-200 hover:bg-[#E94E87] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E94E87] active:scale-95"
                 >
                   <ArrowLeft weight="bold" className="size-4" aria-hidden="true" />
                 </button>
@@ -158,7 +158,7 @@ export default function EditorialTrustStrip() {
                   type="button"
                   onClick={showNextReview}
                   aria-label="Lihat ulasan berikutnya"
-                  className="flex size-11 items-center justify-center rounded-full bg-[#E75480] text-white transition-colors duration-200 hover:bg-[#C7436D] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E75480] active:scale-95"
+                  className="flex size-11 items-center justify-center rounded-full bg-[#E94E87] text-white transition-colors duration-200 hover:bg-[#D63D76] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E94E87] active:scale-95"
                 >
                   <ArrowRight weight="bold" className="size-4" aria-hidden="true" />
                 </button>
