@@ -27,6 +27,9 @@ const categories: Array<{ id: CategoryFilter; label: string }> = [
   { id: "tower-tampah", label: "Tower & Tampah" },
   { id: "party", label: "Party Size" },
   { id: "single", label: "Dimsum Satuan" },
+  { id: "hampers", label: "Hampers" },
+  { id: "collaboration", label: "Kimako & Sanka" },
+  { id: "bundle", label: "Paket Bundling" },
 ];
 
 const formatRupiah = (price: number) => `Rp${new Intl.NumberFormat("id-ID").format(price)}`;
@@ -44,12 +47,12 @@ export default function MenuPage() {
     : PRODUCTS.filter((product) => product.category === activeCategory);
 
   return (
-    <main className="flex min-h-screen flex-col bg-[#FAF7F8] font-sans text-[#3A2232] selection:bg-[#E94E87] selection:text-white">
+    <main className="flex min-h-screen flex-col bg-[#F7F3EF] font-sans text-[#3A2232] selection:bg-[#E75480] selection:text-white">
       <Navbar />
 
-      <section className="relative overflow-hidden border-b border-[#F8E8EE] bg-[#FAF7F8] pb-16 pt-24 md:pb-20 md:pt-32">
+      <section className="relative overflow-hidden border-b border-[#F8E8EE] bg-[#F7F3EF] pb-16 pt-24 md:pb-20 md:pt-32">
         <div className="mx-auto max-w-[1280px] space-y-4 px-5 text-center sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#F8E8EE] px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#E94E87] sm:text-sm">
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#F8E8EE] px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#E75480] sm:text-sm">
             <Sparkle weight="fill" className="size-4" aria-hidden="true" />
             <span>Katalog lengkap LalaGi</span>
           </div>
@@ -71,8 +74,8 @@ export default function MenuPage() {
                   aria-pressed={isActive}
                   className={`rounded-full border px-5 py-2.5 text-sm font-bold transition-all duration-200 sm:text-base ${
                     isActive
-                      ? "border-[#E94E87] bg-[#E94E87] text-white shadow-md"
-                      : "border-[#EADDE5] bg-white text-[#735E6C] hover:border-[#E94E87] hover:text-[#3A2232]"
+                      ? "border-[#E75480] bg-[#E75480] text-white shadow-md"
+                      : "border-[#EADDE5] bg-white text-[#735E6C] hover:border-[#E75480] hover:text-[#3A2232]"
                   }`}
                 >
                   {category.label}
@@ -86,7 +89,7 @@ export default function MenuPage() {
       <section className="mx-auto w-full max-w-[1280px] px-5 py-16 sm:px-6 lg:px-8 lg:py-24" aria-label="Daftar menu LalaGi">
         <div className="mb-8 flex items-center justify-between border-b border-[#EADDE5] pb-4">
           <p className="text-sm font-semibold text-[#735E6C]">
-            {filteredProducts.length} pilihan tersedia
+            {filteredProducts.length} menu &amp; paket tercatat
           </p>
           <p className="text-xs text-[#735E6C]">Harga belum termasuk biaya kirim</p>
         </div>
@@ -99,17 +102,37 @@ export default function MenuPage() {
               className="group flex scroll-mt-24 flex-col overflow-hidden rounded-[28px] border border-[#EADDE5] bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl"
             >
               <div className="relative h-60 overflow-hidden bg-[#F8E8EE]">
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  fill
-                  sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                {product.image ? (
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="relative flex h-full items-center justify-center overflow-hidden px-8 text-center">
+                    <div className="absolute -right-14 -top-14 size-44 rounded-full border border-[#E75480]/25" />
+                    <div className="absolute -bottom-20 -left-10 size-56 rounded-full bg-white/55" />
+                    <p className="relative font-serif-display text-2xl leading-tight text-[#3A2232]">
+                      {product.visualLabel}
+                    </p>
+                  </div>
+                )}
                 <div className="absolute inset-x-4 top-4 flex flex-wrap gap-2">
                   {product.stockStatus === "ask" && (
-                    <span className="rounded-full bg-white/95 px-3 py-1 text-[0.68rem] font-bold text-[#D63D76] shadow-sm">
+                    <span className="rounded-full bg-white/95 px-3 py-1 text-[0.68rem] font-bold text-[#E75480] shadow-sm">
                       Tanyakan stok
+                    </span>
+                  )}
+                  {product.stockStatus === "seasonal" && (
+                    <span className="rounded-full bg-[#E75480] px-3 py-1 text-[0.68rem] font-bold text-white shadow-sm">
+                      Seasonal
+                    </span>
+                  )}
+                  {product.stockStatus === "optional" && (
+                    <span className="rounded-full bg-white/95 px-3 py-1 text-[0.68rem] font-bold text-[#3A2232] shadow-sm">
+                      Tanyakan ketersediaan
                     </span>
                   )}
                   {deliveryLabel[product.deliveryType] && (
@@ -122,8 +145,8 @@ export default function MenuPage() {
 
               <div className="flex flex-1 flex-col p-6 sm:p-7">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#E94E87]">
-                    {product.pieces} pcs
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#E75480]">
+                    {product.meta}
                   </p>
                   <h2 className="mt-2 font-serif-display text-2xl font-semibold leading-tight text-[#3A2232]">
                     {product.name}
@@ -132,23 +155,43 @@ export default function MenuPage() {
                     {product.description}
                   </p>
                   <p className="mt-5 text-xl font-bold text-[#3A2232]">
-                    {formatRupiah(product.price)}
+                    {product.price !== undefined ? (
+                      <>{product.pricePrefix}{formatRupiah(product.price)}{product.priceSuffix && <span className="ml-1 text-sm font-semibold text-[#735E6C]">{product.priceSuffix}</span>}</>
+                    ) : "Harga menyesuaikan"}
                   </p>
+                  {product.availabilityNote && (
+                    <p className="mt-3 border-l-2 border-[#E75480] pl-3 text-xs leading-5 text-[#735E6C]">
+                      {product.availabilityNote}
+                    </p>
+                  )}
                 </div>
 
                 <details className="mt-6 border-y border-[#EADDE5] py-4">
-                  <summary className="cursor-pointer text-sm font-semibold text-[#3A2232] marker:text-[#E94E87]">
+                  <summary className="cursor-pointer text-sm font-semibold text-[#3A2232] marker:text-[#E75480]">
                     Lihat isi paket &amp; add-on
                   </summary>
                   <div className="mt-4 space-y-4">
                     <ul className="space-y-2 text-sm text-[#735E6C]">
                       {product.includes.map((item) => (
                         <li key={item} className="flex items-start gap-2">
-                          <Check weight="bold" className="mt-0.5 size-4 shrink-0 text-[#E94E87]" aria-hidden="true" />
+                          <Check weight="bold" className="mt-0.5 size-4 shrink-0 text-[#E75480]" aria-hidden="true" />
                           <span>{item}</span>
                         </li>
                       ))}
                     </ul>
+                    {product.priceOptions && (
+                      <div className="rounded-2xl bg-[#F7F3EF] p-4">
+                        <p className="text-xs font-bold uppercase tracking-wider text-[#3A2232]">Pilihan ukuran / jumlah</p>
+                        <ul className="mt-2 space-y-1.5 text-sm text-[#735E6C]">
+                          {product.priceOptions.map((option) => (
+                            <li key={option.name} className="flex justify-between gap-4">
+                              <span>{option.name}</span>
+                              <span className="shrink-0 font-semibold">{formatRupiah(option.price)}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                     {product.addons && (
                       <div className="rounded-2xl bg-[#F8E8EE] p-4">
                         <p className="text-xs font-bold uppercase tracking-wider text-[#3A2232]">Add-on</p>
@@ -169,7 +212,7 @@ export default function MenuPage() {
                   href={getProductWhatsAppUrl(product.name)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#E94E87] px-6 py-3 text-sm font-bold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#D63D76]"
+                  className="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#E75480] px-6 py-3 text-sm font-bold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#D63D76]"
                 >
                   <WhatsappLogo weight="fill" className="size-4" aria-hidden="true" />
                   Pesan via WhatsApp
@@ -193,7 +236,7 @@ export default function MenuPage() {
               { icon: WarningCircle, title: "Tanyakan stok", text: "Party Size dan dimsum satuan dapat sewaktu-waktu sold out. Konfirmasi sebelum memesan." },
             ].map((item) => (
               <article key={item.title} className="border border-[#EADDE5] bg-white p-6">
-                <item.icon weight="duotone" className="size-7 text-[#E94E87]" aria-hidden="true" />
+                <item.icon weight="duotone" className="size-7 text-[#E75480]" aria-hidden="true" />
                 <h3 className="mt-5 font-bold text-[#3A2232]">{item.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-[#735E6C]">{item.text}</p>
               </article>
@@ -203,7 +246,7 @@ export default function MenuPage() {
       </section>
 
       <section className="mx-auto w-full max-w-4xl px-5 py-16 sm:px-6 lg:py-24" aria-labelledby="terms-title">
-        <div className="flex items-center gap-3 text-[#E94E87]">
+        <div className="flex items-center gap-3 text-[#E75480]">
           <Clock weight="duotone" className="size-6" aria-hidden="true" />
           <p className="text-xs font-bold uppercase tracking-[0.18em]">Syarat &amp; ketentuan</p>
         </div>
@@ -217,12 +260,14 @@ export default function MenuPage() {
           <li>Ongkir mengikuti aplikasi GoSend/Lalamove dan dapat berubah karena cuaca atau banjir.</li>
           <li>Cake dan Bucket dapat dikirim menggunakan motor dengan bag; driver LalaGi direkomendasikan.</li>
           <li>Mini Tower, Tower, Money Roll, dan Tampah wajib menggunakan mobil.</li>
+          <li>Hampers Ramadan/Idul Fitri bersifat seasonal dan perlu dipesan saat periodenya aktif.</li>
+          <li>Kimako, Sanka, dan paket bundling merupakan menu kolaborasi opsional; ikuti waktu pre-order yang tercantum dan konfirmasi ketersediaan terlebih dahulu.</li>
         </ol>
         <a
           href={getWhatsAppUrl("Halo LalaGi, saya lihat menu di website dan mau tanya/pesan dimsum 😊")}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-9 inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-[#E94E87] px-8 py-3.5 font-bold text-white transition-colors duration-200 hover:bg-[#D63D76]"
+          className="mt-9 inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-[#E75480] px-8 py-3.5 font-bold text-white transition-colors duration-200 hover:bg-[#D63D76]"
         >
           <WhatsappLogo weight="fill" className="size-5" aria-hidden="true" />
           Tanya menu via WhatsApp

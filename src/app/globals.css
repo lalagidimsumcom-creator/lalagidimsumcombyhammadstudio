@@ -7,19 +7,19 @@
   --font-serif: var(--font-cinzel), Georgia, serif;
   
   /* LalaGi Warm Brand Palette */
-  --color-lalagi-coral: #E94E87;
+  --color-lalagi-coral: #E75480;
   --color-lalagi-cocoa: #3A2232;
   --color-lalagi-darkcocoa: #321D16;
-  --color-lalagi-cream: #FAF7F8;
+  --color-lalagi-cream: #F7F3EF;
   --color-lalagi-white: #FFFDF9;
   --color-lalagi-muted: #735E6C;
   --color-lalagi-blush: #F8E8EE;
 }
 
 :root {
-  --background: #FAF7F8;
+  --background: #F7F3EF;
   --foreground: #3A2232;
-  --primary: #E94E87;
+  --primary: #E75480;
   --primary-foreground: #FFFDF9;
   --card: #FFFDF9;
   --card-foreground: #3A2232;
@@ -56,7 +56,7 @@ body {
   }
 
   :focus-visible {
-    outline: 2px solid #E94E87;
+    outline: 2px solid #E75480;
     outline-offset: 4px;
   }
 

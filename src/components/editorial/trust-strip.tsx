@@ -62,11 +62,11 @@ export default function EditorialTrustStrip() {
   return (
     <section
       aria-labelledby="trust-title"
-      className="border-b border-[#3A2232]/15 bg-[#FAF7F8] px-5 py-16 text-[#3A2232] sm:px-8 lg:px-12 lg:py-24"
+      className="border-b border-[#3A2232]/15 bg-[#F7F3EF] px-5 py-16 text-[#3A2232] sm:px-8 lg:px-12 lg:py-24"
     >
       <div className="mx-auto max-w-[1360px]">
         <div className="mb-12 max-w-2xl lg:mb-16">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#E94E87]">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#E75480]">
             Kepercayaan pelanggan
           </p>
           <h2
@@ -105,7 +105,7 @@ export default function EditorialTrustStrip() {
             ))}
 
             <article className="flex min-h-52 flex-col justify-between border-b border-r border-[#3A2232]/15 p-5 sm:min-h-60 sm:p-7">
-              <div className="flex size-16 items-center justify-center rounded-full border border-[#E94E87] bg-[#E94E87] sm:size-20">
+              <div className="flex size-16 items-center justify-center rounded-full border border-[#E75480] bg-[#E75480] sm:size-20">
                 <Medal weight="fill" className="size-8 text-white sm:size-10" aria-hidden="true" />
               </div>
               <div>
@@ -150,7 +150,7 @@ export default function EditorialTrustStrip() {
                   type="button"
                   onClick={showPreviousReview}
                   aria-label="Lihat ulasan sebelumnya"
-                  className="flex size-11 items-center justify-center rounded-full border border-[#E94E87] text-[#E94E87] transition-colors duration-200 hover:bg-[#E94E87] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E94E87] active:scale-95"
+                  className="flex size-11 items-center justify-center rounded-full border border-[#E75480] text-[#E75480] transition-colors duration-200 hover:bg-[#E75480] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E75480] active:scale-95"
                 >
                   <ArrowLeft weight="bold" className="size-4" aria-hidden="true" />
                 </button>
@@ -158,7 +158,7 @@ export default function EditorialTrustStrip() {
                   type="button"
                   onClick={showNextReview}
                   aria-label="Lihat ulasan berikutnya"
-                  className="flex size-11 items-center justify-center rounded-full bg-[#E94E87] text-white transition-colors duration-200 hover:bg-[#D63D76] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E94E87] active:scale-95"
+                  className="flex size-11 items-center justify-center rounded-full bg-[#E75480] text-white transition-colors duration-200 hover:bg-[#D63D76] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E75480] active:scale-95"
                 >
                   <ArrowRight weight="bold" className="size-4" aria-hidden="true" />
                 </button>
