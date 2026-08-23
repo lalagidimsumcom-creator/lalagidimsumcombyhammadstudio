@@ -15,7 +15,7 @@ export default function PesananAcaraPage() {
     {
       title: "Wedding & Resepsi",
       desc: "Stall dimsum hangat dengan live steam atau sajian tampah elegan yang selalu jadi antrean favorit tamu undangan.",
-      image: "/images/lalagi-dimsum-tampah.jpg"
+      image: "/images/lalagi-dimsum-tampah.png"
     },
     {
       title: "Meeting & Corporate Event",

@@ -35,7 +35,7 @@ export default function TentangPage() {
 
   const instagramFeed = [
     { image: "/images/lalagi-dimsum-cake.jpg", caption: "Dimsum Cake Surprise" },
-    { image: "/images/lalagi-dimsum-tampah.jpg", caption: "Dimsum Tampah 50pcs" },
+    { image: "/images/lalagi-dimsum-tampah.png", caption: "Dimsum Tampah 50pcs" },
     { image: "/images/lalagi-dimsum-mentai.jpg", caption: "Mentai Torched Fresh" },
     { image: "/images/lalagi-dimsum-tower.jpg", caption: "Celebration Dimsum Tower" },
     { image: "/images/lalagi-dimsum-kitchen.jpg", caption: "Dapur Jagakarsa" },

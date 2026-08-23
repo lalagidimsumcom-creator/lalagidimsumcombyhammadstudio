@@ -41,7 +41,7 @@ export const PRODUCTS: Product[] = [
     description: "Sajian tampah anyaman bambu tradisional berisi puluhan dimsum aneka varian dengan 2 mangkuk saus cocolan khas di tengahnya.",
     price: "Porsi Rame-Rame",
     priceNote: "Tersedia 30, 50, hingga 100 pcs",
-    image: "/images/lalagi-dimsum-tampah.jpg",
+    image: "/images/lalagi-dimsum-tampah.png",
     highlights: ["Porsi Melimpah untuk Acara", "Campuran Aneka Varian Dimsum", "Wadah Tampah Anyaman Cantik", "Pernah Dipesan RS Harapan Kita (200 pcs)"]
   },
   {
