@@ -3,6 +3,7 @@ import Link from "next/link";
 import {
   InstagramLogo,
   MapPin,
+  TiktokLogo,
   WhatsappLogo,
 } from "@phosphor-icons/react/dist/ssr";
 import { BRAND_CONFIG } from "@/data/config";
@@ -51,7 +52,7 @@ export default function EditorialFooter() {
             <p className="mt-3 text-xs leading-5 tracking-wide text-white/50">
               Halal MUI No. {BRAND_CONFIG.halalCertNumber}
             </p>
-            <div className="mt-6 flex gap-5 text-white/70">
+            <div className="mt-6 flex items-center gap-6 text-white/70">
               <a
                 href={BRAND_CONFIG.instagramUrl}
                 target="_blank"
@@ -59,7 +60,7 @@ export default function EditorialFooter() {
                 className={linkClass}
                 aria-label={`Instagram ${BRAND_CONFIG.instagramHandle}`}
               >
-                <InstagramLogo size={22} weight="regular" aria-hidden="true" />
+                <InstagramLogo size={30} weight="regular" aria-hidden="true" />
               </a>
               <a
                 href={getWhatsAppUrl()}
@@ -68,7 +69,16 @@ export default function EditorialFooter() {
                 className={linkClass}
                 aria-label={`WhatsApp ${BRAND_CONFIG.phoneDisplay}`}
               >
-                <WhatsappLogo size={22} weight="regular" aria-hidden="true" />
+                <WhatsappLogo size={30} weight="regular" aria-hidden="true" />
+              </a>
+              <a
+                href={BRAND_CONFIG.tiktokUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+                aria-label={`TikTok ${BRAND_CONFIG.tiktokHandle}`}
+              >
+                <TiktokLogo size={30} weight="regular" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -116,7 +126,7 @@ export default function EditorialFooter() {
                   className={`flex items-start gap-3 ${linkClass}`}
                 >
                   <WhatsappLogo
-                    size={18}
+                    size={21}
                     weight="regular"
                     className="mt-0.5 shrink-0 text-white/70"
                     aria-hidden="true"
@@ -132,12 +142,28 @@ export default function EditorialFooter() {
                   className={`flex items-start gap-3 ${linkClass}`}
                 >
                   <InstagramLogo
-                    size={18}
+                    size={21}
                     weight="regular"
                     className="mt-0.5 shrink-0 text-white/70"
                     aria-hidden="true"
                   />
                   <span>{BRAND_CONFIG.instagramHandle}</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={BRAND_CONFIG.tiktokUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-start gap-3 ${linkClass}`}
+                >
+                  <TiktokLogo
+                    size={21}
+                    weight="regular"
+                    className="mt-0.5 shrink-0 text-white/70"
+                    aria-hidden="true"
+                  />
+                  <span>{BRAND_CONFIG.tiktokHandle}</span>
                 </a>
               </li>
               <li>

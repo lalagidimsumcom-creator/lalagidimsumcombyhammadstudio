@@ -10,11 +10,11 @@ export default function EditorialSignatureCake() {
       <div className="mx-auto grid max-w-[1360px] items-center gap-12 lg:grid-cols-[1.03fr_0.97fr] lg:gap-16 xl:gap-24">
         <div className="relative aspect-square w-full overflow-hidden bg-lalagi-blush">
           <Image
-            src="/images/lalagi-dimsum-kitchen.jpg"
-            alt="Tim dapur LalaGi Dimsum membuat dimsum dengan tangan di Jagakarsa"
+            src="/images/lalagi-story-dimsum-tower.webp"
+            alt="Dimsum Tower LalaGi Dimsum untuk perayaan ulang tahun"
             fill
             sizes="(min-width: 1024px) 48vw, 100vw"
-            className="object-cover"
+            className="object-cover object-center"
           />
         </div>
 

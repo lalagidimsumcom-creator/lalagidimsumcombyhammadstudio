@@ -10,6 +10,8 @@ export const BRAND_CONFIG = {
   whatsappNumber: "6287882550494",
   instagramHandle: "@lalagi.dimsum",
   instagramUrl: "https://instagram.com/lalagi.dimsum",
+  tiktokHandle: "@lalagidimsum",
+  tiktokUrl: "https://www.tiktok.com/@lalagidimsum",
   googleRating: "5.0",
   googleReviewCount: "166",
   halalCertNumber: "ID31110016921890424",
