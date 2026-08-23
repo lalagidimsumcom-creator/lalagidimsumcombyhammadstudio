@@ -101,7 +101,7 @@ export default function MenuPage() {
               id={product.id}
               className="group flex scroll-mt-24 flex-col overflow-hidden rounded-[28px] border border-[#EADDE5] bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl"
             >
-              <div className="relative h-60 overflow-hidden bg-[#F8E8EE]">
+              <div className="relative aspect-square overflow-hidden bg-[#F8E8EE]">
                 {product.image ? (
                   <Image
                     src={product.image}

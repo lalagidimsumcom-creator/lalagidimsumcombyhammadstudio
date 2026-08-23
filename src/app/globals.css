@@ -61,7 +61,7 @@
   animation-duration: 118s;
 }
 
-.menu-gallery:hover .menu-marquee-track {
+.menu-marquee-track:has(figure:hover) {
   animation-play-state: paused;
 }
 

@@ -3,18 +3,27 @@ import Image from "next/image";
 const topRow = Array.from({ length: 18 }, (_, index) => index + 1);
 const bottomRow = Array.from({ length: 18 }, (_, index) => index + 19);
 
+const tileWidths = [
+  "w-40 sm:w-52 lg:w-60",
+  "w-52 sm:w-64 lg:w-72",
+  "w-44 sm:w-56 lg:w-64",
+  "w-56 sm:w-72 lg:w-80",
+];
+
 function GallerySequence({ images, compact, duplicate = false }: { images: number[]; compact: boolean; duplicate?: boolean }) {
   return (
     <div className="menu-gallery-sequence flex shrink-0 items-center gap-3 pr-3 sm:gap-4 sm:pr-4" aria-hidden={duplicate || undefined}>
-      {images.map((number) => (
+      {images.map((number, index) => (
         <figure
           key={`${duplicate ? "duplicate" : "original"}-${number}`}
-          className={`relative shrink-0 overflow-hidden rounded-lg border border-[#3A2232]/[0.07] bg-[#F8E8EE] shadow-[0_12px_30px_rgba(50,29,22,0.07)] ${compact ? "size-40 sm:size-52 lg:size-64" : "size-44 sm:size-60 lg:size-72"}`}
+          className={`relative shrink-0 overflow-hidden rounded-xl border border-[#3A2232]/[0.07] bg-[#F8E8EE] shadow-[0_12px_30px_rgba(50,29,22,0.07)] ${compact ? "h-44 sm:h-56 lg:h-64" : "h-52 sm:h-64 lg:h-72"} ${tileWidths[index % tileWidths.length]}`}
         >
           <Image
             src={`/images/menu/lalagi-menu-${String(number).padStart(2, "0")}.webp`}
             alt={duplicate ? "" : `Kreasi dimsum LalaGi untuk momen perayaan ${number}`}
             fill
+            loading="eager"
+            unoptimized
             sizes="(max-width: 639px) 224px, (max-width: 1023px) 288px, 320px"
             className="object-cover transition-transform duration-700 hover:scale-[1.025]"
           />
