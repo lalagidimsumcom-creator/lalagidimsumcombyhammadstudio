@@ -47,18 +47,18 @@
 }
 
 .menu-marquee-rail {
-  -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
-  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 }
 
 .menu-marquee-track {
-  animation: lalagi-marquee 92s linear infinite;
+  animation: lalagi-marquee 108s linear infinite;
   will-change: transform;
 }
 
 .menu-marquee-track-reverse {
   animation-direction: reverse;
-  animation-duration: 104s;
+  animation-duration: 118s;
 }
 
 .menu-gallery:hover .menu-marquee-track {
