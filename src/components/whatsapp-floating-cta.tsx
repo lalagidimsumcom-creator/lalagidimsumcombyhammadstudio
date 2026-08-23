@@ -12,7 +12,7 @@ export default function WhatsAppFloatingCta() {
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
     >
       <span className="pointer-events-none mr-3 hidden border border-[#E75480]/35 bg-[#FFFDF9] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#E75480] opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 sm:inline-block">
-        Chat LalaGi
+        Chat LalaGi Dimsum
       </span>
 
       <a

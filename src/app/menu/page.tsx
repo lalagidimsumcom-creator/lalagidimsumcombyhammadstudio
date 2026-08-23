@@ -54,7 +54,7 @@ export default function MenuPage() {
         <div className="mx-auto max-w-[1280px] space-y-4 px-5 text-center sm:px-6 lg:px-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#F8E8EE] px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#E75480] sm:text-sm">
             <Sparkle weight="fill" className="size-4" aria-hidden="true" />
-            <span>Katalog lengkap LalaGi</span>
+            <span>Katalog lengkap LalaGi Dimsum</span>
           </div>
           <h1 className="font-serif-display text-4xl font-normal tracking-tight text-[#3A2232] sm:text-6xl">
             Pilih favoritmu.
@@ -86,7 +86,7 @@ export default function MenuPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-[1280px] px-5 py-16 sm:px-6 lg:px-8 lg:py-24" aria-label="Daftar menu LalaGi">
+      <section className="mx-auto w-full max-w-[1280px] px-5 py-16 sm:px-6 lg:px-8 lg:py-24" aria-label="Daftar menu LalaGi Dimsum">
         <div className="mb-8 flex items-center justify-between border-b border-[#EADDE5] pb-4">
           <p className="text-sm font-semibold text-[#735E6C]">
             {filteredProducts.length} menu &amp; paket tercatat
@@ -231,7 +231,7 @@ export default function MenuPage() {
           </h2>
           <div className="mt-9 grid gap-5 md:grid-cols-3">
             {[
-              { icon: Motorcycle, title: "Cake & Bucket", text: "Bisa menggunakan motor dengan bag. Driver LalaGi direkomendasikan agar paket lebih aman." },
+              { icon: Motorcycle, title: "Cake & Bucket", text: "Bisa menggunakan motor dengan bag. Driver LalaGi Dimsum direkomendasikan agar paket lebih aman." },
               { icon: Car, title: "Tower, Tampah & Money Roll", text: "Mini Tower, Tower, Money Roll, dan Tampah wajib dikirim menggunakan mobil." },
               { icon: WarningCircle, title: "Tanyakan stok", text: "Party Size dan dimsum satuan dapat sewaktu-waktu sold out. Konfirmasi sebelum memesan." },
             ].map((item) => (
@@ -258,13 +258,13 @@ export default function MenuPage() {
           <li>Jam pengiriman pukul 08.00–18.00.</li>
           <li>Semua harga belum termasuk biaya kirim.</li>
           <li>Ongkir mengikuti aplikasi GoSend/Lalamove dan dapat berubah karena cuaca atau banjir.</li>
-          <li>Cake dan Bucket dapat dikirim menggunakan motor dengan bag; driver LalaGi direkomendasikan.</li>
+          <li>Cake dan Bucket dapat dikirim menggunakan motor dengan bag; driver LalaGi Dimsum direkomendasikan.</li>
           <li>Mini Tower, Tower, Money Roll, dan Tampah wajib menggunakan mobil.</li>
           <li>Hampers Ramadan/Idul Fitri bersifat seasonal dan perlu dipesan saat periodenya aktif.</li>
           <li>Kimako, Sanka, dan paket bundling merupakan menu kolaborasi opsional; ikuti waktu pre-order yang tercantum dan konfirmasi ketersediaan terlebih dahulu.</li>
         </ol>
         <a
-          href={getWhatsAppUrl("Halo LalaGi, saya lihat menu di website dan mau tanya/pesan dimsum 😊")}
+          href={getWhatsAppUrl("Halo LalaGi Dimsum, saya lihat menu di website dan mau tanya/pesan dimsum 😊")}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-9 inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-[#E75480] px-8 py-3.5 font-bold text-white transition-colors duration-200 hover:bg-[#D63D76]"

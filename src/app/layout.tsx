@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         url: "/images/lalagi-dimsum-tampah.png",
         width: 941,
         height: 1672,
-        alt: "Tampah aneka dimsum LalaGi"
+        alt: "Tampah aneka LalaGi Dimsum"
       }
     ],
     locale: "id_ID",

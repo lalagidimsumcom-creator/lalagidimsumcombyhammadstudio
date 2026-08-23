@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  EnvelopeSimple,
   InstagramLogo,
   MapPin,
   WhatsappLogo,
@@ -149,20 +148,6 @@ export default function EditorialFooter() {
                   aria-hidden="true"
                 />
                 <span>{BRAND_CONFIG.location}</span>
-              </li>
-              <li>
-                <a
-                  href="mailto:hello@lalagidimsum.com"
-                  className={`flex items-start gap-3 ${linkClass}`}
-                >
-                  <EnvelopeSimple
-                    size={18}
-                    weight="regular"
-                    className="mt-0.5 shrink-0 text-white/70"
-                    aria-hidden="true"
-                  />
-                  <span>hello@lalagidimsum.com</span>
-                </a>
               </li>
             </ul>
           </div>

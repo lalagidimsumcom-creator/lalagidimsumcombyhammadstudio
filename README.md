@@ -18,7 +18,7 @@ Informasi brand utama:
 
 ## Fitur
 
-- Homepage responsif dengan fotografi produk LalaGi
+- Homepage responsif dengan fotografi produk LalaGi Dimsum
 - Navigasi mobile dan desktop
 - Katalog menu dengan filter kategori
 - Satu halaman menu untuk dimsum reguler, Dimsum Cake, tampah, dan hampers
@@ -78,7 +78,7 @@ src/
 ├── data/                # Konfigurasi brand, produk, dan ulasan
 └── lib/                 # Helper tautan WhatsApp
 public/
-└── images/              # Logo dan fotografi produk LalaGi
+└── images/              # Logo dan fotografi produk LalaGi Dimsum
 ```
 
 ## Konfigurasi deployment

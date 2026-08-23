@@ -46,6 +46,26 @@ const reviewImages = [
     src: "/images/google-review-elsa.jpeg",
     alt: "Ulasan Google dari Elsa Meilinda Putri untuk LalaGi Dimsum",
   },
+  {
+    src: "/images/google-review-new-1.webp",
+    alt: "Ulasan Google tambahan dari Fransisca Marseilla untuk LalaGi Dimsum",
+  },
+  {
+    src: "/images/google-review-new-2.webp",
+    alt: "Ulasan Google tambahan dari Liza Noah untuk LalaGi Dimsum",
+  },
+  {
+    src: "/images/google-review-new-3.webp",
+    alt: "Ulasan Google tambahan dari Rifdah Safitri untuk LalaGi Dimsum",
+  },
+  {
+    src: "/images/google-review-new-4.webp",
+    alt: "Ulasan Google tambahan dari Elsa Meilinda Putri untuk LalaGi Dimsum",
+  },
+  {
+    src: "/images/google-review-new-5.webp",
+    alt: "Ulasan Google tambahan dari Ribka Anflora untuk LalaGi Dimsum",
+  },
 ];
 
 export default function EditorialTrustStrip() {

@@ -60,18 +60,13 @@ export default function EditorialHero() {
             </Link>
           </div>
 
-          <div className="mt-10 border-t border-[#EADDE5] pt-5 sm:mt-12">
-            <p className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-[#735E6C]">
-              Halal MUI <span aria-hidden="true">·</span> ID31110016921890424
-            </p>
-          </div>
         </div>
       </div>
 
       <div className="relative h-[31rem] w-full md:hidden">
         <Image
           src="/images/lalagi-dimsum-tampah.png"
-          alt="Aneka dimsum LalaGi tersusun di atas tampah untuk dinikmati bersama"
+          alt="Aneka dimsum LalaGi Dimsum tersusun di atas tampah untuk dinikmati bersama"
           fill
           priority
           loading="eager"

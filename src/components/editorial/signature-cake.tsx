@@ -11,7 +11,7 @@ export default function EditorialSignatureCake() {
         <div className="relative aspect-square w-full overflow-hidden bg-lalagi-blush">
           <Image
             src="/images/lalagi-dimsum-kitchen.jpg"
-            alt="Tim dapur LalaGi membuat dimsum dengan tangan di Jagakarsa"
+            alt="Tim dapur LalaGi Dimsum membuat dimsum dengan tangan di Jagakarsa"
             fill
             sizes="(min-width: 1024px) 48vw, 100vw"
             className="object-cover"
@@ -29,7 +29,7 @@ export default function EditorialSignatureCake() {
           </h2>
 
           <div className="mt-7 max-w-xl space-y-5 text-sm leading-7 text-lalagi-muted sm:text-base sm:leading-8">
-            <p>LalaGi lahir dari dapur rumahan di Jagakarsa, berawal dari keyakinan bahwa makanan terbaik tercipta bukan karena proses yang instan, melainkan karena ketelatenan, kesabaran, dan ketulusan.</p>
+            <p>LalaGi Dimsum lahir dari dapur rumahan di Jagakarsa, berawal dari keyakinan bahwa makanan terbaik tercipta bukan karena proses yang instan, melainkan karena ketelatenan, kesabaran, dan ketulusan.</p>
             <p>Setiap dimsum kami dibuat dengan 90% daging ayam pilihan, tanpa mengurangi kualitas demi mengejar kuantitas. Dari memilih bahan, meracik bumbu, hingga mengukus setiap sajian, kami menjaga cita rasa yang konsisten agar setiap pelanggan merasakan kehangatan yang sama di setiap momen.</p>
             <p>Karena bagi kami, setiap sajian bukan hanya tentang makanan—melainkan cara menghadirkan kebahagiaan di momen Anda.</p>
           </div>

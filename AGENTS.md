@@ -24,7 +24,7 @@ Official brand website and high-converting landing page for **LalaGi Dimsum** in
 
 - Keep TypeScript strict and avoid `any`.
 - Build mobile-first, accessible interfaces with an editorial food aesthetic.
-- Use real LalaGi brand photography and accurate business information.
+- Use real LalaGi Dimsum brand photography and accurate business information.
 - Preserve the approved palette: navbar and footer `#321D16`, primary buttons and accents `#E75480`, button hover `#D63D76`, page background `#F7F3EF`, and headings `#3A2232`.
 - Keep ordering flows clear and route calls to action through the shared WhatsApp helper.
 - Display halal certification number `ID31110016921890424` accurately.
