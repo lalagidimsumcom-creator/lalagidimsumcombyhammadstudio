@@ -16,11 +16,18 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700"],
 });
 
+const SITE_URL = "https://lalagidimsum.com";
+const SITE_DESCRIPTION =
+  "Dimsum homemade premium dengan 90% daging ayam pilihan dari Jagakarsa, Jakarta Selatan, untuk momen sehari-hari hingga perayaan istimewa.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://lalagidimsum.com"),
-  title: "LalaGi Dimsum | Dimsum untuk Setiap Momen",
-  description:
-    "Dimsum homemade dengan 90% daging ayam pilihan dari Jagakarsa, Jakarta Selatan. Dari ngemil sehari-hari, Dimsum Cake ulang tahun, Dimsum Tampah acara, hingga hampers spesial. Halal Certified ID31110016921890424.",
+  metadataBase: new URL(SITE_URL),
+  applicationName: "LalaGi Dimsum",
+  title: {
+    default: "LalaGi Dimsum | Dimsum untuk Setiap Momen",
+    template: "%s | LalaGi Dimsum",
+  },
+  description: SITE_DESCRIPTION,
   keywords: [
     "LalaGi Dimsum",
     "Dimsum Cake Jakarta",
@@ -33,26 +40,46 @@ export const metadata: Metadata = {
     "Dimsum untuk Setiap Momen"
   ],
   authors: [{ name: "LalaGi Dimsum" }],
+  creator: "LalaGi Dimsum",
+  publisher: "LalaGi Dimsum",
+  category: "Food & Beverage",
+  alternates: {
+    canonical: "/",
+  },
+  manifest: "/manifest.webmanifest",
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: "LalaGi Dimsum | Dimsum untuk Setiap Momen",
-    description:
-      "Dimsum homemade dengan 90% daging ayam pilihan untuk menemani momen sehari-hari hingga perayaan istimewa bersama orang tersayang.",
-    url: "https://lalagidimsum.com/",
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
     siteName: "LalaGi Dimsum",
     images: [
       {
-        url: "/images/lalagi-dimsum-tampah.png",
-        width: 941,
-        height: 1672,
-        alt: "Tampah aneka LalaGi Dimsum"
-      }
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "LalaGi Dimsum — Dimsum untuk Setiap Momen",
+      },
     ],
     locale: "id_ID",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "LalaGi Dimsum | Dimsum untuk Setiap Momen",
+    description: SITE_DESCRIPTION,
+    images: ["/twitter-image.jpg"],
+  },
   icons: {
-    icon: "/images/lalagi-logo.jpg",
-    apple: "/images/lalagi-logo.jpg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
 };
 

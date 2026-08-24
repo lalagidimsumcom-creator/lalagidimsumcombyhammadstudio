@@ -83,7 +83,7 @@ public/
 
 ## Konfigurasi deployment
 
-Deploy langsung ke Vercel dengan root directory proyek ini. Variabel `NEXT_PUBLIC_SITE_URL` bersifat opsional; jika tidak diatur, metadata menggunakan `https://lalagidimsum.com`.
+Deploy langsung ke Vercel dengan root directory proyek ini. Canonical URL dan seluruh metadata publik menggunakan domain resmi `https://lalagidimsum.com`.
 
 ## Lisensi
 
