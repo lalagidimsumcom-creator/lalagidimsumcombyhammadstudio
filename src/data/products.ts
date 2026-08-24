@@ -13,6 +13,7 @@ export interface MenuGroup {
   description: string;
   occasions?: readonly string[];
   variants: readonly MenuVariant[];
+  includedLabel: string;
   priceNote?: string;
   notesTitle?: string;
   notes?: readonly string[];
@@ -48,8 +49,9 @@ export const MENU_GROUPS: readonly MenuGroup[] = [
       "Bisa request tambahan add-on keju huruf",
       "Bisa request untuk gift",
     ],
+    includedLabel: "Saus merah, chili oil, dan cutlery.",
     deliveryType: "motor",
-    deliveryLabel: "Pengantaran bisa dengan motor",
+    deliveryLabel: "Pengiriman bisa dengan motor + tas thermal.",
     images: ["/images/menu-groups/dimsum-party-size.webp"],
   },
   {
@@ -67,8 +69,11 @@ export const MENU_GROUPS: readonly MenuGroup[] = [
       { name: "Dimsum Reguler 40 pcs", price: 225_000 },
       { name: "Dimsum Reguler 45 pcs", price: 260_000 },
     ],
+    includedLabel:
+      "Topper, lilin, cutlery, greeting card, saus merah, chili oil, tape, dan box eksklusif.",
     deliveryType: "motor",
-    deliveryLabel: "Pengantaran bisa dengan motor",
+    deliveryLabel:
+      "Pengiriman bisa dengan motor + tas thermal bersama driver LalaGi Dimsum.",
     images: ["/images/menu-groups/dimsum-cake-reguler.webp"],
   },
   {
@@ -86,8 +91,11 @@ export const MENU_GROUPS: readonly MenuGroup[] = [
       { name: "Dimsum Bucket 40 pcs", price: 240_000 },
       { name: "Dimsum Bucket 45 pcs", price: 275_000 },
     ],
+    includedLabel:
+      "Topper, lilin, cutlery, greeting card, saus merah, chili oil, tape, box eksklusif, dan bucket.",
     deliveryType: "motor",
-    deliveryLabel: "Pengantaran bisa dengan motor",
+    deliveryLabel:
+      "Pengiriman bisa dengan motor + tas thermal bersama driver LalaGi Dimsum.",
     images: ["/images/menu-groups/dimsum-bucket.webp"],
   },
   {
@@ -102,8 +110,9 @@ export const MENU_GROUPS: readonly MenuGroup[] = [
       { name: "Dimsum Tampah 50 pcs", price: 390_000 },
       { name: "Dimsum Tampah 100 pcs", price: 580_000 },
     ],
+    includedLabel: "Topper, lilin, cutlery, dan greeting card.",
     deliveryType: "car",
-    deliveryLabel: "Pengantaran wajib dengan mobil",
+    deliveryLabel: "Pengiriman wajib dengan mobil agar susunan tetap aman.",
     images: [
       "/images/menu-groups/dimsum-tampah-01.webp",
       "/images/menu-groups/dimsum-tampah-02.webp",
@@ -121,8 +130,10 @@ export const MENU_GROUPS: readonly MenuGroup[] = [
       { name: "Dimsum Tower 55 pcs", price: 350_000 },
       { name: "Dimsum Tower 100 pcs", price: 635_000 },
     ],
+    includedLabel:
+      "Topper, lilin, cutlery, greeting card, saus merah, chili oil, tape, box eksklusif, dan bucket.",
     deliveryType: "car",
-    deliveryLabel: "Pengantaran wajib dengan mobil",
+    deliveryLabel: "Pengiriman wajib dengan mobil agar susunan tetap aman.",
     images: [
       "/images/menu-groups/dimsum-tower-01.webp",
       "/images/menu-groups/dimsum-tower-02.webp",
@@ -139,6 +150,8 @@ export const MENU_GROUPS: readonly MenuGroup[] = [
     variants: [
       { name: "Dimsum Money Roll 40 pcs", price: 315_000 },
     ],
+    includedLabel:
+      "Topper, lilin, cutlery, greeting card, saus merah, chili oil, tape, box eksklusif, dan bucket.",
     priceNote:
       "Harga Dimsum Money Roll belum termasuk isi uang di dalamnya.",
     notesTitle: "Syarat & ketentuan",
@@ -147,7 +160,7 @@ export const MENU_GROUPS: readonly MenuGroup[] = [
       "Isi uang maksimal Rp1.000.000 untuk pecahan Rp50.000 atau Rp2.000.000 untuk pecahan Rp100.000.",
     ],
     deliveryType: "car",
-    deliveryLabel: "Pengantaran dengan mobil",
+    deliveryLabel: "Pengiriman wajib dengan mobil agar susunan tetap aman.",
     images: ["/images/menu-groups/dimsum-money-roll.webp"],
   },
 ];

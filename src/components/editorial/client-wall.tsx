@@ -11,6 +11,7 @@ const clients = [
   { name: "Kementerian PU", logo: "/images/clients/logo-kemenpu.png" },
   { name: "Kemendagri", logo: "/images/clients/kemendagri.webp" },
   { name: "Universitas Indonesia", logo: "/images/clients/images.jpg" },
+  { name: "Universitas Negeri Jakarta", logo: "/images/clients/unj.webp" },
   { name: "Jasa Marga", logo: "/images/clients/images (5).png" },
   { name: "SCTV", logo: "/images/clients/SCTV_Logo.svg.png" },
   { name: "Kompas", logo: "/images/clients/Logo_Kompasdotcom.png" },

@@ -3,6 +3,7 @@ import {
   ArrowUpRight,
   Car,
   CheckCircle,
+  Gift,
   Motorcycle,
   Sparkle,
   WhatsappLogo,
@@ -119,6 +120,7 @@ export default function MenuPage() {
 
                 {menu.occasions && (
                   <p className="mt-5 max-w-xl text-xs font-semibold uppercase leading-6 tracking-[0.08em] text-[#722F37]">
+                    <span className="mr-1.5">Pilihan topper:</span>
                     {menu.occasions.join("  ·  ")}
                   </p>
                 )}
@@ -174,13 +176,37 @@ export default function MenuPage() {
                   </div>
                 )}
 
-                <div className="mt-7 flex items-start gap-3 bg-[#FFFDF9] px-4 py-4 text-sm font-semibold leading-6 text-[#3A2232]">
-                  <DeliveryIcon
-                    weight="duotone"
-                    className="mt-0.5 size-6 shrink-0 text-[#722F37]"
-                    aria-hidden="true"
-                  />
-                  <span>{menu.deliveryLabel}</span>
+                <div className="mt-7 divide-y divide-[#3A2232]/10 bg-[#FFFDF9] px-4 sm:px-5">
+                  <div className="flex items-start gap-3 py-4">
+                    <Gift
+                      weight="duotone"
+                      className="mt-0.5 size-6 shrink-0 text-[#722F37]"
+                      aria-hidden="true"
+                    />
+                    <div>
+                      <span className="block text-[0.65rem] font-bold uppercase tracking-[0.14em] text-[#722F37]">
+                        Harga sudah termasuk
+                      </span>
+                      <p className="mt-1 text-sm font-semibold leading-6 text-[#3A2232]">
+                        {menu.includedLabel}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 py-4">
+                    <DeliveryIcon
+                      weight="duotone"
+                      className="mt-0.5 size-6 shrink-0 text-[#722F37]"
+                      aria-hidden="true"
+                    />
+                    <div>
+                      <span className="block text-[0.65rem] font-bold uppercase tracking-[0.14em] text-[#722F37]">
+                        Pengiriman
+                      </span>
+                      <p className="mt-1 text-sm font-semibold leading-6 text-[#3A2232]">
+                        {menu.deliveryLabel}
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
                 <a
