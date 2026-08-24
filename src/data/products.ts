@@ -57,17 +57,17 @@ export const MENU_GROUPS: readonly MenuGroup[] = [
   {
     id: "dimsum-cake",
     menuNumber: "02",
-    name: "Dimsum Reguler",
+    name: "Dimsum Cake Reguler",
     meta: "Perayaan yang lebih personal",
     description:
       "Dimsum Cake untuk perayaan momen spesial kamu dengan perpaduan dimsum bersaus mentai creamy dan dimsum original.",
     occasions: CELEBRATION_OCCASIONS,
     variants: [
-      { name: "Dimsum Reguler 25 pcs", price: 165_000 },
-      { name: "Dimsum Reguler 30 pcs", price: 185_000 },
-      { name: "Dimsum Reguler 35 pcs", price: 200_000 },
-      { name: "Dimsum Reguler 40 pcs", price: 225_000 },
-      { name: "Dimsum Reguler 45 pcs", price: 260_000 },
+      { name: "Dimsum Cake Reguler 25 pcs", price: 165_000 },
+      { name: "Dimsum Cake Reguler 30 pcs", price: 185_000 },
+      { name: "Dimsum Cake Reguler 35 pcs", price: 200_000 },
+      { name: "Dimsum Cake Reguler 40 pcs", price: 225_000 },
+      { name: "Dimsum Cake Reguler 45 pcs", price: 260_000 },
     ],
     includedLabel:
       "Topper, lilin, cutlery, greeting card, saus merah, chili oil, tape, dan box eksklusif.",

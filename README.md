@@ -21,7 +21,7 @@ Informasi brand utama:
 - Homepage responsif dengan fotografi produk LalaGi Dimsum
 - Navigasi mobile dan desktop
 - Katalog menu dengan filter kategori
-- Satu halaman menu untuk dimsum reguler, Dimsum Cake, tampah, dan hampers
+- Satu halaman menu untuk Dimsum Cake Reguler, Dimsum Bucket, Dimsum Tampah, Dimsum Tower, dan menu perayaan lainnya
 - Cerita brand, bukti kepercayaan, dan carousel screenshot ulasan Google
 - CTA WhatsApp kontekstual pada setiap alur pemesanan
 - Optimasi gambar dan font melalui Next.js

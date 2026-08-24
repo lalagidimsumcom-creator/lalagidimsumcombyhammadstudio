@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Menu LalaGi Dimsum",
     description:
-      "Pilihan Dimsum Party Size, Dimsum Reguler, Dimsum Bucket, Dimsum Tampah, Dimsum Tower, dan Dimsum Money Roll.",
+      "Pilihan Dimsum Party Size, Dimsum Cake Reguler, Dimsum Bucket, Dimsum Tampah, Dimsum Tower, dan Dimsum Money Roll.",
     url: "/menu",
     siteName: "LalaGi Dimsum",
     images: [
