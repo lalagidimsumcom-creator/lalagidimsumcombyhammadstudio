@@ -102,10 +102,14 @@ export function DirectAnswers({
   eyebrow = "Jawaban langsung",
   title,
   items,
+  moreHref,
+  moreLabel = "Lihat semua pertanyaan",
 }: {
   eyebrow?: string;
   title: string;
   items: readonly { question: string; answer: string }[];
+  moreHref?: string;
+  moreLabel?: string;
 }) {
   return (
     <section className="px-5 py-16 sm:px-8 lg:px-12 lg:py-24" aria-labelledby="direct-answer-title">
@@ -120,6 +124,11 @@ export function DirectAnswers({
             </article>
           ))}
         </div>
+        {moreHref && (
+          <Link href={moreHref} className="mt-8 inline-flex items-center gap-2 border-b border-[#722F37] pb-1 text-xs font-bold uppercase tracking-[0.12em] text-[#722F37]">
+            {moreLabel}<ArrowRight className="size-4" aria-hidden="true" />
+          </Link>
+        )}
       </div>
     </section>
   );

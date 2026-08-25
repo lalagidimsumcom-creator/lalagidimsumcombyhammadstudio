@@ -10,5 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BRAND_CONFIG.siteUrl}/dimsum-cake`, lastModified, changeFrequency: "monthly", priority: 0.85 },
     { url: `${BRAND_CONFIG.siteUrl}/pesanan-acara`, lastModified, changeFrequency: "monthly", priority: 0.85 },
     { url: `${BRAND_CONFIG.siteUrl}/tentang`, lastModified, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BRAND_CONFIG.siteUrl}/faq`, lastModified, changeFrequency: "monthly", priority: 0.7 },
   ];
 }

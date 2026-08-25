@@ -96,6 +96,29 @@ export default function TentangPage() {
         </div>
       </section>
 
+      <section className="px-5 py-16 sm:px-8 lg:px-12 lg:py-24" aria-labelledby="location-title">
+        <div className="mx-auto grid max-w-[1100px] gap-9 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#722F37]">Lokasi LalaGi Dimsum</p>
+            <h2 id="location-title" className="mt-4 font-serif-display text-3xl font-medium leading-tight sm:text-4xl">Dapur rumahan di Jagakarsa.</h2>
+            <p className="mt-5 text-sm leading-7 text-[#735E6C]">{BRAND_CONFIG.streetAddress}, Kecamatan Jagakarsa, Jakarta Selatan {BRAND_CONFIG.postalCode}.</p>
+            <a href={BRAND_CONFIG.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="mt-7 inline-flex items-center gap-2 border-b border-[#722F37] pb-1 text-xs font-bold uppercase tracking-[0.12em] text-[#722F37]">
+              Buka petunjuk Google Maps<MapPin className="size-4" aria-hidden="true" />
+            </a>
+          </div>
+          <div className="aspect-[16/10] overflow-hidden border border-[#3A2232]/10 bg-[#FFFDF9]">
+            <iframe
+              title="Lokasi LalaGi Dimsum di Jagakarsa"
+              src={`https://www.google.com/maps?q=${BRAND_CONFIG.latitude},${BRAND_CONFIG.longitude}&z=16&output=embed`}
+              className="h-full w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#FFFDF9] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-[1100px]">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#722F37]">LalaGi dalam berbagai momen</p>
@@ -107,7 +130,7 @@ export default function TentangPage() {
           <Link href="/pesanan-acara" className="mt-7 inline-flex border-b border-[#722F37] pb-1 text-xs font-bold uppercase tracking-[0.12em] text-[#722F37]">Lihat pesanan acara</Link>
         </div>
       </section>
-      <DirectAnswers title="Pertanyaan tentang LalaGi Dimsum" items={faqs} />
+      <DirectAnswers title="Pertanyaan tentang LalaGi Dimsum" items={faqs} moreHref="/faq" />
     </ServicePageShell>
   );
 }

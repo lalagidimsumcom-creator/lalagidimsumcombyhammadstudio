@@ -41,6 +41,10 @@ const faqs = [
     question: "Apakah LalaGi Dimsum melayani pesanan acara di Jabodetabek?",
     answer: "Ya. LalaGi Dimsum melayani konsultasi pesanan acara dan pengiriman ke area Jabodetabek. Jadwal, jumlah, serta armada disesuaikan dengan produk dan lokasi acara.",
   },
+  {
+    question: "Apa itu Dimsum Money Roll?",
+    answer: "Dimsum Money Roll adalah sajian surprise berisi 40 pcs dimsum dengan susunan uang. Harga Rp315.000 belum termasuk isi uang, dan pengirimannya wajib menggunakan mobil.",
+  },
 ] as const;
 
 export default function PesananAcaraPage() {
@@ -66,9 +70,10 @@ export default function PesananAcaraPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#722F37]">LalaGi dalam berbagai momen</p>
           <h2 className="mt-4 max-w-4xl font-serif-display text-3xl font-medium leading-tight sm:text-4xl">Pesanan LalaGi Dimsum telah hadir di berbagai perusahaan, instansi, rumah sakit, kampus, dan acara di Jabodetabek.</h2>
           <p className="mt-6 max-w-3xl text-sm leading-7 text-[#735E6C] sm:text-base">Setiap pesanan dikonsultasikan berdasarkan jumlah sajian, waktu acara, lokasi pengiriman, dan kebutuhan tampilan. Hubungi admin untuk mengecek slot produksi dan armada.</p>
+          <p className="mt-5 max-w-3xl border-l border-[#722F37]/35 pl-5 text-sm leading-7 text-[#735E6C]">Area layanan mencakup Jakarta Selatan, wilayah Jakarta lainnya, Depok, Tangerang Selatan, Bekasi, dan area Jabodetabek sesuai ketersediaan armada.</p>
         </div>
       </section>
-      <DirectAnswers title="Pertanyaan tentang pesanan dimsum untuk acara" items={faqs} />
+      <DirectAnswers title="Pertanyaan tentang pesanan dimsum untuk acara" items={faqs} moreHref="/faq" />
     </ServicePageShell>
   );
 }

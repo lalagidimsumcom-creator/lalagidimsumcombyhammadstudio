@@ -39,6 +39,7 @@ Informasi brand utama:
 | `/dimsum-cake` | Dimsum Cake, Bucket, birthday, anniversary, dan surprise |
 | `/pesanan-acara` | Dimsum Tampah, Tower, Money Roll, corporate, dan gathering |
 | `/tentang` | Entity brand, cerita, lokasi, halal, dan kanal resmi |
+| `/faq` | Jawaban resmi tentang harga, produk, pemesanan, dan pengiriman |
 
 ## Teknologi
 

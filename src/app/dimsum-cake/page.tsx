@@ -84,7 +84,7 @@ export default function DimsumCakePage() {
           <div><p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/65">Dimsum Bucket</p><h2 className="mt-4 font-serif-display text-3xl leading-tight">Dekorasi bucket yang bisa dipilih.</h2><p className="mt-5 text-sm leading-7 text-white/70">Tersedia 25–45 pcs untuk birthday dan hadiah personal. Paket mencakup kelengkapan perayaan serta bucket eksklusif.</p></div>
         </div>
       </section>
-      <DirectAnswers title="Pertanyaan tentang Dimsum Cake LalaGi Dimsum" items={faqs} />
+      <DirectAnswers title="Pertanyaan tentang Dimsum Cake LalaGi Dimsum" items={faqs} moreHref="/faq" />
     </ServicePageShell>
   );
 }

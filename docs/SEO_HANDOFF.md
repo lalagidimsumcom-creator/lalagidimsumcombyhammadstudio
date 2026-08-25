@@ -1,6 +1,6 @@
 # SEO, AEO, dan GEO — LalaGi Dimsum
 
-Implementasi ini mengonsolidasikan 500 keyword menjadi lima halaman intent. Keyword tidak dimasukkan secara massal dan tidak dibuat menjadi doorway page per variasi lokasi atau pertanyaan.
+Implementasi ini mengonsolidasikan 500 keyword menjadi enam halaman intent. Keyword tidak dimasukkan secara massal dan tidak dibuat menjadi doorway page per variasi lokasi atau pertanyaan.
 
 ## Halaman intent
 
@@ -11,8 +11,11 @@ Implementasi ini mengonsolidasikan 500 keyword menjadi lima halaman intent. Keyw
 | `/dimsum-cake` | Birthday, anniversary, graduation, dan surprise |
 | `/pesanan-acara` | Tampah, Tower, Money Roll, kantor, wedding, dan gathering |
 | `/tentang` | Entity brand, lokasi, halal, cerita, dan kanal resmi |
+| `/faq` | AEO untuk harga, produk, pemesanan, dan pengiriman |
 
-Pemetaan lengkap tersedia di `LalaGiDimsum_Keyword_Map.xlsx`. Keyword yang menyebut produk atau layanan yang belum terverifikasi—misalnya frozen, udang, franchise, reseller, aplikasi delivery, atau cabang—ditandai sebagai **Ditahan**, bukan dipublikasikan sebagai klaim.
+Pemetaan lengkap tersedia di `LalaGiDimsum_Keyword_Map.xlsx`. Seluruh 500 keyword sudah diaudit: 294 intent faktual diimplementasikan, 178 variasi query dicakup secara semantik tanpa exact-match stuffing atau doorway page, 24 keyword produk/kanal yang belum didukung ditahan, dan 4 pertanyaan penyimpanan menunggu SOP resmi client.
+
+Keyword yang menyebut produk atau layanan yang belum terverifikasi—misalnya frozen, udang, reseller, atau aplikasi delivery—tidak dipublikasikan sebagai klaim. Query subjektif seperti “terbaik”, “termurah”, “promo”, dan “viral” dipakai sebagai vocabulary discovery, bukan klaim marketing tanpa bukti.
 
 ## Yang sudah diimplementasikan
 
@@ -23,6 +26,8 @@ Pemetaan lengkap tersedia di `LalaGiDimsum_Keyword_Map.xlsx`. Keyword yang menye
 - `sitemap.xml` dan `robots.txt` otomatis.
 - Internal link berdasarkan intent pengguna.
 - Copy first-party yang membedakan jenis produk, ukuran, kelengkapan, dan SOP motor/mobil.
+- Halaman FAQ resmi dengan jawaban terlihat di UI dan `FAQPage` yang identik dengan konten halaman.
+- Peta lokasi Jagakarsa pada halaman Tentang serta koordinat yang konsisten dengan local business schema.
 
 ## Tindakan operasional di luar kode
 
