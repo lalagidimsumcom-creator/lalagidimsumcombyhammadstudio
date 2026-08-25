@@ -33,7 +33,7 @@ Keyword yang menyebut produk atau layanan yang belum terverifikasi—misalnya fr
 
 1. Verifikasi dan lengkapi Google Business Profile dengan nama `LalaGi Dimsum`, nomor telepon, jam operasional, kategori bisnis, area layanan, dan URL menu yang konsisten.
 2. Tambahkan foto produk asli secara rutin dan balas seluruh review Google secara natural.
-3. Daftarkan `https://lalagidimsum.com/sitemap.xml` ke Google Search Console dan Bing Webmaster Tools.
+3. Daftarkan `https://www.lalagidimsum.com/sitemap.xml` ke Google Search Console dan Bing Webmaster Tools.
 4. Pantau query, halaman, CTR, indexing, Core Web Vitals, dan kemunculan konten sosial setiap bulan.
 5. Jaga alamat Google Business Profile konsisten dengan alamat dan koordinat yang digunakan website; perbarui keduanya bersamaan jika lokasi berubah.
 6. Publikasikan artikel hanya jika tersedia pengalaman, data, foto, atau jawaban first-party yang substansial.

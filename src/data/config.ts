@@ -1,5 +1,5 @@
 export const BRAND_CONFIG = {
-  siteUrl: "https://lalagidimsum.com",
+  siteUrl: "https://www.lalagidimsum.com",
   name: "LalaGi Dimsum",
   tagline: "Dimsum untuk Setiap Momen.",
   subtagline: "Dari ngemil sampai hari spesial.",

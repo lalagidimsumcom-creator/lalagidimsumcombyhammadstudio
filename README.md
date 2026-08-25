@@ -92,7 +92,7 @@ docs/
 
 ## Konfigurasi deployment
 
-Deploy langsung ke Vercel dengan root directory proyek ini. Canonical URL dan seluruh metadata publik menggunakan domain resmi `https://lalagidimsum.com`.
+Deploy langsung ke Vercel dengan root directory proyek ini. Canonical URL dan seluruh metadata publik menggunakan domain utama `https://www.lalagidimsum.com`.
 
 ## Lisensi
 

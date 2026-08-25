@@ -16,7 +16,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700"],
 });
 
-const SITE_URL = "https://lalagidimsum.com";
+const SITE_URL = "https://www.lalagidimsum.com";
 const SITE_DESCRIPTION =
   "LalaGi Dimsum Jagakarsa menghadirkan dimsum full ayam, Dimsum Cake, Tampah, Tower, Party Size dan pesanan acara dengan pengiriman Jabodetabek.";
 
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   publisher: "LalaGi Dimsum",
   category: "Food & Beverage",
   alternates: {
-    canonical: "/",
+    canonical: SITE_URL,
   },
   manifest: "/manifest.webmanifest",
   robots: {
