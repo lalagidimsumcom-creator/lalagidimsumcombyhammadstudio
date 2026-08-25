@@ -18,13 +18,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 const SITE_URL = "https://lalagidimsum.com";
 const SITE_DESCRIPTION =
-  "Dimsum homemade premium dengan 90% daging ayam pilihan dari Jagakarsa, Jakarta Selatan, untuk momen sehari-hari hingga perayaan istimewa.";
+  "LalaGi Dimsum Jagakarsa menghadirkan dimsum full ayam, Dimsum Cake, Tampah, Tower, Party Size dan pesanan acara dengan pengiriman Jabodetabek.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: "LalaGi Dimsum",
   title: {
-    default: "LalaGi Dimsum | Dimsum untuk Setiap Momen",
+    default: "LalaGi Dimsum | Dimsum Cake, Tampah & Dimsum Jakarta Selatan",
     template: "%s | LalaGi Dimsum",
   },
   description: SITE_DESCRIPTION,
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "LalaGi Dimsum | Dimsum untuk Setiap Momen",
+    title: "LalaGi Dimsum | Dimsum Cake, Tampah & Dimsum Jakarta Selatan",
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     siteName: "LalaGi Dimsum",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "LalaGi Dimsum | Dimsum untuk Setiap Momen",
+    title: "LalaGi Dimsum | Dimsum Cake, Tampah & Dimsum Jakarta Selatan",
     description: SITE_DESCRIPTION,
     images: ["/twitter-image.jpg"],
   },

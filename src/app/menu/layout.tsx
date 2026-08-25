@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Menu",
+  title: {
+    absolute: "Menu LalaGi Dimsum | Mentai, Cake, Tampah, Tower & Party Size",
+  },
   description:
     "Lihat pilihan menu LalaGi Dimsum untuk hadiah, ulang tahun, gathering, dan momen spesial lainnya.",
   alternates: {

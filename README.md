@@ -25,7 +25,10 @@ Informasi brand utama:
 - Cerita brand, bukti kepercayaan, dan carousel screenshot ulasan Google
 - CTA WhatsApp kontekstual pada setiap alur pemesanan
 - Optimasi gambar dan font melalui Next.js
-- Metadata dasar untuk mesin pencari dan media sosial
+- Metadata SEO dan social sharing per halaman
+- Structured data FoodEstablishment, Product/Offer, Breadcrumb, dan FAQ
+- Direct-answer content untuk AEO serta fakta first-party untuk GEO
+- Sitemap XML, robots.txt, canonical URL, dan internal linking
 
 ## Halaman
 
@@ -33,6 +36,9 @@ Informasi brand utama:
 | --- | --- |
 | `/` | Landing page utama |
 | `/menu` | Katalog produk dan kategori menu |
+| `/dimsum-cake` | Dimsum Cake, Bucket, birthday, anniversary, dan surprise |
+| `/pesanan-acara` | Dimsum Tampah, Tower, Money Roll, corporate, dan gathering |
+| `/tentang` | Entity brand, cerita, lokasi, halal, dan kanal resmi |
 
 ## Teknologi
 
@@ -72,13 +78,15 @@ Buka [http://localhost:3000](http://localhost:3000).
 
 ```text
 src/
-├── app/                 # Route, layout, metadata, dan global styles
+├── app/                 # Route, metadata, sitemap, robots, dan global styles
 ├── components/
 │   └── editorial/       # Komponen landing page dan navigasi
 ├── data/                # Konfigurasi brand, produk, dan ulasan
-└── lib/                 # Helper tautan WhatsApp
+└── lib/                 # Helper WhatsApp dan structured data
 public/
 └── images/              # Logo dan fotografi produk LalaGi Dimsum
+docs/
+└── LalaGiDimsum_Keyword_Map.xlsx # Pemetaan 500 keyword ke intent dan URL
 ```
 
 ## Konfigurasi deployment

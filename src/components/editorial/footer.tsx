@@ -16,8 +16,8 @@ const navigation = [
 
 const offerings = [
   { label: "Menu Dimsum", href: "/menu" },
-  { label: "Dimsum Cake", href: "/menu#dimsum-cake" },
-  { label: "Pesanan Acara", href: "/menu#dimsum-tampah" },
+  { label: "Dimsum Cake", href: "/dimsum-cake" },
+  { label: "Pesanan Acara", href: "/pesanan-acara" },
 ];
 
 const linkClass =
