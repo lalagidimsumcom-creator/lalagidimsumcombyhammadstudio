@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "LalaGi Dimsum",
     images: [
       {
-        url: "/opengraph-image.jpg",
+        url: "/images/lalagi-dimsum-social.jpg",
         width: 1200,
         height: 630,
         alt: "LalaGi Dimsum dari Jagakarsa, Jakarta Selatan",

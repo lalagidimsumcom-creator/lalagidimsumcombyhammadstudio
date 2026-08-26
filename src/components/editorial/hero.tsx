@@ -9,7 +9,7 @@ export default function EditorialHero() {
       <div className="hero-image-mask pointer-events-none absolute inset-y-0 right-0 hidden w-[62%] select-none md:block lg:w-[60%]">
         <Image
           src="/images/lalagi-dimsum-tampah.png"
-          alt=""
+          alt="Dimsum Tampah LalaGi Dimsum berisi aneka dimsum ayam untuk acara dan momen spesial"
           fill
           priority
           loading="eager"
@@ -66,7 +66,7 @@ export default function EditorialHero() {
       <div className="relative h-[31rem] w-full md:hidden">
         <Image
           src="/images/lalagi-dimsum-tampah.png"
-          alt="Aneka dimsum LalaGi Dimsum tersusun di atas tampah untuk dinikmati bersama"
+          alt=""
           fill
           priority
           loading="eager"

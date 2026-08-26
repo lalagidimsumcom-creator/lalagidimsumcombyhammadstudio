@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: "LalaGi Dimsum",
     images: [
       {
-        url: "/opengraph-image.jpg",
+        url: "/images/lalagi-dimsum-social.jpg",
         width: 1200,
         height: 630,
         alt: "Menu LalaGi Dimsum — Dimsum untuk Setiap Momen",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Menu LalaGi Dimsum",
     description:
       "Pilih sajian LalaGi Dimsum untuk hadiah, perayaan, dan acara spesialmu.",
-    images: ["/twitter-image.jpg"],
+    images: ["/images/lalagi-dimsum-social.jpg"],
   },
 };
 

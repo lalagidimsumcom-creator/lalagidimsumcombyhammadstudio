@@ -17,6 +17,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 const SITE_URL = "https://www.lalagidimsum.com";
+const SOCIAL_IMAGE_URL = `${SITE_URL}/images/lalagi-dimsum-social.jpg`;
 const SITE_DESCRIPTION =
   "LalaGi Dimsum Jagakarsa menghadirkan dimsum full ayam, Dimsum Cake, Tampah, Tower, Party Size dan pesanan acara dengan pengiriman Jabodetabek.";
 
@@ -50,6 +51,16 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   openGraph: {
     title: "LalaGi Dimsum | Dimsum Cake, Tampah & Dimsum Jakarta Selatan",
@@ -58,7 +69,7 @@ export const metadata: Metadata = {
     siteName: "LalaGi Dimsum",
     images: [
       {
-        url: "/opengraph-image.jpg",
+        url: SOCIAL_IMAGE_URL,
         width: 1200,
         height: 630,
         alt: "LalaGi Dimsum — Dimsum untuk Setiap Momen",
@@ -71,7 +82,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "LalaGi Dimsum | Dimsum Cake, Tampah & Dimsum Jakarta Selatan",
     description: SITE_DESCRIPTION,
-    images: ["/twitter-image.jpg"],
+    images: [SOCIAL_IMAGE_URL],
   },
   icons: {
     icon: [

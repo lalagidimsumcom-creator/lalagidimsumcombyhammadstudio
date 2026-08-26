@@ -11,7 +11,7 @@ export const localBusinessSchema: Record<string, unknown> = {
   url: BRAND_CONFIG.siteUrl,
   logo: absoluteUrl("/icon.png"),
   image: [
-    absoluteUrl("/opengraph-image.jpg"),
+    absoluteUrl("/images/lalagi-dimsum-social.jpg"),
     absoluteUrl("/images/lalagi-hero-tampah.jpg"),
     absoluteUrl("/images/lalagi-dimsum-cake.jpg"),
   ],
@@ -67,6 +67,29 @@ export const websiteSchema: Record<string, unknown> = {
   name: BRAND_CONFIG.name,
   inLanguage: "id-ID",
   publisher: { "@id": `${BRAND_CONFIG.siteUrl}/#business` },
+};
+
+export const homepageSchema: Record<string, unknown> = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${BRAND_CONFIG.siteUrl}/#webpage`,
+  url: `${BRAND_CONFIG.siteUrl}/`,
+  name: "LalaGi Dimsum | Dimsum Cake, Tampah & Dimsum Jakarta Selatan",
+  description:
+    "LalaGi Dimsum Jagakarsa menghadirkan dimsum full ayam, Dimsum Cake, Tampah, Tower, Party Size dan pesanan acara dengan pengiriman Jabodetabek.",
+  isPartOf: { "@id": `${BRAND_CONFIG.siteUrl}/#website` },
+  about: { "@id": `${BRAND_CONFIG.siteUrl}/#business` },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    "@id": `${BRAND_CONFIG.siteUrl}/#primaryimage`,
+    contentUrl: absoluteUrl("/images/lalagi-dimsum-tampah.png"),
+    url: absoluteUrl("/images/lalagi-dimsum-tampah.png"),
+    caption: "Dimsum Tampah LalaGi Dimsum untuk acara dan momen spesial",
+    representativeOfPage: true,
+    creditText: "LalaGi Dimsum",
+    copyrightNotice: "LalaGi Dimsum",
+  },
+  inLanguage: "id-ID",
 };
 
 export const breadcrumbSchema = (
